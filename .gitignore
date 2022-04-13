@@ -122,4 +122,5 @@ results/
 
 # Secret & local files
 secret/
+.rasa/
 run_rasa*

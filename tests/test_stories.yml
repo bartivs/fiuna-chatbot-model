@@ -10,7 +10,7 @@ stories:
   - action: utter_greet
   - user: |
       amazing
-    intent: mood_great
+    intent: mood_bueno
   - action: utter_happy
 
 - story: happy path 2
@@ -21,12 +21,12 @@ stories:
   - action: utter_greet
   - user: |
       amazing
-    intent: mood_great
+    intent: mood_bueno
   - action: utter_happy
   - user: |
       bye-bye!
     intent: goodbye
-  - action: utter_goodbye
+  - action: utter_despedida
 
 - story: sad path 1
   steps:
@@ -58,7 +58,7 @@ stories:
   - user: |
       not really
     intent: deny
-  - action: utter_goodbye
+  - action: utter_despedida
 
 - story: sad path 3
   steps:
@@ -74,14 +74,14 @@ stories:
   - user: |
       no
     intent: deny
-  - action: utter_goodbye
+  - action: utter_despedida
 
 - story: say goodbye
   steps:
   - user: |
       bye-bye!
     intent: goodbye
-  - action: utter_goodbye
+  - action: utter_despedida
 
 - story: bot challenge
   steps:

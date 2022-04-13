@@ -45,43 +45,40 @@ nlu:
 
 - intent: mood_bueno
   examples: |
-    -  
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - fine
+    - super 
+    - genial 
+    - excelente 
+    - super bien 
+    - maravilloso 
+    - Me siento muy bien 
+    - Estoy bien 
+    - Soy genial 
+    - perfecto
+    - muy bueno 
+    - muy bueno 
+    - oikoite 
 
 
-- intent: mood_unhappy
+- intent: mood_triste
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - que dia de mierda 
+    - que dia ne 
+    - no quiero saber nada 
+    - super mal 
+    - no me gusta  
+    - triste 
+    - infeliz 
+    - enojado 
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - sos un robot?  
+    - sos un humano?
+    - estoy hablando con un robot?
+    - estoy hablando con un humano?
+
+- intent: ask_jokes
+  examples: |
+    - contame un chiste
+    - contame algo gracioso
+    - haceme reir 
