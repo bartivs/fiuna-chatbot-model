@@ -1,84 +1,78 @@
 version: "3.1"
-
 nlu:
-- intent: saludo 
+- intent: saludo
   examples: |
     - hola
-    - buen dia 
-    - buenas tardes 
-    - buenas noches  
-    - despues   
-    - y despues   
-    - que tal   
-    - que hay   
-    - ha upei   
-    - ha upei  
-     
-
-
-- intent: despedida  
+    - buen dia
+    - buenas tardes
+    - buenas noches
+    - despues
+    - y despues
+    - que tal
+    - que hay
+    - ha upei
+    - Hola
+- intent: despedida
   examples: |
     - chau
-    - adios 
+    - adios
     - hasta mañana
     - hasta nunca
-
-- intent: afirmacion 
+- intent: afirmacion
   examples: |
-    - si 
-    - ok 
-    - dale 
-    - por supuesto 
-    - esta bien 
-    - correcto 
-    - oima 
-
+    - si
+    - ok
+    - dale
+    - por supuesto
+    - esta bien
+    - correcto
+    - oima
 - intent: deny
   examples: |
-    - no 
+    - no
     - nunca
-    - deja nomas 
-    - no creo 
-    - no me gusta 
-    - en realidad no  
-    - jamas 
-
+    - deja nomas
+    - no creo
+    - no me gusta
+    - en realidad no
+    - jamas
 - intent: mood_bueno
   examples: |
-    - super 
-    - genial 
-    - excelente 
-    - super bien 
-    - maravilloso 
-    - Me siento muy bien 
-    - Estoy bien 
-    - Soy genial 
+    - super
+    - genial
+    - excelente
+    - super bien
+    - maravilloso
+    - Me siento muy bien
+    - Estoy bien
+    - Soy genial
     - perfecto
-    - muy bueno 
-    - muy bueno 
-    - oikoite 
-
-
+    - muy bueno
+    - oikoite
 - intent: mood_triste
   examples: |
-    - que dia de mierda 
-    - que dia ne 
-    - no quiero saber nada 
-    - super mal 
-    - no me gusta  
-    - triste 
-    - infeliz 
-    - enojado 
-
+    - que dia de mierda
+    - que dia ne
+    - no quiero saber nada
+    - super mal
+    - no me gusta
+    - triste
+    - infeliz
+    - enojado
 - intent: bot_challenge
   examples: |
-    - sos un robot?  
+    - sos un robot?
     - sos un humano?
     - estoy hablando con un robot?
     - estoy hablando con un humano?
-
 - intent: ask_jokes
   examples: |
     - contame un chiste
     - contame algo gracioso
-    - haceme reir 
+    - haceme reir
+- intent: feriado
+  examples: |
+    - Quiero saber el proximo feriado?
+    - Cuando es el siguente feriado? 
+    - Cuanto tenemos un dia libre?
+    - Cuando hay asueto?  

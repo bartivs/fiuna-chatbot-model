@@ -1,34 +1,42 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - saludo 
-  - despedida 
-  - afirmacion 
-  - deny
-  - mood_bueno
-  - mood_triste
-  - bot_challenge
-
+- afirmacion
+- bot_challenge
+- deny
+- despedida
+- feriado
+- mood_bueno
+- mood_triste
+- saludo
 responses:
+  utter_feriado:
+  - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
   utter_saludo:
-  - text: "Hola! como esta?"
-
+  - text: Hola! como esta?
   utter_cheer_up:
-  - text: "le mando algo para animarte"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: le mando algo para animarte
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Le sirvio mi ayuda?"
-
+  - text: Le sirvio mi ayuda?
   utter_happy:
-  - text: "Que bueno!"
-
+  - text: Que bueno!
   utter_despedida:
-  - text: "Adios"
-
+  - text: Adios
   utter_iamabot:
-  - text: "Soy un robot, entrenado para FIUNA!"
-
+  - text: Soy un bot, entrenado para FIUNA!
+  utter_ask_joes:
+  - text:  ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
+  - text: ¿Cuál es el animal que tiene entre tres y cuatro ojos? El piojo
+  - text: El oxígeno y el potasio tuvieron una cita. Les fue OK.
+  - text: ¿Qué es un terapeuta? 1024 gigapeutas.
+  - text: ¿Por qué Heisenberg murió virgen? Porque cuando encontraba la posición no encontraba el momento, y viceversa.
+  - text: Si no eres parte de la solución eres parte del precipitado.
+  - text: ¿Alguien sabe algún chiste sobre el sodio? Na…
+  - text: ¿Por qué Erwin Schröedinger, Paul Dirac y Wolfang Pauli trabajaron en garajes muy pequeños? Porque eran mecánicos cuánticos.
+  - text: ¿Que es un oso polar? Un oso rectangular, después de un cambio de coordenadas
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- utter_feriado
+- utter_saludo
