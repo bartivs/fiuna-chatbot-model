@@ -1,7 +1,6 @@
 version: "3.1"
 
 rules:
-
 - rule: Despedir a usuario que se despide 
   steps:
   - intent: despedida 
@@ -12,7 +11,17 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: responder con chiste
+- rule: responder las preguntas frecuentes
   steps:
-  - intent: ask_jokes
-  - action: utter_ask_joes
+  - intent: faq
+  - action: utter_faq
+
+- rule: responder las preguntas de tfg
+  steps:
+  - intent: tfg
+  - action: utter_tfg
+
+- rule: responder a chichat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
