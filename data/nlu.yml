@@ -12,12 +12,15 @@ nlu:
     - que hay
     - ha upei
     - Hola
+    - mbaeichapa
 - intent: despedida
   examples: |
     - chau
     - adios
     - hasta mañana
     - hasta nunca
+    - hasta luego
+    - hablamos
 - intent: afirmacion
   examples: |
     - si
@@ -59,20 +62,40 @@ nlu:
     - triste
     - infeliz
     - enojado
+    - haso
 - intent: bot_challenge
   examples: |
     - sos un robot?
     - sos un humano?
     - estoy hablando con un robot?
     - estoy hablando con un humano?
-- intent: ask_jokes
+    - con quién hablo?
+    
+- intent: chitchat/ask_jokes
   examples: |
     - contame un chiste
     - contame algo gracioso
     - haceme reir
-- intent: feriado
+
+- intent: faq/feriado
   examples: |
-    - Quiero saber el proximo feriado?
+    - Quiero saber el proximo feriado
     - Cuando es el siguente feriado? 
     - Cuanto tenemos un dia libre?
-    - Cuando hay asueto?  
+    - Cuando hay asueto? 
+
+- intent: faq/reglamento
+  examples: |
+    - Cuál es el reglamento académico de la facultad?
+    - Me podes pasar el reglamento por favor
+    - me pasas el reglamento xfa
+    - pasame el reglamento
+
+- intent: tfg/requisitos
+  examples: |
+    - cuales son los requisitos para la tesis?
+    - cuando puedo empezar a escribir mi tesis?
+    - ya puedo escribir mi tfg?
+    - requisitos para el tfg
+    - que necesito para empezar mi tfg
+    - que se necesita para empezar la tesis
