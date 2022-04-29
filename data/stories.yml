@@ -29,9 +29,4 @@ stories:
   - intent: deny 
   - action: utter_despedida
 
-- story: interactive_story_1
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: feriado
-  - action: utter_feriado
+

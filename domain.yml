@@ -8,19 +8,16 @@ intents:
 - mood_bueno
 - mood_triste
 - saludo
-- faq
 - chitchat
+- faq
 - tfg
-response:
+responses:
   utter_tfg/requisitos:
-  -text: Para poder solicitar tema de TFG el alumno debe Ser regular del noveno semestre 
- 
+  - text: Para poder solicitar tema de TFG el alumno debe Ser regular del noveno semestre 
   utter_faq/reglamento:
   - text: El último reglamento académico lo podes ver en el siguiente link:http://www.ing.una.py/Resoluciones2021/ConsejoDirectivo/1487/1487_2021_003_reglamento_academico_herramientas_digitalesC1_2022.pdf
-  
-  utter_faq/feriados:
-  - text: Podes ver todos los feriados en el siguiente link:https://dias-festivos.eu/dias-festivos/paraguay/
-  
+  utter_faq/feriado:
+  - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
   utter_saludo:
   - text: Hola! como esta?
   utter_cheer_up:
@@ -32,11 +29,10 @@ response:
   - text: Que bueno!
   utter_despedida:
   - text: Adios
-  - text: Hasta luego
   utter_iamabot:
   - text: Soy un bot, entrenado para FIUNA!
-  utter_chitchat/chistes:
-  - text: ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
+  utter_chitchat/ask_jokes:
+  - text:  ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
   - text: ¿Cuál es el animal que tiene entre tres y cuatro ojos? El piojo
   - text: El oxígeno y el potasio tuvieron una cita. Les fue OK.
   - text: ¿Qué es un terapeuta? 1024 gigapeutas.
@@ -48,6 +44,7 @@ response:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-action:
+actions:
+- utter_faq/feriado
 - utter_saludo
-- utter_despedida
+
