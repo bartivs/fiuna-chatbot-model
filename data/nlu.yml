@@ -30,6 +30,7 @@ nlu:
     - esta bien
     - correcto
     - oima
+    - de lujo
 - intent: deny
   examples: |
     - no
@@ -39,6 +40,7 @@ nlu:
     - no me gusta
     - en realidad no
     - jamas
+    - ni un poco
 - intent: mood_bueno
   examples: |
     - super
@@ -48,12 +50,13 @@ nlu:
     - maravilloso
     - Me siento muy bien
     - Estoy bien
-    - Soy genial
+    - genial
     - perfecto
     - muy bueno
-    - oikoite
 - intent: mood_triste
   examples: |
+    - mal
+    - pesimo
     - que dia de mierda
     - que dia ne
     - no quiero saber nada
@@ -70,13 +73,21 @@ nlu:
     - estoy hablando con un robot?
     - estoy hablando con un humano?
     - con quién hablo?
-    
+
+#Preguntas Chitchat
 - intent: chitchat/ask_jokes
   examples: |
     - contame un chiste
     - contame algo gracioso
     - haceme reir
 
+- intent: chitchat/clima
+  examples: |
+    - cono está el tiempo?
+    - va a llover?
+    - que probabilidades hay de que llueva? 
+
+#Preguntas Frecuentes     
 - intent: faq/feriado
   examples: |
     - Quiero saber el proximo feriado
@@ -91,11 +102,34 @@ nlu:
     - me pasas el reglamento xfa
     - pasame el reglamento
 
+#Preguntas frecuentes sobre TFG
+- intent: tfg/reglamento
+  examples: |
+    - me podes pasar el reglamento de tfg
+    - pasame el reglamento de tfg
+    - pasame el reglamento de la tesis
+    - podes pasarme el reglamento de la tesis xfa 
+
 - intent: tfg/requisitos
   examples: |
+    - me podrias decir cuales son los requisitos para hacer la tesis
     - cuales son los requisitos para la tesis?
     - cuando puedo empezar a escribir mi tesis?
     - ya puedo escribir mi tfg?
     - requisitos para el tfg
     - que necesito para empezar mi tfg
     - que se necesita para empezar la tesis
+
+- intent: tfg/duracion
+  examples: |
+    - Cuanto puedo tardar en hacer la tesis?
+    - Cuanto tiempo lleva la tesis?
+    - Cuál es el plazo que tengo para presentar la tesis?
+    - Cuánto tiempo puedo tardar en terminar el TFG?
+
+- intent: tfg/prorroga
+  examples: |
+    - Puedo pedir prorroga para el tfg?
+    - Se puede extender el periodo del tfg/tesis?
+    - Se puede alargar la duracion de la tesis?
+    - cuanto es a prorroga del tfg/tesis?

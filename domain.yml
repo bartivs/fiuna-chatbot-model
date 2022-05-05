@@ -12,8 +12,14 @@ intents:
 - faq
 - tfg
 responses:
+  utter_tfg/reglamento:
+  - text: El reglamento de Trabajo Final de Grado lo podés encontrar en el siguiente link:http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
   utter_tfg/requisitos:
-  - text: Para poder solicitar tema de TFG el alumno debe Ser regular del noveno semestre 
+  - text: Para poder solicitar tema de TFG, el alumno debe ser regular del noveno semestre y que esté desarrollando o haya cumplido con la Pasantía Curricular. También se debe estar matriculado en el periodo académico en curso y tener los aranceles al día. Para saber más podes leer el reglamento de TFG http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
+  utter_tfg/duracion:
+  - text: El plazo máximo ordinario de presentación de TFG es de dos años contados a partir de la fecha de aprobación del tema. 
+  utter_tfg/prorroga:
+  - text: La dirección académica podrá aprobar una prórroga de hasta 6 meses a partir de la finalizacion del plazo máximo ordinario para presentación del TFG.
   utter_faq/reglamento:
   - text: El último reglamento académico lo podes ver en el siguiente link:http://www.ing.una.py/Resoluciones2021/ConsejoDirectivo/1487/1487_2021_003_reglamento_academico_herramientas_digitalesC1_2022.pdf
   utter_faq/feriado:
@@ -31,6 +37,8 @@ responses:
   - text: Adios
   utter_iamabot:
   - text: Soy un bot, entrenado para FIUNA!
+  utter_chitchat/clima:
+  - text: Va a llover siosi 
   utter_chitchat/ask_jokes:
   - text:  ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
   - text: ¿Cuál es el animal que tiene entre tres y cuatro ojos? El piojo
