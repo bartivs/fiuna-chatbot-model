@@ -11,6 +11,7 @@ intents:
 - chitchat
 - faq
 - tfg
+- examen
 responses:
   utter_tfg/reglamento:
   - text: El reglamento de Trabajo Final de Grado lo podés encontrar en el siguiente link:http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
@@ -22,6 +23,10 @@ responses:
   - text: La dirección académica podrá aprobar una prórroga de hasta 6 meses a partir de la finalizacion del plazo máximo ordinario para presentación del TFG.
   utter_faq/reglamento:
   - text: El último reglamento académico lo podes ver en el siguiente link:http://www.ing.una.py/Resoluciones2021/ConsejoDirectivo/1487/1487_2021_003_reglamento_academico_herramientas_digitalesC1_2022.pdf
+  utter_faq/horario_clases:
+  - text: El último el horario de clases lo podes encontar acá http://www.ing.una.py/?page_id=748
+  utter_faq/horario_examen:
+  - text: El último el horario de examenes lo podes encontar acá http://www.ing.una.py/?page_id=752 
   utter_faq/feriado:
   - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
   utter_saludo:

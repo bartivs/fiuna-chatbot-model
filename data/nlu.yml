@@ -102,6 +102,31 @@ nlu:
     - me pasas el reglamento xfa
     - pasame el reglamento
 
+- intent: faq/horario_clases
+  examples: |
+    - Cual es el horario de las clases?
+    - Cual es el horario de clases en este semestre?
+    - me pasas el horario de clases en este semestre?
+    - cual es el horario de clases?
+
+- synonym: examen
+  examples: |
+    - examenes
+    - parciales
+    - recuperatorio 
+    - recu
+    - final 
+    - parcial
+    - rendir
+    - rendimos
+
+- intent: faq/horario_examen
+  examples: |
+    - Cual es el horario de (examen)?
+    - Cual es el horario de los (examen)?
+    - me pasas el horario de los (examen)?
+    - cuando [rendimos](examen)
+   
 #Preguntas frecuentes sobre TFG
 - intent: tfg/reglamento
   examples: |
