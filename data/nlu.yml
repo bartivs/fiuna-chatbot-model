@@ -110,15 +110,21 @@ nlu:
     - pasame el reglamento de la tesis
     - podes pasarme el reglamento de la tesis xfa 
 
+- synonym: tfg
+  examples: |
+    - tfg
+    - trabajo final de grado 
+    - tesis 
+
 - intent: tfg/requisitos
   examples: |
-    - me podrias decir cuales son los requisitos para hacer la tesis
-    - cuales son los requisitos para la tesis?
-    - cuando puedo empezar a escribir mi tesis?
-    - ya puedo escribir mi tfg?
-    - requisitos para el tfg
-    - que necesito para empezar mi tfg
-    - que se necesita para empezar la tesis
+    - me podrias decir cuales son los requisitos para hacer la [tesis]{"entity" : "tfg"} 
+    - cuales son los requisitos para la [tesis](tfg)?
+    - cuando puedo empezar a escribir mi [tesis](tfg)?
+    - ya puedo escribir mi [tesis](tfg)?
+    - requisitos para el [tesis](tfg)
+    - que necesito para empezar mi [tesis](tfg)
+    - que se necesita para empezar la [tesis](tfg)
 
 - intent: tfg/duracion
   examples: |
