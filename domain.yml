@@ -16,6 +16,7 @@ entities:
 - nombre
 
 responses:
+#Respuestas TFG
   utter_tfg/asesores:
   - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
   utter_tfg/reglamento:
@@ -26,6 +27,7 @@ responses:
   - text: El plazo máximo ordinario de presentación de TFG es de dos años contados a partir de la fecha de aprobación del tema. 
   utter_tfg/prorroga:
   - text: La dirección académica podrá aprobar una prórroga de hasta 6 meses a partir de la finalizacion del plazo máximo ordinario para presentación del TFG.
+ #Respuestas FAQ
   utter_faq/reglamento:
   - text: El último reglamento académico lo podes ver en el siguiente link:http://www.ing.una.py/Resoluciones2021/ConsejoDirectivo/1487/1487_2021_003_reglamento_academico_herramientas_digitalesC1_2022.pdf
   utter_faq/feriado:
@@ -44,6 +46,7 @@ responses:
   - text: chau
   utter_iamabot:
   - text: Soy un bot, entrenado para FIUNA!
+  #Resputas chitchat
   utter_chitchat/clima:
   - text: Va a llover siosi 
   utter_chitchat/ask_jokes:
