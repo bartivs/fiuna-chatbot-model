@@ -3,6 +3,7 @@ nlu:
 - intent: saludo
   examples: |
     - hola
+    - Hola que tal?
     - buen dia
     - buenas tardes
     - buenas noches
@@ -13,6 +14,7 @@ nlu:
     - ha upei
     - Hola
     - mbaeichapa
+    - Hola, mi nombre es 
 - intent: despedida
   examples: |
     - chau
@@ -133,3 +135,9 @@ nlu:
     - Se puede extender el periodo del tfg/tesis?
     - Se puede alargar la duracion de la tesis?
     - cuanto es a prorroga del tfg/tesis?
+
+- intent: tfg/asesores
+  examples: |
+    - Quien puede ser mi tutor?
+    - Quienes son los asesores de tfg?
+    - quien puede ayudarme con mi tfg/tesis?

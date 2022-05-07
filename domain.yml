@@ -11,7 +11,13 @@ intents:
 - chitchat
 - faq
 - tfg
+
+entities:
+- nombre
+
 responses:
+  utter_tfg/asesores:
+  - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
   utter_tfg/reglamento:
   - text: El reglamento de Trabajo Final de Grado lo podés encontrar en el siguiente link:http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
   utter_tfg/requisitos:
@@ -35,6 +41,7 @@ responses:
   - text: Que bueno!
   utter_despedida:
   - text: Adios
+  - text: chau
   utter_iamabot:
   - text: Soy un bot, entrenado para FIUNA!
   utter_chitchat/clima:
