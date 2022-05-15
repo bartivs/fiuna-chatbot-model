@@ -14,7 +14,7 @@ nlu:
     - ha upei
     - Hola
     - mbaeichapa
-    - Hola, mi nombre es 
+    - Hola, mi nombre es
 - intent: despedida
   examples: |
     - chau
@@ -52,7 +52,6 @@ nlu:
     - maravilloso
     - Me siento muy bien
     - Estoy bien
-    - genial
     - perfecto
     - muy bueno
 - intent: mood_triste
@@ -75,100 +74,92 @@ nlu:
     - estoy hablando con un robot?
     - estoy hablando con un humano?
     - con quién hablo?
-
-#Preguntas Chitchat
 - intent: chitchat/ask_jokes
   examples: |
     - contame un chiste
     - contame algo gracioso
     - haceme reir
-
 - intent: chitchat/clima
   examples: |
     - cono está el tiempo?
     - va a llover?
-    - que probabilidades hay de que llueva? 
-
-#Preguntas Frecuentes     
+    - que probabilidades hay de que llueva?
+- intent: nota_segun_firma
+  examples: |
+    - Cuanto tengo que hacer para quitar 5 si mi firma es [35](firma)
+    - mi firma es de [55](firma), cuanto debo hacer para pasar?
+    - si tengo de firma [44](firma), con cuanto paso?
+    - quiero quitar 4 y mi firma es de [51], cuanto tengo que hacer?
+    - quiero saber cuanto tengo que hacer para quitar cinco si mi firma es de [40](firma)
 - intent: faq/feriado
   examples: |
     - Quiero saber el proximo feriado
-    - Cuando es el siguente feriado? 
+    - Cuando es el siguente feriado?
     - Cuanto tenemos un dia libre?
-    - Cuando hay asueto? 
-
+    - Cuando hay asueto?
 - intent: faq/reglamento
   examples: |
     - Cuál es el reglamento académico de la facultad?
     - Me podes pasar el reglamento por favor
     - me pasas el reglamento xfa
     - pasame el reglamento
-
 - intent: faq/horario_clases
   examples: |
     - Cual es el horario de las clases?
     - Cual es el horario de clases en este semestre?
     - me pasas el horario de clases en este semestre?
     - cual es el horario de clases?
-
-- synonym: examen
-  examples: |
-    - examenes
-    - parciales
-    - recuperatorio 
-    - recu
-    - final 
-    - parcial
-    - rendir
-    - rendimos
-
 - intent: faq/horario_examen
   examples: |
     - Cual es el horario de (examen)?
     - Cual es el horario de los (examen)?
     - me pasas el horario de los (examen)?
-    - cuando [rendimos](examen)
-   
-#Preguntas frecuentes sobre TFG
+    - cuando (rendimos) [lineal 2](materia)?
+    - que día se rinde [estática](materia)?
 - intent: tfg/reglamento
   examples: |
     - me podes pasar el reglamento de tfg
     - pasame el reglamento de tfg
     - pasame el reglamento de la tesis
-    - podes pasarme el reglamento de la tesis xfa 
-
-- synonym: tfg
-  examples: |
-    - tfg
-    - trabajo final de grado 
-    - tesis 
-
+    - podes pasarme el reglamento de la tesis xfa
 - intent: tfg/requisitos
   examples: |
-    - me podrias decir cuales son los requisitos para hacer la [tesis]{"entity" : "tfg"} 
+    - me podrias decir cuales son los requisitos para hacer la [tesis](tfg)
     - cuales son los requisitos para la [tesis](tfg)?
     - cuando puedo empezar a escribir mi [tesis](tfg)?
     - ya puedo escribir mi [tesis](tfg)?
     - requisitos para el [tesis](tfg)
     - que necesito para empezar mi [tesis](tfg)
     - que se necesita para empezar la [tesis](tfg)
-
 - intent: tfg/duracion
   examples: |
     - Cuanto puedo tardar en hacer la tesis?
     - Cuanto tiempo lleva la tesis?
     - Cuál es el plazo que tengo para presentar la tesis?
     - Cuánto tiempo puedo tardar en terminar el TFG?
-
 - intent: tfg/prorroga
   examples: |
     - Puedo pedir prorroga para el tfg?
     - Se puede extender el periodo del tfg/tesis?
     - Se puede alargar la duracion de la tesis?
     - cuanto es a prorroga del tfg/tesis?
-
 - intent: tfg/asesores
   examples: |
     - Quien puede ser mi tutor?
     - Quienes son los asesores de tfg?
     - quien puede ayudarme con mi tfg/tesis?
+- synonym: examen
+  examples: |
+    - examenes
+    - parciales
+    - recuperatorio
+    - recu
+    - final
+    - parcial
+    - rendir
+    - rendimos
+- synonym: tfg
+  examples: |
+    - tfg
+    - trabajo final de grado
+    - tesis

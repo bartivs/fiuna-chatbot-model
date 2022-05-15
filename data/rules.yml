@@ -26,3 +26,8 @@ rules:
   steps:
   - intent: tfg
   - action: utter_tfg
+
+- rule: responder sobre los puntos necesarios
+  steps:
+  - intent: nota_segun_firma
+  - action: puntos_necesarios
