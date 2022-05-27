@@ -30,13 +30,13 @@ stories:
   - action: utter_despedida
 
 
-#- story: interactive_story_1
-#  steps:
-#  - intent: saludo
-#  - action: utter_saludo
-#  - intent: nota_segun_firma
-#    entities:
-#    - firma: '40'
-#  - slot_was_set:
-#    - puntos_firma: '40'
-#  - action: puntos_necesarios
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: nota_segun_firma
+    entities:
+    - firma: '40'
+  - slot_was_set:
+    - puntos_firma: '40'
+  - action: puntos_necesarios

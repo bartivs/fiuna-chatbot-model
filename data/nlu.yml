@@ -84,13 +84,20 @@ nlu:
     - cono está el tiempo?
     - va a llover?
     - que probabilidades hay de que llueva?
+
+- synonym: pasar
+  examples: |
+    - 2
+    - dos
+    - paso
+
 - intent: nota_segun_firma
   examples: |
-    - Cuanto tengo que hacer para quitar 5 si mi firma es [35](firma)
-    - mi firma es de [55](firma), cuanto debo hacer para pasar?
-    - si tengo de firma [44](firma), con cuanto paso?
-    - quiero quitar 4 y mi firma es de [51], cuanto tengo que hacer?
-    - quiero saber cuanto tengo que hacer para quitar cinco si mi firma es de [40](firma)
+    - Cuanto tengo que hacer para quitar [5](nota) si mi firma es [35](firma)
+    - mi firma es de [55](firma), cuanto debo hacer para [pasar](nota)?
+    - si tengo de firma [44](firma), con cuanto [paso](nota)?
+    - quiero quitar [4](nota) y mi firma es de [51], cuanto tengo que hacer?
+    - quiero saber cuanto tengo que hacer para quitar [cinco](nota) si mi firma es de [40](firma)
 - intent: faq/feriado
   examples: |
     - Quiero saber el proximo feriado

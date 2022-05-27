@@ -32,6 +32,7 @@ entities:
 - firma
 - nombre
 - materia
+- nota
 slots:
   puntos_firma:
     type: float
@@ -40,6 +41,14 @@ slots:
       entity: firma
     min_value: 35
     max_value: 70
+
+  nota_deseada:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: nota
+      initial_value: 0
+      max_value: 5
 responses:
   utter_tfg/asesores:
   - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
