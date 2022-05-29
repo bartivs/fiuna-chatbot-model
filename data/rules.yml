@@ -26,3 +26,20 @@ rules:
   steps:
   - intent: tfg
   - action: utter_tfg
+
+- rule: Activate putajes final form
+  steps:
+  - intent: preguntar_puntaje_final 
+  - action: puntaje_final_form
+  - active_loop: puntaje_final_form
+
+- rule: Submit puntaje final form
+  condition:
+  - active_loop: puntaje_final_form 
+  steps:
+  - action: puntaje_final_form 
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_informar_puntaje_final 

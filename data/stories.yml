@@ -30,3 +30,70 @@ stories:
   - action: utter_despedida
 
 
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: saludo
+#   - action: utter_saludo
+#   - intent: preguntar_puntaje_final
+#   - action: puntaje_final_form
+#   - active_loop: puntaje_final_form
+#   - slot_was_set:
+#     - requested_slot: nota_final
+#   - slot_was_set:
+#     - nota_final: '2'
+#   - slot_was_set:
+#     - requested_slot: firma_parciales
+#   - slot_was_set:
+#     - nota_final: '35'
+#   - slot_was_set:
+#     - requested_slot: firma_parciales
+#   - slot_was_set:
+#     - nota_final: '45'
+#   - slot_was_set:
+#     - requested_slot: firma_parciales
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: saludo
+#   - action: utter_saludo
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: afirmacion
+#   - action: utter_happy
+#   - intent: saludo
+#   - action: utter_saludo
+#   - intent: mood_bueno
+#   - action: utter_happy
+#   - intent: preguntar_puntaje_final
+#   - action: puntaje_final_form
+#   - active_loop: puntaje_final_form
+#   - slot_was_set:
+#     - requested_slot: nota_final
+#   - slot_was_set:
+#     - nota_final: '5'
+#   - slot_was_set:
+#     - requested_slot: firma_parciales
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: saludo
+#   - action: utter_saludo
+#   - intent: mood_bueno
+#   - action: utter_happy
+#   - intent: preguntar_puntaje_final
+#   - action: puntaje_final_form
+#   - active_loop: puntaje_final_form
+#   - slot_was_set:
+#     - requested_slot: nota_final
+#   - intent: mood_bueno
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: preguntar_puntaje_final
+#   - action: puntaje_final_form
+#   - active_loop: puntaje_final_form
+#   - slot_was_set:
+#     - requested_slot: nota_final
+#   - intent: mood_bueno
