@@ -1,4 +1,4 @@
-from typing import Any, Dict, Text
+from typing import Any, Dict, Text, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -36,7 +36,7 @@ class ActionFirma(Action):
 
         firma_actual = int(tracker.get_slot("firma_parciales"))
         nota_des = int(tracker.get_slot("nota_final"))
-        if nota_actual and nota_des:
+        if firma_actual and nota_des:
             aux = [fila[firma_actual - 35] for fila in ABACO]
             aux.reverse()
             nota5 = aux.index(5) + 9
@@ -57,7 +57,7 @@ class ActionFirma(Action):
             #     msg = f"Para pasar con 2 tenes que hacer {nota2}\nPara quitar 3, {nota3}\nPara quitar 4,{nota4}\n y para quitar 5 {nota5}"
             #     dispatcher.utter_message(text=msg)
             # else:
-            msg = f"Si haces {puntos_final} en el final, quitas {aux[puntos_final-9]}"
+            msg = f"Si haces {notas[nota_des-2]} en el final, quitas {nota_des}"
             dispatcher.utter_message(text=msg)
 
             return []
