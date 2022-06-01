@@ -1,5 +1,6 @@
 from typing import Any, Dict, Text, List
 from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
 ABACO = [
@@ -36,6 +37,20 @@ class ActionFirma(Action):
 
         firma_actual = int(tracker.get_slot("firma_parciales"))
         nota_des = int(tracker.get_slot("nota_final"))
+        
+        if firma_actual < 35:
+            msg = f"La la firma debe ser mayor 35 para poder pasar :("
+            dispatcher.utter_message(text=msg)
+            return [SlotSet("firma_parciales", None)]
+        if firma_actual > 70:
+            msg = "La maxima firma es de 70 puntos"
+            dispatcher.utter_message(text=msg)
+            return [SlotSet("firma_parciales", None)]
+        if nota_des < 2 and nota_des > 5:
+            msg = "Las notas para pasar son entre 2 y 5."
+            dispatcher.utter_message(text=msg)
+            return [SlotSet("nota_des", None)]
+
         if firma_actual and nota_des:
             aux = [fila[firma_actual - 35] for fila in ABACO]
             aux.reverse()
