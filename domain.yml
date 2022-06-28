@@ -104,6 +104,9 @@ responses:
   - text: ¿Alguien sabe algún chiste sobre el sodio? Na…
   - text: ¿Por qué Erwin Schröedinger, Paul Dirac y Wolfang Pauli trabajaron en garajes muy pequeños? Porque eran mecánicos cuánticos.
   - text: ¿Que es un oso polar? Un oso rectangular, después de un cambio de coordenadas
+  utter_correlativas:
+    text: te paso la informacion de las correlativas https://drive.google.com/drive/folders/1KHJcoaBB8_186hhAX83v0fm0395mQ2jh?usp=sharing
+     
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
