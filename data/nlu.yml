@@ -123,13 +123,18 @@ nlu:
     - Quiero saber el proximo feriado
     - Cuando es el siguente feriado?
     - Cuanto tenemos un dia libre?
-    - Cuando hay asueto?
+ 
+- synonym: reglamento 
+  examples: |
+    - reglamento 
+    - reglamento academico 
+
 - intent: faq/reglamento
   examples: |
-    - Cuál es el reglamento académico de la facultad?
-    - Me podes pasar el reglamento por favor
-    - me pasas el reglamento xfa
-    - pasame el reglamento
+    - Cuál es el [reglamento](reglamento) de la facultad?
+    - Me podes pasar el [reglamento](reglamento) por favor
+    - me pasas el [reglamento](reglamento) xfa
+    - pasame el [reglamento](reglamento)
 - intent: faq/horario_clases
   examples: |
     - Cual es el horario de las clases?
@@ -142,6 +147,32 @@ nlu:
     - Cual es el horario de los (examen)?
     - me pasas el horario de los (examen)?
     - cuando [rendimos](examen)
+- synonym: carrera 
+  examples: |
+    - eca
+    - electronica 
+    - mtc
+    - mecatronica 
+    - civil 
+    - civ 
+    - indus 
+    - ind 
+    - industrial 
+    - mec 
+    - mecanica 
+    - electro 
+    - electromecanica 
+    - geografica y ambiental 
+
+- intent: faq/correlativas
+  examples: |
+  - me pasas las materias?
+  - me pasas las correlativas de [mtc](carrera)?  
+  - me pasas las correlativas de ing. [mtc](carrera)?  
+  - me pasas las correlativas de ingenieria [mtc](carrera)?  
+  - quiero saber que materias me faltan  
+  - quiero ver las materias de [ind](carrera)  
+  - quiero saber las materias de [ind](carrera)  
 - intent: preguntar_puntaje_final
   examples: |
     - Cuanto tengo que hacer para pasar
@@ -183,34 +214,5 @@ nlu:
     - Quien puede ser mi tutor?
     - Quienes son los asesores de [tesis](tfg)?
     - quien puede ayudarme con mi [tesis](tfg)?
-
-- synonym: carrera 
-  examples: |
-    - eca
-    - electronica 
-    - mtc
-    - mecatronica 
-    - civil 
-    - civ 
-    - indus 
-    - ind 
-    - industrial 
-    - mec 
-    - mecanica 
-    - electro 
-    - electromecanica 
-    - geografica y ambiental 
-
-- intent: correlativas
-  examples: |
-  - me pasas las materias?
-  - me pasas las correlativas de [mtc](carrera)?  
-  - me pasas las correlativas de ing. [mtc](carrera)?  
-  - me pasas las correlativas de ingenieria [mtc](carrera)?  
-  - quiero saber que materias me faltan  
-  - quiero ver las materias de [ind](carrera)  
-  - quiero saber las materias de [ind](carrera)  
-   
-
 
 # 

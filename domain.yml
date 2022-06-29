@@ -71,6 +71,8 @@ responses:
   - text: El último el horario de examenes lo podes encontar acá http://www.ing.una.py/?page_id=752
   utter_faq/feriado:
   - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
+  utter_faq/correlativas:
+    text: te paso la informacion de las correlativas https://drive.google.com/drive/folders/1KHJcoaBB8_186hhAX83v0fm0395mQ2jh?usp=sharing
   utter_saludo:
   - text: Hola! como esta?
   utter_cheer_up:
@@ -104,9 +106,7 @@ responses:
   - text: ¿Alguien sabe algún chiste sobre el sodio? Na…
   - text: ¿Por qué Erwin Schröedinger, Paul Dirac y Wolfang Pauli trabajaron en garajes muy pequeños? Porque eran mecánicos cuánticos.
   - text: ¿Que es un oso polar? Un oso rectangular, después de un cambio de coordenadas
-  utter_correlativas:
-    text: te paso la informacion de las correlativas https://drive.google.com/drive/folders/1KHJcoaBB8_186hhAX83v0fm0395mQ2jh?usp=sharing
-     
+    
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
