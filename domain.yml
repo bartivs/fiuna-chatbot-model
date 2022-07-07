@@ -4,54 +4,44 @@ intents:
 - bot_challenge
 - chitchat:
     used_entities:
-    - firma_parciales
+    - firma
+    - materia
     - nombre
-    - nota_final
     is_retrieval_intent: true
 - deny
 - despedida
 - examen
 - faq:
     used_entities:
-    - firma_parciales
+    - firma
+    - materia
     - nombre
-    - nota_final
     is_retrieval_intent: true
 - feriado
 - informar_firma
 - informar_nota_deseada
 - mood_bueno
 - mood_triste
-- preguntar_puntaje
-- preguntar_puntaje_final
-- preguntar_puntaje_informar_nota
+- nota_segun_firma
 - saludo
 - tfg:
     used_entities:
-    - firma_parciales
+    - firma
+    - materia
     - nombre
-    - nota_final
     is_retrieval_intent: true
 entities:
-- nota_final
+- firma
 - nombre
-- firma_parciales
+- materia
 slots:
-  nota_final:
-    type: any
+  puntos_firma:
+    type: float
     mappings:
     - type: from_entity
-      entity: nota_final
-  firma_parciales:
-    type: any
-    mappings:
-    - type: from_entity
-      entity: firma_parciales
-forms:
-  puntaje_final_form:
-    required_slots:
-    - nota_final
-    - firma_parciales
+      entity: firma
+    min_value: 35
+    max_value: 70
 responses:
   utter_tfg/asesores:
   - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
@@ -87,13 +77,6 @@ responses:
   - text: chau
   utter_iamabot:
   - text: Soy un bot, entrenado para FIUNA!
-  utter_ask_puntaje_final_form_firma_parciales:
-  - text: ¿Cuanto tenes de firma?
-  - text: ¿Cuanto alcanzaste de firma?
-  utter_ask_puntaje_final_form_nota_final:
-  - text: Que nota deseas sacar?
-  utter_informar_puntaje_final:
-  - text: Tenes {firma_parciales} y queres un {nota_final}
   utter_chitchat/clima:
   - text: Va a llover siosi
   utter_chitchat/ask_jokes:
@@ -111,10 +94,10 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
+- puntos_necesarios
 - utter_chitchat
 - utter_faq
 - utter_faq/feriado
 - utter_happy
 - utter_saludo
 - utter_tfg
-- action_informar_puntaje_final
