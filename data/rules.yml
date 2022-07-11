@@ -12,7 +12,7 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: responder con chiste
+- rule: responder chitchats
   steps:
   - intent: chitchat
   - action: utter_chitchat
@@ -31,3 +31,13 @@ rules:
   steps:
   - intent: nota_segun_firma
   - action: puntos_necesarios
+
+- rule: fuera_de_alcance
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: replantear
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback

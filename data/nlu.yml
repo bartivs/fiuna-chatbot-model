@@ -54,6 +54,7 @@ nlu:
     - Estoy bien
     - perfecto
     - muy bueno
+    - todo bien gracias
 - intent: mood_triste
   examples: |
     - mal
@@ -79,11 +80,16 @@ nlu:
     - contame un chiste
     - contame algo gracioso
     - haceme reir
-- intent: chitchat/clima
+- intent: chitchat/consulta
   examples: |
-    - cono está el tiempo?
-    - va a llover?
-    - que probabilidades hay de que llueva?
+    - Tengo una consulta
+    - Quiero preguntar algo
+- intent: chitchat/agradecimiento
+  examples: |
+    - Gracias!
+    - graciaaas
+    - De lujo
+    - Esoo
 - intent: nota_segun_firma
   examples: |
     - Cuanto tengo que hacer para quitar 5 si mi firma es [35](firma)
@@ -163,3 +169,14 @@ nlu:
     - tfg
     - trabajo final de grado
     - tesis
+- intent: out_of_scope
+  examples: |
+    - Tengo hambre
+    - Cuánto es 2+2
+    - donde puedo encontrar hielo
+    - Quien es el presidente de paraguay
+    - Como está el clima
+    - Va a llover
+    - Que hora es en China
+- intent: nlu_fallback
+  examples: null

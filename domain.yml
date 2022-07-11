@@ -22,6 +22,8 @@ intents:
 - mood_triste
 - nota_segun_firma
 - saludo
+- out_of_scope
+- nlu_fallback
 - tfg:
     used_entities:
     - firma
@@ -73,8 +75,6 @@ responses:
   - text: chau
   utter_iamabot:
   - text: Soy un bot, entrenado para FIUNA!
-  utter_chitchat/clima:
-  - text: Va a llover siosi
   utter_chitchat/ask_jokes:
   - text: ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
   - text: ¿Cuál es el animal que tiene entre tres y cuatro ojos? El piojo
@@ -85,6 +85,19 @@ responses:
   - text: ¿Alguien sabe algún chiste sobre el sodio? Na…
   - text: ¿Por qué Erwin Schröedinger, Paul Dirac y Wolfang Pauli trabajaron en garajes muy pequeños? Porque eran mecánicos cuánticos.
   - text: ¿Que es un oso polar? Un oso rectangular, después de un cambio de coordenadas
+  utter_chitchat/consulta:
+  - text: Sii decime
+  - text: Para esto estoy, decime
+  utter_out_of_scope:
+  - text: Lo siento, no puedo responder a eso.
+  - text: Lo siento, no puedo darte una respuesta buena.
+  utter_fallback:
+  - text: Lo lamento, no entendi muy bien. Podrias replantear?
+  utter_chitchat/agradecimiento_rpta:
+  - text: De nada!
+  - text: No es nada, para eso estoy ;)
+  - text: Cuando quieras
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
