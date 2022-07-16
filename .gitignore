@@ -125,4 +125,3 @@ secret/
 .rasa/
 run_rasa*
 env/
-values.yaml
