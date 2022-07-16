@@ -12,7 +12,7 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: responder con chiste
+- rule: responder chitchats
   steps:
   - intent: chitchat
   - action: utter_chitchat
@@ -29,17 +29,15 @@ rules:
 
 - rule: Activate putajes final form
   steps:
-  - intent: preguntar_puntaje_final 
-  - action: puntaje_final_form
-  - active_loop: puntaje_final_form
+  - intent: nota_segun_firma
+  - action: puntos_necesarios
 
-- rule: Submit puntaje final form
-  condition:
-  - active_loop: puntaje_final_form 
+- rule: fuera_de_alcance
   steps:
-  - action: puntaje_final_form 
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  # The actions we want to run when the form is submitted.
-  - action: action_informar_puntaje_final 
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: replantear
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback

@@ -30,12 +30,9 @@ pipeline:
      retrieval_intent: chitchat
    - name: ResponseSelector
      epochs: 100
-     retrieval_intent: tfg     
-#     constrain_similarities: true
-#   - name: FallbackClassifier
-#     threshold: 0.3
-#     ambiguity_threshold: 0.1
-
+     retrieval_intent: tfg
+   - name: FallbackClassifier
+     threshold: 0.7
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
