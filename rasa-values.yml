@@ -1,0 +1,72 @@
+
+# This example shows how to download data from a git repository and train a model.
+#
+# Execute command: helmfile -f examples/rasa/download-model-helmfile.yaml sync
+#
+
+repositories:
+- name: rasa
+  url: https://helm.rasa.com
+
+releases:
+  - name: rasa
+    chart: rasa/rasa
+
+    values:
+
+      - applicationSettings:
+          token: ${RASA_TOKEN}
+          # Enable debug mode
+          debugMode: true
+          # Train an initial model. If data files don't exist, a new project will be created (`rasa init`).
+          # It creates a init container that runs the `rasa train` command.
+          trainInitialModel: true
+
+          # Credentials configuration
+          credentials:
+            additionalChannelCredentials:
+              # Enable REST channel
+              rest:
+          service:
+            type: LoadBalancer 
+          # ingress:
+          #   enabled: true
+          rasaX:
+            # -- Run Rasa X / Enterprise server
+            enabled:  true 
+            # -- Token Rasa X / Enterprise accepts as authentication token from other Rasa services
+            token: ${RASA_X_TOKEN} 
+            url: "http://rasa-x-rasa-x.rasa-x.svc:5002"
+          # Configure Rasa OSS
+          # Add a init container to the rasa deployment that downloads data files from a git repository
+          eventBroker:
+            type: "pika"
+              url: "rasa-x-rabbit.rasa.svc" 
+              port: 5672  # change if your RabbitMQ service is exposed on a different port
+              username: "user"  # if customized, value of the RABBITMQ_USERNAME environment variable
+              password: ${RABBITMQ_PASSWORD} 
+              queues:
+              - "rasa_production_events"  # if using a custom queue, change the queue name to the one that you usetPath: /app
+                  
+      - initContainers:
+        - name: download-data
+          image: "bitnami/git:latest"
+          command: ["/bin/sh", "-c"]
+          # The train init container expects data files in the /app directory.
+          # The commands below make sure that the /app directory is empty, and then it clones the rasa-x-demo repository.
+          # The rasa image runs with UID 1001, that's why at the end you have to change owner for /app directory.
+          args:
+            - "cd /app && rm -rf {,.[!.],..?}* && git clone https://github.com/bartivs/fiuna-chatbot-model.git . && chown -R 1001:1001 /app"
+          # Mount the `/app` directory which is shared with the init container that trains a model.
+          volumeMounts:
+            - mounevent_broker:
+                name: app-dir
+extraEnv:
+  # The configuration for an event broker uses environment variables, thus
+  # you have to pass extra environment variables that read values from
+  # the rasa-x-rabbit secret.
+  - name: "RABBITMQ_PASSWORD"
+    valueFrom:
+      secretKeyRef:
+        name: rasa-x-rabbit
+        key: rabbitmq-password
