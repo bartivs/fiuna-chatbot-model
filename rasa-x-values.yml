@@ -3,9 +3,9 @@ rasax:
   # initialUser is the user which is created upon the initial start of Rasa Enterprise
   initialUser:
     # username specifies a name of this user - defaults to "admin"
-    username: 'admin'
+    username: ${INITIAL_USER} 
     # password for the Rasa Enterprise user
-    password: 'admin'
+    password: ${INITIAL_USER} 
   # passwordSalt Rasa Enterprise uses to salt the user passwords
   passwordSalt: ${PASSWORD_SALT} 
   # token Rasa Enterprise accepts as authentication token from other Rasa services
@@ -35,16 +35,16 @@ rabbitmq:
   # rabbitmq settings of the subchart
   auth:
     # password which is used for the authentication
-    password: 'YiTL7oUmYVCuRu'
+    password: ${RABBITMQ_PASSWORD}
 # global settings of the used subcharts
 global:
   # postgresql: global settings of the postgresql subchart
   postgresql:
     # postgresqlPassword is the password which is used when the postgresqlUsername equals "postgres"
-    postgresqlPassword: 'VnteG2hJCdSBQi'
+    postgresqlPassword: ${DB_PASSWORD}
   # redis: global settings of the redis subchart
   redis:
     # password to use in case there no external secret was provided
-    password: '5Yo7hBX77CrKQM'
+    password: ${REDIS_PASSWORD} 
 # 
 debugMode: 'true'
