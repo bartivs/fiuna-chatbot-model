@@ -1,0 +1,8 @@
+tests/*
+models/*
+actions/*
+**/*.md
+venv
+env
+rasa-x-values.yml
+rasa-values.yml

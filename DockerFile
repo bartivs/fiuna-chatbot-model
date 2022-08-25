@@ -1,0 +1,8 @@
+FROM rasa/rasa-sdk:3.2.0 
+USER root
+WORKDIR /app
+COPY actions.py /app
+COPY requirements.txt /app
+RUN pip3 install -r requirements.txt
+CMD ["start", "--actions", "actions"]
+USER 1001
