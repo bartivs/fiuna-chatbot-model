@@ -64,7 +64,7 @@ responses:
   utter_faq/feriado:
   - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
   utter_faq/correlativas:
-    text: te paso la informacion de las correlativas https://drive.google.com/drive/folders/1KHJcoaBB8_186hhAX83v0fm0395mQ2jh?usp=sharing
+  - text: te paso la informacion de las correlativas https://drive.google.com/drive/folders/1KHJcoaBB8_186hhAX83v0fm0395mQ2jh?usp=sharing
   utter_saludo:
   - text: Hola! como esta?
   utter_cheer_up:
