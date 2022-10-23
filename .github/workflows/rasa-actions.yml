@@ -1,5 +1,8 @@
+name: Rasa Push Actions 
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 jobs:
-  training-testing:
+   training-testing:
     name: Training and Testing
     runs-on: ubuntu-latest
     steps:
