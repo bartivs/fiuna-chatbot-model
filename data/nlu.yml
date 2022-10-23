@@ -116,9 +116,6 @@ nlu:
     - haceme reir
 - intent: chitchat/consulta
   examples: |
-    # - cono está el tiempo?
-    # - va a llover?
-    # - que probabilidades hay de que llueva?
     - Tengo una consulta
     - Quiero preguntar algo
 - intent: chitchat/agradecimiento
