@@ -2,30 +2,28 @@ version: '3.1'
 intents:
 - afirmacion
 - bot_challenge
+- deny
+- despedida
+- mood_bueno
+- mood_triste
+- nota_segun_firma
+- preguntar_puntaje_final
+- informar_nota_deseada
+- informar_puntaje_parcial
+- saludo
+- out_of_scope
 - chitchat:
     used_entities:
     - firma
     - materia
     - nombre
     is_retrieval_intent: true
-- deny
-- despedida
-- examen
 - faq:
     used_entities:
     - firma
     - materia
     - nombre
     is_retrieval_intent: true
-- feriado
-- informar_firma
-- informar_nota_deseada
-- mood_bueno
-- mood_triste
-- nota_segun_firma
-- saludo
-- out_of_scope
-- nlu_fallback
 - tfg:
     used_entities:
     - firma
