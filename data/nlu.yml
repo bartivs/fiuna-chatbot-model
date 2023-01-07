@@ -95,7 +95,7 @@ nlu:
     - Cuanto tengo que hacer para quitar 5 si mi firma es [35](firma)
     - mi firma es de [55](firma), cuanto debo hacer para pasar?
     - si tengo de firma [44](firma), con cuanto paso?
-    - quiero quitar 4 y mi firma es de [51], cuanto tengo que hacer?
+    - quiero quitar 4 y mi firma es de [51](firma), cuanto tengo que hacer?
     - quiero saber cuanto tengo que hacer para quitar cinco si mi firma es de [40](firma)
 - intent: faq/feriado
   examples: |
