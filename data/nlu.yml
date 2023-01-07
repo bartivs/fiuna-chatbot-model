@@ -108,16 +108,16 @@ nlu:
     - estoy hablando con un humano?
     - estoy hablando con un kp?
     - con quién hablo?
-- intent: chitchat/ask_jokes
+- intent: chitchat_ask_jokes
   examples: |
     - contame un chiste
     - contame algo gracioso
     - haceme reir
-- intent: chitchat/consulta
+- intent: chitchat_consulta
   examples: |
     - Tengo una consulta
     - Quiero preguntar algo
-- intent: chitchat/agradecimiento
+- intent: chitchat_agradecimiento
   examples: |
     - Gracias!
     - graciaaas
@@ -130,7 +130,7 @@ nlu:
     - si tengo de firma [44](firma), con cuanto paso?
     - quiero quitar 4 y mi firma es de [51], cuanto tengo que hacer?
     - quiero saber cuanto tengo que hacer para quitar cinco si mi firma es de [40](firma)
-- intent: faq/feriado
+- intent: faq_feriado
   examples: |
     - Quiero saber el proximo feriado
     - Cuando es el siguente feriado?
@@ -141,19 +141,19 @@ nlu:
     - reglamento 
     - reglamento academico 
 
-- intent: faq/reglamento
+- intent: faq_reglamento
   examples: |
     - Cuál es el [reglamento](reglamento) de la facultad?
     - Me podes pasar el [reglamento](reglamento) por favor
     - me pasas el [reglamento](reglamento) xfa
     - pasame el [reglamento](reglamento)
-- intent: faq/horario_clases
+- intent: faq_horario_clases
   examples: |
     - Cual es el horario de las clases?
     - Cual es el horario de clases en este semestre?
     - me pasas el horario de clases en este semestre?
     - cual es el horario de clases?
-- intent: faq/horario_examen
+- intent: faq_horario_examen
   examples: |
     - Cual es el horario de (examen)?
     - Cual es el horario de los (examen)?
@@ -175,7 +175,7 @@ nlu:
     - electro 
     - electromecanica 
     - geografica y ambiental
-- intent: faq/correlativas
+- intent: faq_correlativas
   examples: |
     - me pasas las materias?
     - me pasas las correlativas de [mtc](carrera)?  
@@ -193,13 +193,13 @@ nlu:
     - Cuanto tengo que hacer en 3er final para pasar?
     - Cuanto teno que hacer para pasar?
     - cuanto tengo que hacer en el final para pasar?
-- intent: tfg/reglamento
+- intent: tfg_reglamento
   examples: |
     - me podes pasar el reglamento de tfg
     - pasame el reglamento de tfg
     - pasame el reglamento de la tesis
     - podes pasarme el reglamento de la tesis xfa
-- intent: tfg/requisitos
+- intent: tfg_requisitos
   examples: |
     - me podrias decir cuales son los requisitos para hacer la [tesis](tfg)
     - cuales son los requisitos para la [tesis](tfg)?
@@ -208,19 +208,19 @@ nlu:
     - requisitos para el [tesis](tfg)
     - que necesito para empezar mi [tesis](tfg)
     - que se necesita para empezar la [tesis](tfg)
-- intent: tfg/duracion
+- intent: tfg_duracion
   examples: |
     - Cuanto puedo tardar en hacer la [tesis](tfg)?
     - Cuanto tiempo lleva la [tesis](tfg)?
     - Cuál es el plazo que tengo para presentar la [tesis](tfg)?
     - Cuánto tiempo puedo tardar en terminar el [tesis](tfg)?
-- intent: tfg/prorroga
+- intent: tfg_prorroga
   examples: |
     - Puedo pedir prorroga para el [tesis](tfg)?
     - Se puede extender el periodo del [tesis](tfg)?
     - Se puede alargar la duracion de la [tesis](tfg)?
     - cuanto es a prorroga del [tesis](tfg)?
-- intent: tfg/asesores
+- intent: tfg_asesores
   examples: |
     - Quien puede ser mi tutor?
     - Quienes son los asesores de [tesis](tfg)?

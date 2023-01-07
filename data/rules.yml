@@ -14,18 +14,79 @@ rules:
 
 - rule: responder chitchats
   steps:
-  - intent: chitchat
-  - action: utter_chitchat
+  - intent: chitchat_ask_jokes
+  - action: utter_chitchat_ask_jokes
+
+- rule: responder chitchats
+  steps:
+  - intent: chitchat_consulta
+  - action: utter_chitchat_consulta
+
+- rule: responder chitchats
+  steps:
+  - intent: chitchat_agradecimiento_rpta
+  - action: utter_chitchat_agradecimiento_rpta
+
+- rule: responder chitchats
+  steps:
+  - intent: chitchat_asesores
+  - action: utter_chitchat_asesores
+
+- rule: responder chitchats
+  steps:
+  - intent: chitchat_reglamento
+  - action: utter_chitchat_reglamento
+
 
 - rule: responder faqs
   steps:
-  - intent: faq
-  - action: utter_faq
+  - intent: faq_horario_reglamento
+  - action: utter_faq_horario_reglamento
+
+- rule: responder faqs
+  steps:
+  - intent: faq_horario_clases
+  - action: utter_faq_horario_clases
+
+- rule: responder faqs
+  steps:
+  - intent: faq_feriado
+  - action: utter_faq_feriado
+
+- rule: responder faqs
+  steps:
+  - intent: faq_horario_examen
+  - action: utter_faq_horario_examen
+
+- rule: responder faqs
+  steps:
+  - intent: faq_correlativas
+  - action: utter_faq_correlativas
 
 - rule: responder sobre tfg
   steps:
-  - intent: tfg
-  - action: utter_tfg
+  - intent: tfg_asesores
+  - action: utter_tfg_asesores
+
+- rule: responder sobre tfg
+  steps:
+  - intent: tfg_reglamento
+  - action: utter_tfg_reglamento
+
+- rule: responder sobre tfg
+  steps:
+  - intent: tfg_requisitos
+  - action: utter_tfg_requisitos
+
+- rule: responder sobre tfg
+  steps:
+  - intent: tfg_duracion
+  - action: utter_tfg_duracion
+
+- rule: responder sobre tfg
+  steps:
+  - intent: tfg_prorroga
+  - action: utter_tfg_prorroga
 
 - rule: Activate putajes final form
   steps:
