@@ -30,7 +30,7 @@ rules:
 - rule: Activate putajes final form
   steps:
   - intent: nota_segun_firma
-  - action: puntos_necesarios
+  - action: action_informar_puntaje_final 
 
 - rule: fuera_de_alcance
   steps:

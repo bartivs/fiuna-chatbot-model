@@ -104,7 +104,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
-- puntos_necesarios
+- action_informar_puntaje_final
 - utter_chitchat
 - utter_faq
 - utter_faq/feriado

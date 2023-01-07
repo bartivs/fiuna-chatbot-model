@@ -35,21 +35,21 @@ class ActionFirma(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        firma_actual = int(tracker.get_slot("firma_parciales"))
+        firma_actual = int(tracker.get_slot("firma"))
         nota_des = int(tracker.get_slot("nota_final"))
         
         if firma_actual < 35:
             msg = f"La la firma debe ser mayor 35 para poder pasar :("
             dispatcher.utter_message(text=msg)
-            return [SlotSet("firma_parciales", None)]
+            return [SlotSet("firma", 0)]
         if firma_actual > 70:
             msg = "La maxima firma es de 70 puntos"
             dispatcher.utter_message(text=msg)
-            return [SlotSet("firma_parciales", None)]
+            return [SlotSet("firma", 0)]
         if nota_des < 2 and nota_des > 5:
             msg = "Las notas para pasar son entre 2 y 5."
             dispatcher.utter_message(text=msg)
-            return [SlotSet("nota_des", None)]
+            return [SlotSet("nota_final", 0)]
 
         if firma_actual and nota_des:
             aux = [fila[firma_actual - 35] for fila in ABACO]
