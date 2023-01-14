@@ -2,46 +2,49 @@ version: '3.1'
 intents:
 - afirmacion
 - bot_challenge
-- deny
-- despedida
-- mood_bueno
-- mood_triste
-- nota_segun_firma
-- preguntar_puntaje_final
-- informar_nota_deseada
-- informar_puntaje_parcial
-- saludo
-- out_of_scope
 - chitchat:
     used_entities:
     - firma
-    - materia
-    - nombre
+    - nota
     is_retrieval_intent: true
+- deny
+- despedida
 - faq:
     used_entities:
     - firma
-    - materia
-    - nombre
+    - nota
     is_retrieval_intent: true
+- mood_bueno
+- mood_triste
+- nlu_fallback
+- nota_segun_firma
+- out_of_scope
+- saludo
 - tfg:
     used_entities:
     - firma
-    - materia
-    - nombre
+    - nota
     is_retrieval_intent: true
 entities:
 - firma
-- nombre
-- materia
+- nota
 slots:
-  puntos_firma:
+  firma:
     type: float
     mappings:
     - type: from_entity
       entity: firma
     min_value: 35
     max_value: 70
+    influence_conversation: false
+  nota:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: firma
+    min_value: 1
+    max_value: 5
+    influence_conversation: false
 responses:
   utter_tfg/asesores:
   - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
@@ -63,20 +66,6 @@ responses:
   - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
   utter_faq/correlativas:
   - text: te paso la informacion de las correlativas https://drive.google.com/drive/folders/1KHJcoaBB8_186hhAX83v0fm0395mQ2jh?usp=sharing
-  utter_saludo:
-  - text: Hola! como esta?
-  utter_cheer_up:
-  - text: le mando algo para animarte
-    image: https://i.imgur.com/nGF1K8f.jpg
-  utter_did_that_help:
-  - text: Le sirvio mi ayuda?
-  utter_happy:
-  - text: Que bueno!
-  utter_despedida:
-  - text: Adios
-  - text: chau
-  utter_iamabot:
-  - text: Soy un bot, entrenado para FIUNA!
   utter_chitchat/ask_jokes:
   - text: ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
   - text: ¿Cuál es el animal que tiene entre tres y cuatro ojos? El piojo
@@ -90,16 +79,29 @@ responses:
   utter_chitchat/consulta:
   - text: Sii decime
   - text: Para esto estoy, decime
+  utter_chitchat/agradecimiento:
+  - text: De nada!
+  - text: No es nada, para eso estoy ;)
+  - text: Cuando quieras
   utter_out_of_scope:
   - text: Lo siento, no puedo responder a eso.
   - text: Lo siento, no puedo darte una respuesta buena.
   utter_fallback:
   - text: Lo lamento, no entendi muy bien. Podrias replantear?
-  utter_chitchat/agradecimiento_rpta:
-  - text: De nada!
-  - text: No es nada, para eso estoy ;)
-  - text: Cuando quieras
-
+  utter_saludo:
+  - text: Hola! Soy FiunaBOT! un asistente creado para ayudarte con las preguntas frecuentes
+  utter_cheer_up:
+  - text: le mando algo para animarte
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Le sirvio mi ayuda?
+  utter_happy:
+  - text: Que bueno!
+  utter_despedida:
+  - text: Adios
+  - text: chau
+  utter_iamabot:
+  - text: Soy un bot, entrenado para FIUNA!
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -107,7 +109,6 @@ actions:
 - action_informar_puntaje_final
 - utter_chitchat
 - utter_faq
-- utter_faq/feriado
 - utter_happy
 - utter_saludo
 - utter_tfg

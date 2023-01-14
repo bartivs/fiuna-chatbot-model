@@ -27,11 +27,6 @@ rules:
   - intent: tfg
   - action: utter_tfg
 
-- rule: Activate putajes final form
-  steps:
-  - intent: nota_segun_firma
-  - action: action_informar_puntaje_final 
-
 - rule: fuera_de_alcance
   steps:
   - intent: out_of_scope
