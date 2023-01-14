@@ -1,7 +1,7 @@
 version: '2.0'
 responses:
   utter_tfg/asesores:
-   - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
+  - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
   utter_tfg/reglamento:
   - text: El reglamento de Trabajo Final de Grado lo podés encontrar en el siguiente link:http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
   utter_tfg/requisitos:
@@ -43,7 +43,7 @@ responses:
   utter_fallback:
   - text: Lo lamento, no entendi muy bien. Podrias replantear?
   utter_saludo:
-  - text: Hola! como esta?
+  - text: Hola! Soy FiunaBOT! un asistente creado para ayudarte con las preguntas frecuentes
   utter_cheer_up:
   - text: le mando algo para animarte
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -56,4 +56,3 @@ responses:
   - text: chau
   utter_iamabot:
   - text: Soy un bot, entrenado para FIUNA!
- 

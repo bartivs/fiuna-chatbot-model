@@ -2,45 +2,47 @@ version: '2.0'
 intents:
 - afirmacion
 - bot_challenge
-- deny
-- despedida
-- mood_bueno
-- mood_triste
-- nota_segun_firma
-- preguntar_puntaje_final
-- informar_nota_deseada
-- informar_puntaje_parcial
-- saludo
-- out_of_scope
 - chitchat:
     used_entities:
     - firma
-    - materia
-    - nombre
+    - nota
     is_retrieval_intent: true
+- deny
+- despedida
 - faq:
     used_entities:
     - firma
-    - materia
-    - nombre
+    - nota
     is_retrieval_intent: true
+- mood_bueno
+- mood_triste
+- nlu_fallback
+- nota_segun_firma
+- out_of_scope
+- saludo
 - tfg:
     used_entities:
     - firma
-    - materia
-    - nombre
+    - nota
     is_retrieval_intent: true
 entities:
 - firma
-- nombre
-- materia
+- nota
 slots:
   firma:
     type: float
     min_value: 35
     max_value: 70
+    influence_conversation: false
+  nota:
+    type: float
+    min_value: 1
+    max_value: 5
+    influence_conversation: false
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
 - action_informar_puntaje_final
+- utter_happy
+- utter_saludo
