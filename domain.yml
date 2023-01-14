@@ -39,68 +39,8 @@ slots:
     type: float
     min_value: 35
     max_value: 70
-responses:
-  utter_tfg/asesores:
-  - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
-  utter_tfg/reglamento:
-  - text: El reglamento de Trabajo Final de Grado lo podés encontrar en el siguiente link:http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
-  utter_tfg/requisitos:
-  - text: Para poder solicitar tema de TFG, el alumno debe ser regular del noveno semestre y que esté desarrollando o haya cumplido con la Pasantía Curricular. También se debe estar matriculado en el periodo académico en curso y tener los aranceles al día. Para saber más podes leer el reglamento de TFG http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
-  utter_tfg/duracion:
-  - text: El plazo máximo ordinario de presentación de TFG es de dos años contados a partir de la fecha de aprobación del tema.
-  utter_tfg/prorroga:
-  - text: La dirección académica podrá aprobar una prórroga de hasta 6 meses a partir de la finalizacion del plazo máximo ordinario para presentación del TFG.
-  utter_faq/reglamento:
-  - text: El último reglamento académico lo podes ver en el siguiente link:http://www.ing.una.py/Resoluciones2021/ConsejoDirectivo/1487/1487_2021_003_reglamento_academico_herramientas_digitalesC1_2022.pdf
-  utter_faq/horario_clases:
-  - text: El último el horario de clases lo podes encontar acá http://www.ing.una.py/?page_id=748
-  utter_faq/horario_examen:
-  - text: El último el horario de examenes lo podes encontar acá http://www.ing.una.py/?page_id=752
-  utter_faq/feriado:
-  - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
-  utter_faq/correlativas:
-  - text: te paso la informacion de las correlativas https://drive.google.com/drive/folders/1KHJcoaBB8_186hhAX83v0fm0395mQ2jh?usp=sharing
-  utter_chitchat/ask_jokes:
-  - text: ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
-  - text: ¿Cuál es el animal que tiene entre tres y cuatro ojos? El piojo
-  - text: El oxígeno y el potasio tuvieron una cita. Les fue OK.
-  - text: ¿Qué es un terapeuta? 1024 gigapeutas.
-  - text: ¿Por qué Heisenberg murió virgen? Porque cuando encontraba la posición no encontraba el momento, y viceversa.
-  - text: Si no eres parte de la solución eres parte del precipitado.
-  - text: ¿Alguien sabe algún chiste sobre el sodio? Na…
-  - text: ¿Por qué Erwin Schröedinger, Paul Dirac y Wolfang Pauli trabajaron en garajes muy pequeños? Porque eran mecánicos cuánticos.
-  - text: ¿Que es un oso polar? Un oso rectangular, después de un cambio de coordenadas
-  utter_chitchat/consulta:
-  - text: Sii decime
-  - text: Para esto estoy, decime
-  utter_chitchat/agradecimiento:
-  - text: De nada!
-  - text: No es nada, para eso estoy ;)
-  - text: Cuando quieras
-  utter_out_of_scope:
-  - text: Lo siento, no puedo responder a eso.
-  - text: Lo siento, no puedo darte una respuesta buena.
-  utter_fallback:
-  - text: Lo lamento, no entendi muy bien. Podrias replantear?
-  utter_saludo:
-  - text: Hola! como esta?
-  utter_cheer_up:
-  - text: le mando algo para animarte
-    image: https://i.imgur.com/nGF1K8f.jpg
-  utter_did_that_help:
-  - text: Le sirvio mi ayuda?
-  utter_happy:
-  - text: Que bueno!
-  utter_despedida:
-  - text: Adios
-  - text: chau
-  utter_iamabot:
-  - text: Soy un bot, entrenado para FIUNA!
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
 - action_informar_puntaje_final
-- utter_happy
-- utter_saludo

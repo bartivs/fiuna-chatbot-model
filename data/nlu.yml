@@ -250,4 +250,5 @@ nlu:
     - Va a llover
     - Que hora es en China
 - intent: nlu_fallback
-  examples: null
+  examples: | 
+    - No entendi su pregunta.
