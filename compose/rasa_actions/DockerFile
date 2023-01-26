@@ -1,0 +1,10 @@
+ARG RASA_VERSION=${RASA_VERSION:-latest}
+FROM rasa/rasa:$RASA_VERSION
+
+USER root 
+WORKDIR /app
+COPY actions/actions.py ./
+RUN ls -a
+USER 1001 
+# RUN pip3 install -r requirements.txt 
+CMD ["run", "actions"]

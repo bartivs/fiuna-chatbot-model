@@ -1,0 +1,2 @@
+rasa==2.8.33
+sqlalchemy<=2.0

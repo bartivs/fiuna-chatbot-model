@@ -1,0 +1,30 @@
+ARG RASA_VERSION=${RASA_VERSION:-latest}
+FROM rasa/rasa:$RASA_VERSION  as trainer 
+WORKDIR /app
+COPY data ./data
+COPY config.yml domain.yml ./
+RUN rasa train
+
+FROM alpine:3.14 as configs
+RUN apk add --no-cache gettext 
+WORKDIR /app
+ARG POSTGRES_USER
+ARG POSTGRES_URL
+ARG POSTGRES_PASSWORD 
+ARG POSTGRES_DB=5432
+ARG POSTGRES_PORT=$POSTGRES_PORT
+ARG TELEGRAM_TOKEN=$TELEGRAM_TOKEN 
+ARG TELEGRAM_NAME=$TELEGRAM_NAME 
+ARG BASE_URL=$BASE_URL
+COPY endpoints.yml.template credentials.yml.template ./
+RUN envsubst < endpoints.yml.template > endpoints.yml 
+RUN envsubst < credentials.yml.template > credentials.yml 
+
+FROM rasa/rasa:$RASA_VERSION  as runner
+WORKDIR /app
+COPY --from=trainer /app/models ./models
+COPY --from=configs /app/endpoints.yml ./
+COPY --from=configs /app/credentials.yml ./
+RUN cat endpoints.yml
+RUN cat credentials.yml
+CMD ["run"] 

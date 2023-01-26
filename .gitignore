@@ -89,7 +89,7 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-#.env
+.env
 .venv
 env/
 venv/
@@ -125,3 +125,4 @@ secret/
 .rasa/
 run_rasa*
 env/
+credentials.yml

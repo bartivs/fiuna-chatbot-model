@@ -1,0 +1,7 @@
+ARG RASA_VERSION ${RASA_VERSION} 
+FROM rasa/rasa-sdk:${RASA_VERSION} as deps
+USER root
+WORKDIR /app
+COPY actions/ ./actions
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt

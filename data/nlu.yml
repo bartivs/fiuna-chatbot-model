@@ -1,37 +1,5 @@
-version: "3.1"
+version: "2.0"
 nlu:
-- synonym: examen
-  examples: |
-    - examenes
-    - parciales
-    - recuperatorio
-    - recu
-    - final
-    - parcial
-    - rendir
-    - rendimos
-- synonym: tfg
-  examples: |
-    - tfg
-    - trabajo final de grado
-    - tesis
-- regex: firma_parciales
-  examples: |
-    - \b\d\d\b
-- regex: nota_final
-  examples: |
-    - \b\d\b
-- intent: informar_nota_deseada
-  examples: |
-    - [5](nota_final)
-    - quiero sacar un [2](nota_final)
-    - un [3](nota_final)
-- intent: informar_puntaje_parcial
-  examples: |
-    - [35](firma_parciales)     
-    - tengo [55](firma_parciales)     
-    - llegue a [44](firma_parciales)     
-    - junte [36](firma_parciales)     
 - intent: saludo
   examples: |
     - hola
@@ -46,7 +14,6 @@ nlu:
     - ha upei
     - Hola
     - mbaeichapa
-    - Hola, mi nombre es
 - intent: despedida
   examples: |
     - chau
@@ -108,6 +75,13 @@ nlu:
     - estoy hablando con un humano?
     - estoy hablando con un kp?
     - con quién hablo?
+- intent: nota_segun_firma
+  examples: |
+    - Cuanto tengo que hacer para quitar [5](nota) si mi firma es [35](firma)
+    - mi firma es de [55](firma), cuanto debo hacer para pasar?
+    - si tengo de firma [44](firma), con cuanto paso?
+    - quiero quitar [4](nota) y mi firma es de [51](firma), cuanto tengo que hacer?
+    - quiero saber cuanto tengo que hacer para quitar [3](nota) si mi firma es de [40](firma)
 - intent: chitchat/ask_jokes
   examples: |
     - contame un chiste
@@ -117,30 +91,21 @@ nlu:
   examples: |
     - Tengo una consulta
     - Quiero preguntar algo
+    - Tengo una duda
+    - Quiero saber algo
+    - me podes ayudar en algo
+    - ayudame en algo
 - intent: chitchat/agradecimiento
   examples: |
     - Gracias!
     - graciaaas
     - De lujo
     - Esoo
-- intent: nota_segun_firma
-  examples: |
-    - Cuanto tengo que hacer para quitar 5 si mi firma es [35](firma)
-    - mi firma es de [55](firma), cuanto debo hacer para pasar?
-    - si tengo de firma [44](firma), con cuanto paso?
-    - quiero quitar 4 y mi firma es de [51](firma), cuanto tengo que hacer?
-    - quiero saber cuanto tengo que hacer para quitar cinco si mi firma es de [40](firma)
 - intent: faq/feriado
   examples: |
     - Quiero saber el proximo feriado
     - Cuando es el siguente feriado?
     - Cuanto tenemos un dia libre?
- 
-- synonym: reglamento 
-  examples: |
-    - reglamento 
-    - reglamento academico 
-
 - intent: faq/reglamento
   examples: |
     - Cuál es el [reglamento](reglamento) de la facultad?
@@ -155,44 +120,22 @@ nlu:
     - cual es el horario de clases?
 - intent: faq/horario_examen
   examples: |
-    - Cual es el horario de (examen)?
-    - Cual es el horario de los (examen)?
-    - me pasas el horario de los (examen)?
-    - cuando [rendimos](examen)
-- synonym: carrera 
-  examples: |
-    - eca
-    - electronica 
-    - mtc
-    - mecatronica 
-    - civil 
-    - civ 
-    - indus 
-    - ind 
-    - industrial 
-    - mec 
-    - mecanica 
-    - electro 
-    - electromecanica 
-    - geografica y ambiental
+    - Cual es el horario de [examen](examen)?
+    - Cual es el horario de los [examenes] (parciales)?
+    - me pasas el horario de los [examenes](examen)?
+    - cuando (examen)
 - intent: faq/correlativas
   examples: |
     - me pasas las materias?
-    - me pasas las correlativas de [mtc](carrera)?  
-    - me pasas las correlativas de ing. [mtc](carrera)?  
-    - me pasas las correlativas de ingenieria [mtc](carrera)?  
-    - quiero saber que materias me faltan  
-    - quiero ver las materias de [ind](carrera)  
-    - quiero saber las materias de [ind](carrera)  
-- intent: preguntar_puntaje_final
-  examples: |
-    - Cuanto tengo que hacer para pasar
-    - que puntaje tengo que hacer en el final para pasar?
-    - Cuanto tengo que hacer en 1er final para pasar?
-    - que tengo que hacer para pasar?
-    - Cuanto tengo que hacer en 3er final para pasar?
-    - Cuanto teno que hacer para pasar?
-    - cuanto tengo que hacer en el final para pasar?
+    - me pasas las correlativas de [mtc](carrera)?
+    - me pasas las correlativas de ing. [mtc](carrera)?
+    - me pasas las correlativas de ingenieria [mtc](carrera)?
+    - quiero saber que materias me faltan
+    - quiero ver las materias de [ind](carrera)
+    - quiero saber las materias de [ind](carrera)
+    - necesito la malla curricular
+    - quiero ver la malla curricular
+    - quiero ver las materias que me faltan
 - intent: tfg/reglamento
   examples: |
     - me podes pasar el reglamento de tfg
@@ -225,6 +168,37 @@ nlu:
     - Quien puede ser mi tutor?
     - Quienes son los asesores de [tesis](tfg)?
     - quien puede ayudarme con mi [tesis](tfg)?
+- intent: out_of_scope
+  examples: |
+    - Tengo hambre
+    - Cuánto es 2+2
+    - donde puedo encontrar hielo
+    - Quien es el presidente de paraguay
+    - Como está el clima
+    - Va a llover
+    - Que hora es en China
+    - Como resuelvo esta integral
+    - Quiero una hamburguesa
+- synonym: reglamento
+  examples: |
+    - reglamento
+    - reglamento academico
+- synonym: carrera
+  examples: |
+    - eca
+    - electronica
+    - mtc
+    - mecatronica
+    - civil
+    - civ
+    - indus
+    - ind
+    - industrial
+    - mec
+    - mecanica
+    - electro
+    - electromecanica
+    - geografica y ambiental
 - synonym: examen
   examples: |
     - examenes
@@ -240,14 +214,3 @@ nlu:
     - tfg
     - trabajo final de grado
     - tesis
-- intent: out_of_scope
-  examples: |
-    - Tengo hambre
-    - Cuánto es 2+2
-    - donde puedo encontrar hielo
-    - Quien es el presidente de paraguay
-    - Como está el clima
-    - Va a llover
-    - Que hora es en China
-- intent: nlu_fallback
-  examples: null

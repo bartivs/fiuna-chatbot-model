@@ -34,9 +34,8 @@ class ActionFirma(Action):
         return "action_informar_puntaje_final"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        firma_actual = int(tracker.get_slot("firma"))
-        nota_des = int(tracker.get_slot("nota_final"))
+        firma_actual = int(next(tracker.get_latest_entity_values("firma"), None))
+        '''nota_des = tracker.get_latest_entity_value("nota",None)
         
         if firma_actual < 35:
             msg = f"La la firma debe ser mayor 35 para poder pasar :("
@@ -51,7 +50,8 @@ class ActionFirma(Action):
             dispatcher.utter_message(text=msg)
             return [SlotSet("nota_final", 0)]
 
-        if firma_actual and nota_des:
+        if firma_actual and nota_des:'''
+        if firma_actual:
             aux = [fila[firma_actual - 35] for fila in ABACO]
             aux.reverse()
             nota5 = aux.index(5) + 9
@@ -72,7 +72,9 @@ class ActionFirma(Action):
             #     msg = f"Para pasar con 2 tenes que hacer {nota2}\nPara quitar 3, {nota3}\nPara quitar 4,{nota4}\n y para quitar 5 {nota5}"
             #     dispatcher.utter_message(text=msg)
             # else:
-            msg = f"Si haces {notas[nota_des-2]} en el final, quitas {nota_des}"
+            msg = f"Si haces {nota2} en el final, quitas 2"
             dispatcher.utter_message(text=msg)
-
-            return []
+        else:
+            msg="No guardó el entity"
+            dispatcher.utter_message(text=msg)
+        return []
