@@ -2,7 +2,7 @@ services:
 
   actions:
    container_name: rasa_actions
-  #  restart: always
+   restart: always
    build:
     context: ./
     dockerfile: compose/rasa_actions/DockerFile
@@ -12,10 +12,9 @@ services:
      - "5055:5055"
 
 
-
   rasa:
    container_name: rasa_runner
-  #  restart: always
+   restart: always
    build:
     context: ./
     dockerfile: compose/rasa_runner/DockerFile
@@ -34,6 +33,19 @@ services:
     - actions
    ports:
      - "5005:5005"
+   volumes:
+    - ./models:/app/models:ro
+
+  nginx: 
+    image: nginx:stable
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    volumes:
+      - ./nginx-conf/:/etc/nginx/conf.d/:ro
+      - ./certbot/www:/var/www/certbot/:ro
+      - ./certbot/conf/:/etc/nginx/ssl/:ro
 
   db:
     image: postgres
