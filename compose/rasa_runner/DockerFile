@@ -1,9 +1,4 @@
 ARG RASA_VERSION=${RASA_VERSION:-latest}
-FROM rasa/rasa:$RASA_VERSION  as trainer 
-WORKDIR /app
-COPY data ./data
-COPY config.yml domain.yml ./
-RUN rasa train
 
 FROM alpine:3.14 as configs
 RUN apk add --no-cache gettext 
@@ -22,7 +17,6 @@ RUN envsubst < credentials.yml.template > credentials.yml
 
 FROM rasa/rasa:$RASA_VERSION  as runner
 WORKDIR /app
-COPY --from=trainer /app/models ./models
 COPY --from=configs /app/endpoints.yml ./
 COPY --from=configs /app/credentials.yml ./
 RUN cat endpoints.yml
