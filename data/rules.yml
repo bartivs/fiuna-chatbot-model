@@ -36,3 +36,19 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_fallback
+
+- rule: Activate form
+  steps:
+  - intent: nota_segun_firma
+  - action: notas_form
+  - active_loop: notas_form
+
+- rule: Submit form
+  condition:
+  - active_loop: notas_form
+  steps:
+  - action: notas_form
+  - active_loop: null
+  - slot_was_set: 
+    - requested_slot: null
+  - action: action_informar_puntaje_final

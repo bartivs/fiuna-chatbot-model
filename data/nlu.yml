@@ -14,6 +14,11 @@ nlu:
     - ha upei
     - Hola
     - mbaeichapa
+    - Hola, mi nombre es [Carlos](nombre)
+    - Hola yo soy [Maria](nombre)
+    - holaa
+    - buenas
+    - holis
 - intent: despedida
   examples: |
     - chau
@@ -75,13 +80,6 @@ nlu:
     - estoy hablando con un humano?
     - estoy hablando con un kp?
     - con quién hablo?
-- intent: nota_segun_firma
-  examples: |
-    - Cuanto tengo que hacer para quitar [5](nota) si mi firma es [35](firma)
-    - mi firma es de [55](firma), cuanto debo hacer para pasar?
-    - si tengo de firma [44](firma), con cuanto paso?
-    - quiero quitar [4](nota) y mi firma es de [51](firma), cuanto tengo que hacer?
-    - quiero saber cuanto tengo que hacer para quitar [3](nota) si mi firma es de [40](firma)
 - intent: chitchat/ask_jokes
   examples: |
     - contame un chiste
@@ -92,38 +90,83 @@ nlu:
     - Tengo una consulta
     - Quiero preguntar algo
     - Tengo una duda
-    - Quiero saber algo
-    - me podes ayudar en algo
-    - ayudame en algo
+    - quiero saber algo
 - intent: chitchat/agradecimiento
   examples: |
     - Gracias!
     - graciaaas
     - De lujo
     - Esoo
+- intent: nota_segun_firma
+  examples: |
+    - Cuanto tengo que hacer para quitar [5](nota_des) si mi firma es [35](firma)
+    - mi firma es de [55](firma), cuanto debo hacer para pasar con [2](nota_des)?
+    - si tengo de firma [44](firma), con cuanto paso?
+    - quiero quitar [4](nota_des) y mi firma es de [51], cuanto tengo que hacer?
+    - quiero saber cuanto tengo que hacer para quitar [5](nota_des) si mi firma es de [40](firma)
+    - Cuanto tengo que hacer para pasar
+    - que puntaje tengo que hacer en el final para pasar?
+    - Cuanto tengo que hacer en 1er final para pasar?
+    - que tengo que hacer para pasar?
+    - Cuanto tengo que hacer en 3er final para pasar?
+    - cuanto tengo que hacer en el final para pasar?
+    - quiero saber cuanto tengo que hacer para pasar
+    - con cuanto paso
+    - cuanto tengo que hacer en el final para poder pasar
+    - quiero saber cuanto por tengo que hacer para pasar
+    - quiero saber cuanto debo hacer para pasar
+    - quiero saber cuanto debo hacer en mi examen
+    - quiero saber cuanto tengo que hacer en mi examen para pasar
+- intent: puntos_firma
+  examples: |
+    - Mi firma es [35](firma)
+    - apenas [37](firma)
+    - no se, creo que [38](firma)
+    - [39](firma) por ahi
+    - mi firma es [43](firma)
+    - mi firma es [42](firma)
+    - creo que es [55](firma) 
+    - Me parece que [60](firma)
+- intent: nota_deseada
+  examples: |
+    - quiero quitar un [3](nota_des)
+    - quiero quitar [2](nota_des)
+    - quiero pasar con [4](nota_des)
+    - quiero quitar [3](nota_des)
+    - y un [dos](nota_des)
+    - quiero pasar con [tres](nota_des)
+    - un [cinco](nota_des) luego quiero
+    - quiero quitar [5](nota_des)
+    - y me gustaria un [4](nota_des)
+    - quiero pasar con [2](nota_des)
+    - [2](nota_des) nomas
+    - [4](nota_des)
+    - Un [cinco](nota_des) o que
 - intent: faq/feriado
   examples: |
     - Quiero saber el proximo feriado
     - Cuando es el siguente feriado?
-    - Cuanto tenemos un dia libre?
+    - Cuando tenemos un dia libre?
+    - El lunes es feriado?
 - intent: faq/reglamento
   examples: |
     - Cuál es el [reglamento](reglamento) de la facultad?
     - Me podes pasar el [reglamento](reglamento) por favor
     - me pasas el [reglamento](reglamento) xfa
     - pasame el [reglamento](reglamento)
+    - necesito el reglamento
 - intent: faq/horario_clases
   examples: |
     - Cual es el horario de las clases?
     - Cual es el horario de clases en este semestre?
     - me pasas el horario de clases en este semestre?
-    - cual es el horario de clases?
+    - Necesito el horario de clases
 - intent: faq/horario_examen
   examples: |
-    - Cual es el horario de [examen](examen)?
-    - Cual es el horario de los [examenes] (parciales)?
-    - me pasas el horario de los [examenes](examen)?
-    - cuando (examen)
+    - Cual es el horario de (examen)?
+    - Cual es el horario de los (examen)?
+    - me pasas el horario de los (examen)?
+    - cuando [rendimos](examen)
 - intent: faq/correlativas
   examples: |
     - me pasas las materias?
@@ -133,9 +176,32 @@ nlu:
     - quiero saber que materias me faltan
     - quiero ver las materias de [ind](carrera)
     - quiero saber las materias de [ind](carrera)
-    - necesito la malla curricular
-    - quiero ver la malla curricular
-    - quiero ver las materias que me faltan
+- intent: faq/formularios
+  examples: |
+    - Quiero la solicitud de [nota al decano](formularios)
+    - Me pasas la solicitud de [convalidacion de asignaturas](formularios)
+    - Necesito el formulario de solicitud de [certificado de estudios](formularios) para registro ante el MEC.
+    - quiero saber que formulario se completa para el [certificado de estudios](formularios) para grado y posgrado
+    - necesito una [constancia](formularios)
+    - quiero pedir mi [prorroga de permanencia](formularios)
+    - cual es la solicitud de [homologacion de asignaturas](formularios) que tengo que completar?
+    - cual es la solicitud de [tramites varios](formularios)
+    - me pasas el formato de [curriculum](formularios) por fa
+    - quiero el formato de [cv](formularios)
+- intent: faq/horario_atencion
+  examples: |
+    - Cual es el horario de atencion de mesa de entrada
+    - Hasta que hora se abre mesa de entrada
+    - hoy abre mesa de entrada?
+    - hasta que hora atienden en mesa de entrada
+    - sabados a partir de que hora atienden en mesa de entrada?
+- intent: faq/MesaDeEntrada_Contacto
+  examples: |
+    - Como puedo contactar con mesa de entrada
+    - cual es el correo de mesa de entrada
+    - cual es el numero de telefono de mesa de entrada
+    - me pasas el correo de mesa de entrada
+    - quiero el numero de telefono de mesa de entrada
 - intent: tfg/reglamento
   examples: |
     - me podes pasar el reglamento de tfg
@@ -177,12 +243,21 @@ nlu:
     - Como está el clima
     - Va a llover
     - Que hora es en China
-    - Como resuelvo esta integral
-    - Quiero una hamburguesa
-- synonym: reglamento
+- synonym: examen
   examples: |
-    - reglamento
-    - reglamento academico
+    - examenes
+    - parciales
+    - recuperatorio
+    - recu
+    - final
+    - parcial
+    - rendir
+    - rendimos
+- synonym: tfg
+  examples: |
+    - tfg
+    - trabajo final de grado
+    - tesis
 - synonym: carrera
   examples: |
     - eca
@@ -199,18 +274,7 @@ nlu:
     - electro
     - electromecanica
     - geografica y ambiental
-- synonym: examen
+- synonym: reglamento
   examples: |
-    - examenes
-    - parciales
-    - recuperatorio
-    - recu
-    - final
-    - parcial
-    - rendir
-    - rendimos
-- synonym: tfg
-  examples: |
-    - tfg
-    - trabajo final de grado
-    - tesis
+    - reglamento
+    - reglamento academico
