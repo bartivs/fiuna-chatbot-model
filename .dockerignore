@@ -14,3 +14,4 @@ rasa-x-values.yml
 .profile
 rasa-values.yml
 story_graph.dot
+nginx-conf
