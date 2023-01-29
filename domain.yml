@@ -13,18 +13,18 @@ intents:
     is_retrieval_intent: true
 - mood_bueno
 - mood_triste
+- nota_deseada
 - nota_segun_firma
 - out_of_scope
 - puntos_firma
-- nota_deseada
 - saludo
 - tfg:
     is_retrieval_intent: true
 entities:
+- formularios
+- nombre
 - firma
 - nota_des
-- nombre
-- formularios
 slots:
   nota_des:
     type: text
@@ -56,6 +56,12 @@ responses:
   - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
   utter_faq/correlativas:
   - text: te paso la informacion de las correlativas https://drive.google.com/drive/folders/1KHJcoaBB8_186hhAX83v0fm0395mQ2jh?usp=sharing
+  utter_faq/formularios:
+  - text: Todos los formularios podes encontrarlos en el siguiente link http://www.ing.una.py/?page_id=6831
+  utter_faq/horario_atencion:
+  - text: El horario de mesa de entrada es de 8:00 a 14:00 de lunes a viernes y de 7:00 a 12:00 los sabados
+  utter_faq/faq/MesaDeEntrada_Contacto:
+  - text: El correo de mesa de entrada es mesadeentrada@ing.una.py y su numero de telefono es 585581/4 int. 1195
   utter_chitchat/ask_jokes:
   - text: ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
   - text: ¿Cuál es el animal que tiene entre tres y cuatro ojos? El piojo
@@ -99,12 +105,12 @@ responses:
   - text: tenes que hacer 25
 actions:
 - action_informar_puntaje_final
+- action_saludo
 - utter_chitchat
 - utter_faq
 - utter_saludo
 - utter_tfg
 - validate_notas_form
-- action_saludo
 forms:
   notas_form:
     required_slots:

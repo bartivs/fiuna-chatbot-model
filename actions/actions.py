@@ -89,14 +89,14 @@ class ActionFirma(Action):
 
         return []
 
-class ActionFirma(Action):
+class ActionSaludo(Action):
     def name(self) -> Text:
         return "action_saludo"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        nombre = (tracker.get_slot('firma',None))
+        nombre = (tracker.get_slot('nombre'))
         if nombre:
-            msg = f"Hola {slot_value}! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad"
+            msg = f"Hola {nombre}! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad"
         else:
             msg = msg = f"Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad"
         dispatcher.utter_message(text=msg)    
