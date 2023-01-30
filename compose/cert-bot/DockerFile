@@ -1,0 +1,9 @@
+FROM certbot/certbot:latest
+
+ARG EMAIL
+ENV EMAIL ${EMAIL}
+ARG BASE_URL 
+ARG BASE_URL ${BASE_URL}
+COPY certbot.sh . 
+RUN  * * */3 * | crontab    
+CMD cron -f
