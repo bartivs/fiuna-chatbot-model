@@ -57,17 +57,5 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql
 
-  certbot:
-    build:
-      context: .
-      dockerfile: compose/cert-bot/DockerFile
-      args: 
-        BASE_URL: $BASE_URL
-        EMAIL: $EMAIL
-    volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
-            
-
 volumes:
   pgdata:

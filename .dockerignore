@@ -15,3 +15,4 @@ rasa-x-values.yml
 rasa-values.yml
 story_graph.dot
 nginx-conf
+certbot
