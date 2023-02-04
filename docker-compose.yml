@@ -8,8 +8,8 @@ services:
     dockerfile: compose/rasa_actions/DockerFile
    depends_on:
     - db
-   ports:
-     - "5055:5055"
+  #  ports:
+  #    - "5055:5055"
 
 
   rasa:
@@ -35,17 +35,6 @@ services:
      - "5005:5005"
    volumes:
     - ./models:/app/models:ro
-
-  nginx: 
-    image: nginx:stable
-    ports:
-      - 80:80
-      - 443:443
-    restart: always
-    volumes:
-      - ./nginx-conf/:/etc/nginx/conf.d/:ro
-      - ./certbot/www:/var/www/certbot/:ro
-      - ./certbot/conf/:/etc/nginx/ssl/:ro
 
   db:
     image: postgres
