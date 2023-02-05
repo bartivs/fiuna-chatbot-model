@@ -37,7 +37,7 @@ services:
       - ./models:/app/models:ro
 
   db:
-    image: postgres
+    image: postgres:15-alpine
     restart: always
     environment:
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
