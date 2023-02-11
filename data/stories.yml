@@ -5,7 +5,7 @@ stories:
 - story: happy path
   steps:
   - intent: saludo
-  - action: utter_saludo
+  - action: action_saludo
   - intent: mood_bueno
   - action: utter_happy
 
@@ -34,10 +34,22 @@ stories:
   - intent: saludo
   - action: utter_saludo
   - intent: nota_segun_firma
-    entities:
-    - nota: 4
-    - firma: 45
+  - action: notas_form
+  - active_loop: notas_form
   - slot_was_set:
-    - nota: 4
-    - firma: 45
+    - requested_slot: nota_des
+  - slot_was_set:
+    - nota_des: '2'
+  - slot_was_set:
+    - nota_des: '2'
+  - slot_was_set:
+    - requested_slot: firma
+  - slot_was_set:
+    - firma: '35'
+  - slot_was_set:
+    - firma: '35'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
   - action: action_informar_puntaje_final
+

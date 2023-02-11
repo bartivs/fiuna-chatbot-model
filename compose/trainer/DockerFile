@@ -1,0 +1,10 @@
+ARG RASA_VERSION=${RASA_VERSION:-latest}
+FROM rasa/rasa:$RASA_VERSION  as trainer 
+WORKDIR /app
+USER root
+COPY data ./data
+COPY config.yml domain.yml ./
+# RUN mkdir models 
+# RUN chown -R rasa:rasa models/ 
+USER 1000 
+CMD ["train"] 

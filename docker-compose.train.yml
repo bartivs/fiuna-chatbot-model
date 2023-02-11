@@ -1,0 +1,19 @@
+services:
+  rasa-trainer:
+   container_name: rasa_trainer
+  #  restart: always
+   build:
+    context: ./
+    dockerfile: compose/trainer/DockerFile
+    args: 
+      POSTGRES_USER:  $POSTGRES_USER
+      POSTGRES_PASSWORD:  $POSTGRES_PASSWORD
+      POSTGRES_URL:  $POSTGRES_URL
+      POSTGRES_DB:  $POSTGRES_DB
+      POSTGRES_PORT:  $POSTGRES_PORT
+      TELEGRAM_TOKEN: $TELEGRAM_TOKEN 
+      TELEGRAM_NAME: $TELEGRAM_NAME 
+      BASE_URL: $BASE_URL
+      RASA_VERSION: $RASA_VERSION
+   volumes:
+    - ./models:/app/models:rw
