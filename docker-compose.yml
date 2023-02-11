@@ -57,7 +57,7 @@ services:
       PGPASSWORD: $POSTGRES_PASSWORD
       POSTGRES_USER: $POSTGRES_USER
     volumes:
-      - ./dumps:/app/dumps:rw
+      - $DUMPS_DIR:/app/dumps:rw
       - ./jobs.sh:/app/jobs.sh:rw
 
 
