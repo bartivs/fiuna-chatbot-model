@@ -1,7 +1,7 @@
 version: "2.0"
 responses:
-  # utter_saludo:
-  # - text: Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad
+  utter_saludo:
+   - text: Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad
   
   utter_tfg/asesores:
   - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
@@ -10,7 +10,7 @@ responses:
   - text: El reglamento de Trabajo Final de Grado lo podés encontrar en el siguiente link:http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
   
   utter_tfg/requisitos:
-  - text: Para poder solicitar tema de TFG, el alumno debe ser regular del noveno semestre y que esté desarrollando o haya cumplido con la Pasantía Curricular. También se debe estar matriculado en el periodo académico en curso y tener los aranceles al día. Para saber más podes leer el reglamento de TFG http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
+  - text: Para poder empezar tu TFG, tenes que ser regular del noveno semestre, estar desarrollando o haber cumplido con la Pasantía Curricular. También se debe estar matriculado en el periodo académico en curso y tener los aranceles al día. Para pedir tema tenes que completar el formulario de Solicitud de aprobacion de tema http://www.ing.una.py/formularios2018/tfg/01formulario-aprobacion-temaCONASESORES.pdf y presentarlo en mesa de entrada. Para saber más podes leer el reglamento de TFG http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
   
   utter_tfg/duracion:
   - text: El plazo máximo ordinario de presentación de TFG es de dos años contados a partir de la fecha de aprobación del tema.
@@ -18,11 +18,14 @@ responses:
   utter_tfg/prorroga:
   - text: La dirección académica podrá aprobar una prórroga de hasta 6 meses a partir de la finalizacion del plazo máximo ordinario para presentación del TFG.
   
+  utter_tfg/integrantes:
+  - text: El TFG podrá presentarse en forma individual o en grupos de hasta 2 (dos) alumnos y podrá ser desarrollado también, por alumnos de diferentes carreras de la FIUNA.
+
   utter_faq/reglamento:
   - text: El último reglamento académico lo podes ver en el siguiente link:http://www.ing.una.py/Resoluciones2021/ConsejoDirectivo/1487/1487_2021_003_reglamento_academico_herramientas_digitalesC1_2022.pdf
   
   utter_faq/horario_clases:
-  - text: El último el horario de clases lo podes encontar acá http://www.ing.una.py/?page_id=748
+  - text: El horario de clases lo podes mirar en este link http://www.ing.una.py/?page_id=748
   
   utter_faq/horario_examen:
   - text: El último el horario de examenes lo podes encontar acá http://www.ing.una.py/?page_id=752
@@ -39,8 +42,128 @@ responses:
   utter_faq/horario_atencion:
   - text: El horario de mesa de entrada es de 8:00 a 14:00 de lunes a viernes y de 7:00 a 12:00 los sabados
 
-  utter_faq/faq/MesaDeEntrada_Contacto:
+  utter_faq/MesaDeEntrada_Contacto:
   - text: El correo de mesa de entrada es mesadeentrada@ing.una.py y su numero de telefono es 585581/4 int. 1195
+
+  utter_faq/cierre_inscripcion:
+  - text: El cierre de inscripcion se habilita en insweb a partir del Viernes 27/01 y va hasta el 04/02, no olvidar que se debe completar la encuesta de evaluacion docente.
+
+  utter_faq/inicio_clases:
+  - text: Las clases inician el Lunes 30 de Enero para Ciencias Básicas y Ciclo Profesional
+
+  utter_faq/plan_estudios:
+  - text: Todos los contenidos del plan de estudio de tu carrera podes descargarlo encontrarlos en el siguiente link http://www.ing.una.py/?page_id=629
+
+  utter_faq/jefe_Catedra:
+  - text: La lista de docentes Jefes de Catedra podes verla aqui http://www.ing.una.py/?page_id=2156
+
+  utter_faq/Arancel_Cero:
+  - text: Para gestionar el arancel cero el estudiante debe ser egresado de un Colegio Público o Subvencionado y haber ingresado a la FIUNA en el año 2016 en adelante o en caso de ser de un Colegio Privado es necesario una constancia de vulnerabilidad. Se debe entregar el formulario de gratuidad disponible en el e-Aula, con una copia de cédula de identidad en Mesa de entrada.  Para mas informacion podes acceder al siguiente link http://www.ing.una.py/?p=55299
+
+  utter_faq/horario_caja:
+  - text: El horario de atencion de la caja es de Lunes a Viernes de 07:30 a 19:00 y los Sabados de 08:00 a 12:00 hs
+
+  utter_faq/formas_pago:
+  - text: Las formas de pago que ofrece la facultad son:-1. Efectivo 2.Bancard(desde la app) 3.Tarjeta de Crédito, débito y con QR 4. Transferencia y depósitos bancarios  5. Bocas de cobranza Aqui Pago. Infonet Cobranzas
+
+  utter_faq/malla_curricular:
+  - text: Podes encontrar la malla curricular de tu carrera en el siguiente link http://www.ing.una.py/?page_id=629
+
+  utter_faq/grupos:
+  - text: Para entrar a los grupos de whatsapp podes contactar con el delegado de tu semestre
+
+  utter_faq/antecedente_academico:
+  - text: Para gestionar el certificado de estudios tenes que completar el siguiente formulario http://www.ing.una.py/pdf2020/formularios_Secretaria/SOLICITUD_CERTIFICADO_DE_ESTUDIOS_DE_GRADO_%20POSTGRADO.doc y luego presentarlo en mesa de entrada, tambien lo podes enviar al correo mesadeentrada@ing.una.py
+
+  utter_faq/matriculacion:
+  - text: Para matricularte solo necesitas ingresar al sistema insweb.ing.una.py. Al cerrar la preinscripción se verificará que el estudiante haya completado las encuestas de las asignaturas que cursó en el semestre anterior, luego se generará la deuda en caja y el sistema desplegará un mensaje indicando que “ya no podrá realizar modificaciones” a la selección. A partir de ese momento el estudiante podrá pagar la deuda correspondiente.
+
+  utter_faq/matricula_cuota:
+  - text: La matricula ordinaria es 190.000 gs. La cuota mensual por asignatura es de 25.000gs. Para mas informacion podes ver el siguiente documento:https://drive.google.com/file/d/127HMvEDDr0NCVZ3wj2Oo2Tl9tiXZPGVy/view
+
+  utter_faq/costo_examenes:
+  - text: Para rendir los examenes finales solamente tenes que abonar las cuotas, pagar los aranceles de cursos de idioma y las multas, 
+  
+  utter_faq/abaco:
+  - text: El abaco podes verlo aqui:https://ceiuna233565215.files.wordpress.com/2019/04/whatsapp-image-2020-01-15-at-12.32.43.jpeg?w=816 
+  
+  utter_faq/eaula:
+  - text: Podes verlo en la app de eAlu del CNC o en su pagina web
+
+  utter_faq/extension:
+  - text: Podes obtener informacion en el canal de telegram "Extension Universitaria - FIUNA"
+
+  utter_faq/asistencia:
+  - text: Podes verificar con la siguiente informacion, igual ya no faltes https://drive.google.com/file/d/1aniL5MICJmCQ6Qnq6HzGjia2xOMd92A5/view?usp=share_link
+  
+  utter_faq/aranceles:
+  - text: Podes encontrar todos los aranceles en el siguiente documento https://drive.google.com/file/d/127HMvEDDr0NCVZ3wj2Oo2Tl9tiXZPGVy/view
+  
+  utter_faq/estudio:
+  - text: Podes estudiar en la biblioteca de Lunes a Viernes desde las 7:00 hasta las 20:00 y los sabados desde las 7:00 hasta las 12:00. La biblioteca de Citec abre de lunes a viernes de 7:15 a 19:00hs. Además podes utilizar las aulas H1 y H2 que estan destinadas a estudio o cualquiera que se encuentre libre :)
+  
+  utter_faq/fotocopiadora:
+  - text: Tenes la fotocopiadora de la facultad ubicada en el Bloque D, tambien podes irte a los de otras facultades como Quimica o Arqui
+ 
+  utter_faq/decano:
+  - text: El decano actual es el Prof. Dr. Ing. Rubén Alcides López Santacruz
+
+  utter_faq/laboratorios:
+  - text: Podes encontrar info sobre los laboratorios en el siguiente link http://www.ing.una.py/?page_id=622
+  
+  utter_faq/miembros_cei:
+  - text: El presidente del CEI es Oscar Barboza y el vicepresidente es Isaac Schneider
+
+  utter_faq/cosas_perdidas:
+  - text: Generalmente las cosas perdidas se dejan en el CEI o se publican en el grupo de Facebook Cursos Basicos.
+
+  utter_faq/carnet_biblioteca:
+  - text: Para solicitar un carnet de biblioteca necesitas presentar matricula de inscripcion o mostrar tu estado de cuenta en eAlu, 2 fotos tipo carnet, llenar el formulario que te proveen en biblioteca.
+  
+  utter_faq/sala_profesores:
+  - text: La sala de profesores queda en el inicio del bloque D, antes de las salas de dibujo.
+
+  utter_faq/secretario_academico:
+  - text: El secretario academico es
+
+  utter_faq/atencion_alumno:
+  - text: Tel.:021 72 900 10 Int. 1102 
+
+  utter_faq/secretaria:
+  - text: POdes contactarte con secretaria por estos medios; Campus de la UNA, San Lorenzo Tel:021 72 900 10 Int. 1100. Correo:secretaria@ing.una.py. Sede Isla Bogado Luque Tel./Fax:+595 21 646 167
+
+  utter_faq/prorroga_permanencia:
+  - text: El tiempo de permanencia en la facultad es de 10 años, para solicitar prorroga se debe llenar este formulario http://ing.una.py/pdf2022/Secretaria/SOLICITUD_DE_PRORROGA_DE_PERMANENCIA.doc y presentarlo en mesa de entrada
+  
+  utter_faq/electronica:
+  - text: La carrera de ingenieria Electrónica tiene una duracion de 10 semestres. Sus clases son desarrolladas en mayor parte en el Centro de Innovación Tecnológica (CITEC). Para mas informacion http://www.ing.una.py/?page_id=1473
+
+  utter_faq/insweb:
+  - text: Podes ingresar a insweb en el siguiente link http://insweb.ing.una.py/login
+
+  utter_faq/sga:
+  - text: Podes ingresar al SGA en el siguiente link http://aplicaciones.ing.una.py/sga/
+
+  utter_faq/carreras:
+  - text: Las carreras que ofrece la facultad son Ingeniería Electrónica, Mecatrónica, Civil, Industrial, ELectromecánica y Geográfica y Ambiental
+  
+  utter_faq/reposo_medico:
+  - text: Los alumnos pueden solicitar consideracion de inasistencia presentando una nota dirigida a  Direccion academica. Serán considerados justificativos los certificados médicos de embarazo y los de diagnóstico severo como por ejemplo:Covid-19m dengue, zica, chikungunya, gastroenteritis aguda, influenza, accidentes, enfermedades crónicas, cirugías, etc.
+  
+  utter_faq/sin_multa:
+  - text: Podes ver el vencimiento de la matricula y cuotas en el siguiente documento https://drive.google.com/file/d/11-ZlfAZYZPO8ll7lg6Y3fF60o7UES-Pz/view
+
+  utter_faq/cambio_carrera:
+  - text: El Alumno que dentro de la FIUNA desee cambiar de Carrera de Ingeniería, debe comunicar Decano, con el sgte formulario http://www.ing.una.py/pdf2020/formularios_Secretaria/SOLICITUD_GENERAL%20_NOTA_DECANO.doc
+  
+  utter_faq/enfermeria:
+  - text: Para ver el horario de atencion y el contacto de enfermeria podes fijarte en la siguiente imagen https://drive.google.com/file/d/1-jCZUS6g6sQKmwdtzLn6seVC--1IqR-M/view?usp=share_link 
+  
+  utter_faq/revision:
+  - text: Para obtener informacion sobre la revision de examenes podes contactar con el delegado del curso o en los grupos de la materia.
+  
+  utter_faq/prestamo_libros:
+  - text: Los prestamos de libro a domicilio son por 8 dias.
 
   utter_chitchat/ask_jokes:
   - text: ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
@@ -61,10 +184,15 @@ responses:
   - text: De nada!
   - text: No es nada, para eso estoy ;)
   - text: Cuando quieras
-  
+
+  utter_chitchat/dificultad:
+  - text: Nada es fácil, pero tampoco nada es imposible, hay que estudiar nomas ;)
+
+  utter_chitchat/starwars:
+  - text: NOOOOO, eso no es cierto. Es imposiiible
+
   utter_out_of_scope:
   - text: Lo siento, no puedo responder a eso.
-  - text: Lo siento, no puedo darte una respuesta buena.
   - text: Lo siento, eso se encuentra fuera de mi alcance.
   
   utter_fallback:
