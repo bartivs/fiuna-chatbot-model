@@ -1,0 +1,7 @@
+FROM alpine:latest
+
+RUN apk add --no-cache postgresql-client bash
+WORKDIR /app
+COPY jobs.sh .
+RUN echo "0 * * * *  bash /app/jobs.sh" | crontab -
+CMD crond -f 

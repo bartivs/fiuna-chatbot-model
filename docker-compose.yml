@@ -1,49 +1,66 @@
 services:
 
   actions:
-   container_name: rasa_actions
-  #  restart: always
-   build:
-    context: ./
-    dockerfile: compose/rasa_actions/DockerFile
-   depends_on:
-    - db
-   ports:
-     - "5055:5055"
-
+    container_name: rasa_actions
+    restart: always
+    build:
+      context: ./
+      dockerfile: compose/rasa_actions/DockerFile
+    depends_on:
+      - db
+  #  ports:
+  #    - "5055:5055"
 
 
   rasa:
-   container_name: rasa_runner
-  #  restart: always
-   build:
-    context: ./
-    dockerfile: compose/rasa_runner/DockerFile
-    args: 
-      POSTGRES_USER:  $POSTGRES_USER
-      POSTGRES_PASSWORD:  $POSTGRES_PASSWORD
-      POSTGRES_URL:  $POSTGRES_URL
-      POSTGRES_DB:  $POSTGRES_DB
-      POSTGRES_PORT:  $POSTGRES_PORT
-      TELEGRAM_TOKEN: $TELEGRAM_TOKEN 
-      TELEGRAM_NAME: $TELEGRAM_NAME 
-      BASE_URL: $BASE_URL
-      RASA_VERSION: $RASA_VERSION
-   depends_on:
-    - db
-    - actions
-   ports:
-     - "5005:5005"
+    container_name: rasa_runner
+    restart: always
+    build:
+      context: ./
+      dockerfile: compose/rasa_runner/DockerFile
+      args:
+        POSTGRES_USER: $POSTGRES_USER
+        POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+        POSTGRES_URL: $POSTGRES_URL
+        POSTGRES_DB: $POSTGRES_DB
+        POSTGRES_PORT: $POSTGRES_PORT
+        TELEGRAM_TOKEN: $TELEGRAM_TOKEN
+        TELEGRAM_NAME: $TELEGRAM_NAME
+        BASE_URL: $BASE_URL
+        RASA_VERSION: $RASA_VERSION
+    depends_on:
+      - db
+      - actions
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./models:/app/models:ro
 
   db:
-    image: postgres
+    image: postgres:15-alpine
     restart: always
     environment:
-      POSTGRES_PASSWORD:  $POSTGRES_PASSWORD
-      POSTGRES_USER:  $POSTGRES_USER
-      POSTGRES_DB:  $POSTGRES_DB
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+      POSTGRES_USER: $POSTGRES_USER
+      POSTGRES_DB: $POSTGRES_DB
     volumes:
-      - pgdata:/var/lib/postgresql
+      - pgdata:/var/lib/postgresql/data
+
+    ports:
+      - "5432:5432"
+
+  jobs:
+    build:
+      context: ./
+      dockerfile: compose/cron/DockerFile
+    environment:
+      PGPASSWORD: $POSTGRES_PASSWORD
+      POSTGRES_USER: $POSTGRES_USER
+    volumes:
+      - $DUMPS_DIR:/app/dumps:rw
+      - ./jobs.sh:/app/jobs.sh:rw
+
 
 volumes:
   pgdata:
+    external: true

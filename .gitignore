@@ -126,3 +126,7 @@ secret/
 run_rasa*
 env/
 credentials.yml
+nginx-conf
+train_deploy.sh
+certbot
+dumps
