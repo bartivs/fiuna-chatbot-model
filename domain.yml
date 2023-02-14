@@ -41,7 +41,6 @@ actions:
 - action_saludo
 - utter_chitchat
 - utter_faq
-- utter_saludo
 - utter_tfg
 - validate_notas_form
 forms:

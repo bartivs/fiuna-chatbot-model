@@ -217,15 +217,17 @@ nlu:
     - clase de dinamica
 - intent: faq/horario_examen
   examples: |
-    - Cual es el horario de (examen)?
+    - Cual es el horario de [examen](examen)?
     - Cual es el horario de los (examen)?
     - me pasas el horario de los (examen)?
     - cuando [rendimos](examen)
     - Horario exámenes finales
     - cuando se rinde
     - fecha de examen
-    - Horario de examenes parciales
+    - Horario de [examenes parciales](examen)
     - Horario de examen?
+    - cuando se rinde [fisica](materia)?
+    - fecha de examen de  [calculo](materia)
 - intent: faq/correlativas
   examples: |
     - me pasas las materias?
@@ -458,6 +460,7 @@ nlu:
     - horas de extension que tengo
     - Donde puedo ver cuanto debo de abonar este mes?
     - cuanto tengo que abonar este mes
+    - quiero saber mi nota
 - intent: faq/extension
   examples: |
     - A que actividades de extension me puedo anotar?
@@ -539,6 +542,7 @@ nlu:
     - encargado del lab
     - Encargados de laboratorio fiuna
     - Laboratorio fiuna
+    - quien es el encargado de laboratorio
 - intent: faq/miembros_cei
   examples: |
     - Quienes son los miembros del CEI

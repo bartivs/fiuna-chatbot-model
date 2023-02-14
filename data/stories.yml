@@ -12,7 +12,7 @@ stories:
 - story: sad path 1
   steps:
   - intent: saludo 
-  - action: utter_saludo
+  - action: action_saludo
   - intent: mood_triste
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -22,7 +22,7 @@ stories:
 - story: sad path 2
   steps:
   - intent: saludo 
-  - action: utter_saludo
+  - action: action_saludo
   - intent: mood_triste
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -32,7 +32,7 @@ stories:
 - story: interactive_story_1
   steps:
   - intent: saludo
-  - action: utter_saludo
+  - action: action_saludo
   - intent: nota_segun_firma
   - action: notas_form
   - active_loop: notas_form

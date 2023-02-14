@@ -1,7 +1,7 @@
 version: "2.0"
 responses:
-  utter_saludo:
-   - text: Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad
+  #utter_saludo:
+  # - text: Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad
   
   utter_tfg/asesores:
   - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
@@ -94,7 +94,7 @@ responses:
   - text: Podes obtener informacion en el canal de telegram "Extension Universitaria - FIUNA"
 
   utter_faq/asistencia:
-  - text: Podes verificar con la siguiente informacion, igual ya no faltes https://drive.google.com/file/d/1aniL5MICJmCQ6Qnq6HzGjia2xOMd92A5/view?usp=share_link
+  - text: Podes verificar con la siguiente imagen, igual ya no faltes https://drive.google.com/file/d/1aniL5MICJmCQ6Qnq6HzGjia2xOMd92A5/view?usp=share_link
   
   utter_faq/aranceles:
   - text: Podes encontrar todos los aranceles en el siguiente documento https://drive.google.com/file/d/127HMvEDDr0NCVZ3wj2Oo2Tl9tiXZPGVy/view
@@ -108,7 +108,7 @@ responses:
   utter_faq/decano:
   - text: El decano actual es el Prof. Dr. Ing. Rubén Alcides López Santacruz
 
-  utter_faq/laboratorios:
+  utter_faq/laboratorio:
   - text: Podes encontrar info sobre los laboratorios en el siguiente link http://www.ing.una.py/?page_id=622
   
   utter_faq/miembros_cei:
