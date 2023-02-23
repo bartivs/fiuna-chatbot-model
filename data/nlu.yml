@@ -82,6 +82,22 @@ nlu:
     - estoy hablando con un humano?
     - estoy hablando con un kp?
     - con quién hablo?
+    - SOS un bot?
+- intent: chitchat/creadores
+  examples: |
+    - Quién te creó?
+    - quien te hizo
+    - quienes te hicieron    
+    - Quien TE Creo?
+    - Quien te creo?
+- intent: chitchat/nombre
+  examples: |
+    - Cómo te llamas?
+    - Como te llamaas
+    - cual es tu nombre?
+    - nombre?
+    - como es tu nombre
+    - quien sos
 - intent: chitchat/ask_jokes
   examples: |
     - contame un chiste
@@ -123,6 +139,24 @@ nlu:
     - I am your father
     - im yoour father
     - Luke, yo soy tu padre
+- intent: chitchat/preguntas_frecuentes
+  examples: |
+    - que le puedo preguntar a fiunabot
+    - Que sabes hacer ?
+    - Cuales son las preguntas frecuentes?
+    - Que te puedo preguntar
+    - preguntas frecuentes
+    - que por ejemplo te puedo preguntar
+    - que sabés responder
+    - que me podes decir
+    - qué tipo de preguntas
+    - que clase de preguntas
+- intent: chitchat/como_funciona
+  examples: |
+    - Como te hago preguntas ?
+    - como funciona esto?
+    - como tengo que hacer las preguntas
+    - como te pregunto?
 - intent: nota_segun_firma
   examples: |
     - Cuanto tengo que hacer para quitar [5](nota_des) si mi firma es [35](firma)
@@ -146,6 +180,7 @@ nlu:
     - Si mi firma es [56](firma), cuanto tengo que hacer en el final para pasar?
     - Con que puntaje de final paso teniendo firma de [45](firma)
     - Si mi firma es [44](firma) cuanto tengo que hacer para pasar?
+    - Tengo firma de [35](firma) cuánto debo hacer en el final?
 - intent: puntos_firma
   examples: |
     - Mi firma es [35](firma)
@@ -215,6 +250,7 @@ nlu:
     - laboratorio de hoy
     - laboratorio de que tengo esta tarde
     - clase de dinamica
+    - cuál es el Horario de clases
 - intent: faq/horario_examen
   examples: |
     - Cual es el horario de [examen](examen)?
@@ -222,12 +258,36 @@ nlu:
     - me pasas el horario de los (examen)?
     - cuando [rendimos](examen)
     - Horario exámenes finales
-    - cuando se rinde
-    - fecha de examen
     - Horario de [examenes parciales](examen)
     - Horario de examen?
     - cuando se rinde [fisica](materia)?
     - fecha de examen de  [calculo](materia)
+- intent: faq/calendario
+  examples: |
+    - Que día empiezan los parciales
+    - Cuándo empiezan los parciales
+    - Cuándo empiezan los exámenes
+    - Que día empiezan los exámenes
+    - Exámenes parciales
+    - Fecha de examenes
+    - cuando terminan los finales
+    - cuando termina tercer final
+    - cuando termina 2 final
+    - fecha de 1er final
+    - que fecha empiezan los finales
+    - que fecha empiezan los examenes
+    - inicio 2do final
+    - fecha de 2° final 
+    - cuando termina 3° final
+    - cuando se rinde 3er final
+    - Que fecha son los exámenes este semestre?
+    - cuando se rinde
+    - fecha de examen
+    - cuando terminan los examenes
+    - Cuando empiezan las clases?
+    - Cuánto empieza las clases?
+    - Cuándo empiezan las clases
+    - Que día empiezan las clases
 - intent: faq/correlativas
   examples: |
     - me pasas las materias?
@@ -250,6 +310,8 @@ nlu:
     - me pasas el formato de [curriculum](formularios) por fa
     - quiero el formato de [cv](formularios)
     - cual es el formulario de [antecedentes](formularios)
+    - Me pasan el formulario de [nota al Decano](formularios)?
+    - me pasas el formulario de [nota al decano](formularios)
 - intent: faq/horario_atencion
   examples: |
     - Cual es el horario de atencion de mesa de entrada
@@ -258,7 +320,8 @@ nlu:
     - hasta que hora atienden en mesa de entrada
     - sabados a partir de que hora atienden en mesa de entrada?
     - horario de mesa de entrada
-    - horario de mesa de entrada
+    - Horario atención Fiuna
+    - horario de atención mesa de entrada
 - intent: faq/MesaDeEntrada_Contacto
   examples: |
     - Como puedo contactar con mesa de entrada
@@ -278,6 +341,9 @@ nlu:
     - hasta cuando tengo tiempo de cerrar mi preinscripcion
     - Cual es la fecha de cierre de inscripcion?
     - Como cierro mi inscripcion?
+    - cuando termina el periodo de inscripción?
+    - cierre del periodo de inscripcion
+    - hasta cuando puedo cerrar mi inscripcion
 - intent: faq/inicio_clases
   examples: |
     - ¿Cuando empiezan las clases?
@@ -300,6 +366,7 @@ nlu:
     - que entra en el examen de [resis](materia)
     - Donde puedo ver el plan de estudios de electronica?
     - plan de estudios de civil
+    - Contenido de las materias?
 - intent: faq/jefe_Catedra
   examples: |
     - ¿Que profesor esta como jefe de catedra de la materia [Probabilidad y Estadística](materia)?
@@ -327,7 +394,7 @@ nlu:
     - como sé que se necesita para el arancel 0
 - intent: faq/horario_caja
   examples: |
-    - Cual es el horario de atencion de la caja
+    - Cual es el horario de atención de la caja
     - Hasta que hora atieden en caja
     - hoy abre la caja?
     - hasta que hora atienden en la caja
@@ -338,6 +405,9 @@ nlu:
     - ¿Hasta que hora abre caja?
     - Horario de caja
     - Hasta que horas estará el cajero de la facultad hoy?
+    - Cuál es el horario de la caja?
+    - Horario caja de la facultad
+    - Horario de caja
 - intent: faq/formas_pago
   examples: |
     - Como puedo pagar mi cuota?
@@ -356,6 +426,12 @@ nlu:
     - bancard
     - Quiero pagar mi matricula en aqui pago
     - se puede pagar la cuota en infonet cobranzas?
+    - donde pago la cuota
+    - donde puedo pagar la cuota
+    - donde se paga la cuota
+    - Donde pago los aranceles?
+    - Dónde puedo pagar la cuota
+    - Dónde puedo pagar mi cuota
 - intent: faq/malla_curricular
   examples: |
     - Necesito la malla curricular de electronica
@@ -373,6 +449,13 @@ nlu:
     - Malla curricular mecánica
     - Correlativas mecánica de materiales 1
     - Materias primer semestre
+    - Hay una nueva malla?
+    - me pueden pasar la malla de electrónica?
+    - me podes pasar la malla de eca
+    - Donde veo la malla curricular?
+    - Cuántas materias hay?
+    - Cual es la malla curricular de electrónica?
+    - Quiero la malla de eca
 - intent: faq/grupos
   examples: |
     - Grupo de [fisica](materia)?
@@ -392,6 +475,8 @@ nlu:
     - que tengo que hacer para pedir mi antecedente academico
     - como pido mi certificado de estudios
     - como hago para tener mi certificado de estudios
+    - Cómo hago para conseguir mi certificado de estudios?
+    - Donde retiro mi antecedente de la facultad
 - intent: faq/matriculacion
   examples: |
     - Que documentos necesito para matricularme?
@@ -421,6 +506,13 @@ nlu:
     - Cuanto cuesta la cuota por materia?
     - precio de la matriculacion
     - precio
+    - costo de la matricula
+    - costo matricula
+    - costo de la cuota
+    - costo de cuotas
+    - El costo de matrícula
+    - Cuánto cuesta la matrícula?
+    - Cuánto se paga por la matrícula
 - intent: faq/costo_examenes
   examples: |
     - Los examenes se pagan?
@@ -432,6 +524,7 @@ nlu:
     - cual es el costo de los examenes?
     - tengo que pagar algo por los examenes?
     - cuanto es el arancel del examen
+    - Cuanto tiempo antes debo pagar por mi examen?
 - intent: faq/abaco
   examples: |
     - Donde puedo ver el abanico
@@ -443,7 +536,8 @@ nlu:
     - quiero ver el abanico de notas
     - pasame el abaco
     - ábaco de las notas según firma
-- intent: faq/eaula
+    - Me pasan el abanico de calificaciones
+- intent: faq/eAlu
   examples: |
     - Donde puedo ver mis notas?
     - quiero ver mis notas
@@ -461,6 +555,10 @@ nlu:
     - Donde puedo ver cuanto debo de abonar este mes?
     - cuanto tengo que abonar este mes
     - quiero saber mi nota
+    - Dónde puedo ver mis notas?
+    - Donde puedo ver mis calificaciones?
+    - Donde puedo consultar mis estados de deudas?
+    - Donde puedo ver mis puntos de extensión?
 - intent: faq/extension
   examples: |
     - A que actividades de extension me puedo anotar?
@@ -473,8 +571,7 @@ nlu:
     - actividades para juntar horas de extension?
     - voluntariado para extension
     - necesito horas de extension universitaria
-    - Puntos de extensión
-    - Extensión
+    - que puedo hacer para ganar horas de extension
 - intent: faq/asistencia
   examples: |
     - Donde puedo consultar la asistencia ?
@@ -493,6 +590,7 @@ nlu:
     - Mínima asistencia necesaria
     - Asistencia mínima necesaria para rendir final
     - Cuanto por ciento debe ser mi asistencia para habilitar examen?
+    - Asistencia mínima
 - intent: faq/aranceles
   examples: |
     - Cuanto cuesta el certificado de estudios?
@@ -506,24 +604,39 @@ nlu:
     - multa por materia
     - cuanto es la multa por libros
     - multa biblioteca
-- intent: faq/estudio
+- intent: faq/horario_biblioteca
   examples: |
-    - Que aula puedo utilizar para estudiar?
-    - donde puedo estudiar en la facultad
     - horario de atencion de la biblioteca
     - hasta que hora se abre la biblio
     - desde que hora abre la biblioteca
-    - aulas para estudiar?
-    - cuales son las aulas habilitadas para estudiar
     - que hora abre la biblioteca
     - hasta que hora puedo quedarme en la biblioteca
     - La biblioteca estará abierta hoy?
+    - Cual es el horario de la biblioteca?
+    - Horario de biblioteca en citec
+- intent: faq/aulas_estudio
+  examples: |
+    - Que aula puedo utilizar para estudiar?
+    - donde puedo estudiar en la facultad
+    - aulas para estudiar?
+    - cuales son las aulas habilitadas para estudiar
+    - Que aula puedo utilizar para estudiar
+- intent: faq/horario_H
+  examples: |
+    - Hasta que hora se abren las aulas H?
+    - Que hora abren las aulas H
+    - horario aulas h
+    - desde que hora se abre h
+    - que hora cierran H
+    - aulas H
+    - horario de clases H
 - intent: faq/fotocopiadora
   examples: |
     - Donde puedo hacer fotocopias?
     - quiero fotocopias
     - necesito fotocopias
     - en donde puedo irme para hacer fotocopias
+    - Donde queda la fotocopiadora ?
 - intent: faq/decano
   examples: |
     - Quien es el decano?
@@ -532,6 +645,24 @@ nlu:
     - nombre del decano
     - me decis el nombre del decano
     - quiero saber quien es el decano
+    - Quien es actualmente el decano/a?
+    - Nombre del decano
+- intent: faq/vice_decano
+  examples: |
+    - Quien es el vice decano?
+    - cual es el nombre del vicedecano
+    - vicedecano actual
+    - nombre del vicedecano
+    - me decis el nombre del vicedecano
+    - quiero saber quien es el vicedecano
+    - Quien es actualmente el vicedecano/a?
+    - Nombre del vicedecano
+    - Nombre del vice decano
+    - vice decano actual
+    - cual es el nombre del vice decano
+    - Quien es el vicedecano?
+    - vice decano actual
+    - Quién es el vice decano ?
 - intent: faq/laboratorio
   examples: |
     - Quien es el encargado del laboratorio de fisica?
@@ -543,6 +674,7 @@ nlu:
     - Encargados de laboratorio fiuna
     - Laboratorio fiuna
     - quien es el encargado de laboratorio
+    - Profesores de los laboratorios?
 - intent: faq/miembros_cei
   examples: |
     - Quienes son los miembros del CEI
@@ -553,6 +685,8 @@ nlu:
     - organizador del cof
     - quienes forman parte del cof
     - quienes son los del cei
+    - presidente del cei
+    - presidente del centro de estudiantes
 - intent: faq/cosas_perdidas
   examples: |
     - Donde se dejan las cosas perdidas?
@@ -598,6 +732,7 @@ nlu:
     - necesito comunicarme con atencion al alumno
     - quiero el numero de atencion al alumno
     - numero de atencion al alumno
+    - Atal
 - intent: faq/secretaria
   examples: |
     - contacto de secretaria
@@ -606,9 +741,8 @@ nlu:
     - numero de telefono de secretaria
     - correo de secretaria
     - cual es el telefono de secretaria
-    - cual es el correode la secretaria de la facultad
+    - cual es el correo de la secretaria de la facultad
     - quiero contactarme con secretaria
-    - numero de telefono citec
     - Secretario
     - numero de secretaria
 - intent: faq/prorroga_permanencia
@@ -620,6 +754,11 @@ nlu:
     - tengo que pedir mas tiempo para terminar mis materias
     - tiempo de permanencia en la facultad
     - prorroga para terminar mis materias
+    - Plazo de permanencia en la facultad?
+    - cuanto tiempo tengo para terminar mis materias
+    - permanencia en la facultad
+    - tiempo de permanencia en la facultad
+    - cuando tengo que pedir prorroga
 - intent: faq/electronica
   examples: |
     - Cuantos semestres dura la carrera de Ingeniería electrónica
@@ -659,18 +798,32 @@ nlu:
     - que carreras ofrece la facu
     - carreas de la fiuna
     - otras carreras que hay
+    - Cuántas carreras hay?
 - intent: faq/reposo_medico
   examples: |
-    - Donde presento mi certificado de reposo medico ?
-    - Donde presento mi certificado de reposo
-    - como justifico mi ausencia
     - justificativo medico
     - reposo medico
     - justificativo
+    - certificado medico
+    - tengo chikungunya
+    - dengue
+    - covid-19
+    - Certificado médico
+- intent : faq_presentar_reposo_medico
+  examples: |
+    - Donde presento mi certificado de reposo medico ?
+    - Donde presento mi certificado de reposo
     - como presento mi justificativo medico
     - donde tengo que presentar mi justificativo medico
     - estuve enfermo, donde presento mi reposo
+    - donde presento mi certificado medico
+    - Dónde presento mi reposo médico
+- intent: faq/inasistencia
+  examples: |
+    - como justifico mi ausencia
+    - Como justificar ausencia
     - puedo presentar reposo para justificar ausencias?
+    - consideracion de inasistencia
 - intent: faq/sin_multa
   examples: |
     - fecha para pagar matriculacion sin multa
@@ -730,12 +883,329 @@ nlu:
     - tiempo limite para devolver libros
     - dias para devoler libros
     - cuantos dias puedo tener un libro
+- intent: faq/aula_clase
+  examples: |
+    - Como puedo saber en que aula tendré mi clase de Física 1?
+    - en que aula voy a tener mi clase?
+    - aula para la clase de Quimica
+    - ¿Cómo puedo encontrar el aula de la clase de dibujo?
+    - ¿cuál es el aula para la clase de mm1?
+    - en que aula se se enseña tecnologia mecanica
+    - aula para electronica 3
+    - en que aula enseña Sanchez
+    - en que aula esta el Carlos Vera
+    - aula de la clase de Zarate?
+    - Como veo en donde tendré clases el día de hoy?
+    - distribucion de aulas
+    - Que clases hay hoy en citec ?
+    - En que clases hay hoy ?
+    - Que clases hay hoy de civil ?
+- intent: faq/calendario
+  examples: |
+    - Calendario de clases?
+    - calendario academico
+    - calendario de la facultad
+    - quiero el calendario academico
+    - pasame el calendario de la facultad
+    - donde puedo ver el calendario academico
+- intent: faq/extension_universitaria
+  examples: |
+    - Como funciona los puntos de extensión?
+    - cuantos puntos de extension necesito?
+    - reglamento de extension
+    - cantidad de horas de extension necesarias
+    - cuantas horas de extension necesito?
+    - horas de extension
+    - extension universitaria
+    - extension
+    - Extensión universitaria
+- intent: faq/pasantia
+  examples: |
+    - Como funciona el tema de la pasantía.
+    - Pasantia
+    - como hago la pasantia
+    - me explicas la pasantia 
+    - como es la pasantia
+    - Cuanto dura la pasantia
+    - como es el tema de la pasantia
+    - donde puedo tener más información sobre pasantía?
+- intent: faq/pasantia_requisitos
+  examples: |
+    - que necesito para hacer la pasantia
+    - que se necesita para empezar la pasantia
+    - requisitos para la pasantia
+    - cuando puedo hacer la pasantia
+    - como se si ya puedo hacer la pasantia
+    - donde puedo consultar si ya puedo hacer la pasantia
+    - requsitos de pasantia
+    - quiero hacer la pasantía
+- intent: faq/pasantia_tramites
+  examples: |
+    - cómo es el proceso para hacer una pasantía?
+    - ¿Qué debo hacer para solicitar una pasantía?
+    - como hago para empezar la pasantia
+    - que papeles se necesita para la pasantia
+    - donde presento mis papeles para la pasantia
+    - documentos para la pasantia
+    - que documentos necesito presentar para la pasantia
+    - documentos necesarios para pasantia
+- intent: faq/pasantia_empresas
+  examples: |
+    - Empresas donde puedo hacer pasantía
+    - donde puedo hacer mi pasantia
+    - empresas para hacer pasantia
+    - empresas para pasantia
+    - convenios para pasantia?
+    - en que empresa puedo hacer pasantia?
+- intent: faq/nota_decano
+  examples: |
+    - Como puedo mandar alguna nota al decano.
+    - nota al decano
+    - como envio nota al decano
+    - quiero enviar una nota al decano
+    - donde encuentro un ejemplo de nota al decano
+    - ejemplo de nota al decano
+    - quiero mandar una nota al decano
+- intent: faq/acreditacion
+  examples: |
+    - Está certificada la carrera de civil
+    - que carreras estan certificadas
+    - electronica esta acreditada?
+    - acreditacion de mecatronica
+    - industrial esta acreditada?
+    - que carreras estan acreditas porla ANEAES
+    - acreditacion mercosur
+    - acreditacion arcu-sur
+    - Electronica esta acreditada?
+    - civil esta acreditada?
+    - Carreras certificadas
+    - carreras acreditadas
+    - cuales son las carreras acreditadas?
+- intent: faq/extension_encargado
+  examples: |
+    - Encargado de extensión
+    - quien es el encargado de extension
+    - quien esta a cargo de extension
+    - con quien contacto por extension universitaria
+    - contacto de extension unversitaria
+    - numero de telefono del encargado de extension universitaria
+    - telefono de extension
+    - correo de extension
+    - quien se encarga de extension?
+- intent: faq/bolsa_trabajo
+  examples: |
+    - Hay bolsas de trabajo
+    - donde puedo encontrar trabajo
+    - busqueda de trabajo
+    - trabajo para civil
+    - trabajo para electronicos
+    - trabajo para celectromecanico
+    - bolsa de trabajo
+    - busqueda de trabajo
+    - trabajo para industrial
+- intent: faq/becas
+  examples: |
+    - beca  
+    - Becas
+    - Becas facultad
+    - becas de la facultad
+    - hay becas en la facultad?
+    - ayuda economica
+    - exoneracion de aranceles
+    - exoneracion de matricula
+    - exoneracion de cuotas
+    - becas de la fiuna
+    - becas para estudiantes de la fiuna
+    - ayuda financiera
+    - ayuda monetaria
+    - no puedo pagar mi cuota
+    - no puedo solventar la facultad
+    - ayuda con los gastos
+    - me cuesta pagar la matricula y cuota
+    - donde averiguo sobre las becas
+    - en donde puedo averiguar acerca de las becas de la facultad
+- intent: faq/becas_ayuda_economica
+  examples: |
+    - ayuda economica
+    - en que consiste la ayuda económica
+    - ayuda económica de la facultad
+    - beca ayuda económica
+    - ayuda economica de la fiuna
+- intent: faq/becas_meritos_academicos
+  examples: |
+    - meritos academicos
+    - becas por meritos academicos
+    - beca meritos academicos
+    - en que consisten los meritos acedemicos
+    - como son las becas por meritos academicos
+    - ayuda economica por meritos academicos
+    - en que consisten las becas por meritos academicos
+    - requisitos para becas por meritos academicos
+    - requisitos para becas por meritos
+    - que necesito para pedir becas por meritos
+- intent: faq/becas_deportivas_culturales
+  examples: |
+    - becas deportivas
+    - becas culturales
+    - beca actividades deportivas
+    - becas artisticas
+    - en que consisten las becas por actividades deportivas o culturales
+    - como son las becas por actividades culturales
+    - ayuda economica por actividad deportiva
+    - ayuda economica por actividad cultural
+    - requisitos para la beca deportiva
+    - requisitos para obtener beca cultural
+    - que necesito para pedir beca deportiva
+- intent: faq/becas_promocion_academica
+  examples: |
+    - en que consiste la promocion académica
+    - becas de promoción académica
+    - promocion academica
+    - como funciona la beca por promocion academica
+    - quiero la beca por promocion
+    - requisitos para beca por promocion
+    - beca de promocion
+    - beca promocion
+- intent: faq/becas_peticion
+  examples: |
+    - donde pido becas
+    - como pido becas
+    - como pido ayuda economica
+    - en donde puedo solcitar becas
+    - como hago para pedir becas
+    - como puedo pedir ayuda economica
+    - quiero solicitar una beca
+    - donde pido ayuda economica
+    - donde averiguo como solicito una beca
+    - cuando puedo pedir becas
+    - cuando puedo solicitar becas
+    - Como solicitar becas internas?
+- intent: faq/inscripcion
+  examples: |
+    - Cómo me inscribo?
+    - Inscripción
+    - donde me inscribo?
+    - cuando empieza la inscripcion
+    - fecha de inscripcion
+    - inicio de inscripciones
+    - como hago para inscribirme
+    - inicio de inscripcion
+    - procedimiento para inscribirme
+    - matriculacion fiuna
+    - inicio de matriculacion
+    - matriculacion
+    - donde me matriculo
+    - proceso de matriculacion
+- intent: faq/ubi_lab_fisica
+  examples: |
+    - Donde queda el laboratorio de fisica?
+    - en donde queda que lab de fisica
+    - ubicacion del laboratorio de fisica
+    - ubi del lab de fisica?
+    - donde esta el laboratorio de fisica?
+    - como encuentro el laboratorio de fisica
+    - cual es el laboratorio de fisica?
+- intent: faq/ubi_DeBernardi
+  examples: |
+    - Donde queda el edificio Enzo Debernardi
+    - cual es el enzo debernardi
+    - cual es el edificio enzo debernardi
+    - enzo debernardi
+    - enzo de bernardi
+    - hacia donde es el enzo de bernardi
+    - donde esta el enzo de bernardi
+- intent: faq/horario_atal
+  examples: |
+    - Hasta que hora se abre atención al alumno?
+    - horario de atención al alumno
+    - horario de atal
+    - Hasta qué hora atienden en atal?
+    - hasta qué hora abre atal?
+    - hasta que hora abre atencion al alumno?
+- intent: faq/contacto_repre_estudiantil
+  examples: |
+    - Me pueden pasar el número de algún representante estudiantil?
+    - contacto de un representante estudiantil
+    - numero de telefono de algun representante
+    - telefono del representante estudiantil
+    - quiero hablar con un representante
+    - como puedo tener el numero de un representante estudiantil
+    - me podes pasar el contacto de un representante
+    - pasame el numero de un representante estudiantil
+    - pasame el telefono del representante
+- intent: faq/atal_ubicacion
+  examples: |
+    - Donde esta atal?
+    - Dónde queda atal?
+    - ubicación de atal
+    - ubicacion de atención al alumno
+    - donde queda atención al alumno
+    - atención al alumno ubicación
+- intent: faq_FIUNA_telefono
+  examples: |
+    - Numero de telefono de la facultad
+    - telefono facultad
+    - nro de la facu
+    - numero de la faculta
+    - contacto de la facultad
+    - numero de citec
+    - Cuál es el número de teléfono de la  facultad?
+    - cuál es el numero de la facultad
+- intent: faq/idiomas
+  examples: |
+    - Cursos de idiomas de la facultad
+    - que idiomas se enseña en la facu
+    - idiomas que se enseña en la fiuna
+    - idiomas
+    - cursos de idiomas
+    - Busco información sobre los cursos de idiomas
+- intent: faq/aleman
+  examples: |
+    - idioma aleman
+    - alemán
+    - curso de alemán
+    - curso de idioma alemán
+    - cuando empiezan las clases de aleman
+    - horario de clases de aleman
+    - horario aleman
+    - inscripcion aleman
+- intent: faq/ingles
+  examples: |
+    - idioma inglés
+    - inglés
+    - curso de inglés
+    - curso de idioma inglés
+    - cuando empiezan las clases de inglés
+    - horario de clases de inglés
+    - horario inglés
+    - inscripcion inglés
+- intent: faq/ccna
+  examples: |
+    - curso de ccna
+    - CCNA
+    - cursos de cisco
+    - cuando empiezan los cursos de cisco
+    - horario de las clases de cisco
+    - horario de las clases de ccna
+    - ccna turno noche
+    - Busco información sobre la academia CISCO
+    - academia cisco
+- intent: faq/maestria
+  examples: |
+    - Maestrias de la fiuna
+    - maestrias
+    - que maestrias ofrece la facultad
+    - maestrias que ofrece la fiuna
+    - Cuales son los cursos de maestría que ofrecen la facultad?
+    - cuales son las maestrias de la facultad
 - intent: tfg/reglamento
   examples: |
     - me podes pasar el reglamento de tfg
     - pasame el reglamento de tfg
     - pasame el reglamento de la tesis
     - podes pasarme el reglamento de la tesis xfa
+    - reglamento de la tesis
+    - reglamento de tfg
 - intent: tfg/requisitos
   examples: |
     - me podrias decir cuales son los requisitos para hacer la [tesis](tfg)
@@ -753,6 +1223,8 @@ nlu:
     - TFG
     - quiero emepezar a gestionar la tesis
     - Como puedo solicitar tema  trabajo final de grado.
+    - Quiero pedir tema de tfg
+    - quiero pedir tema de tesis
 - intent: tfg/duracion
   examples: |
     - Cuanto puedo tardar en hacer la [tesis](tfg)?
@@ -773,6 +1245,7 @@ nlu:
     - Se puede extender el periodo del [tesis](tfg)?
     - Se puede alargar la duracion de la [tesis](tfg)?
     - cuanto es a prorroga del [tesis](tfg)?
+    - Prorroga de tesis
 - intent: tfg/asesores
   examples: |
     - Quien puede ser mi tutor?
@@ -789,6 +1262,15 @@ nlu:
     - puedo hacer mi tesis con alguien de otra carrera?
     - se puede hacer el tfg entre distintas carreras?
     - tesis entre distintas carreras
+- intent: tfg/presentacion
+  examples: |
+    - Presentación TFG?
+    - como presento mi tesis
+    - como presento mi tfg
+    - como hago para presentar mi tfg
+    - como hago para presentar mi tesis
+    - presentacion de tesis?
+    - pasos para presentar la tesis
 - intent: out_of_scope
   examples: |
     - Tengo hambre
@@ -821,6 +1303,17 @@ nlu:
     - Ingreso fiuna
     - Eca > meca ?
     - Ingreso
+    - Becas para el cursillo
+    - Cursillo
+    - Hector Rojas
+    - Quien es Hector Rojas
+    - Quien fue Gustavo Riart
+    - Puedo comprar libros de geometría de pujol
+    - Miss fiuna
+    - cuanto cuesta el cursillo
+    - Cuánto cuesta el cursillo?
+    - Rubencito se la come?
+    - Se puede portar armas en la facultad? Porque estoy bien armado
 - synonym: examen
   examples: |
     - examenes

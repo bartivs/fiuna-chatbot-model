@@ -82,7 +82,7 @@ class ActionFirma(Action):
         aux = [fila[firma_actual - 35] for fila in ABACO]
         aux.reverse()
 
-        puntaje_final = aux.index(nota_deseada)
+        puntaje_final = aux.index(nota_deseada)+9
             #indice5 = 21 - aux.index(5)
         msg = f"Si haces {puntaje_final} en el final, quitas {nota_deseada}"
         dispatcher.utter_message(text=msg)

@@ -1,7 +1,7 @@
 version: "2.0"
 responses:
-  #utter_saludo:
-  # - text: Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad
+  utter_saludo:
+  - text: Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad
   
   utter_tfg/asesores:
   - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
@@ -21,14 +21,20 @@ responses:
   utter_tfg/integrantes:
   - text: El TFG podrá presentarse en forma individual o en grupos de hasta 2 (dos) alumnos y podrá ser desarrollado también, por alumnos de diferentes carreras de la FIUNA.
 
+  utter_tfg/presentacion:
+  - text: Los alumnos pueden presentar el examen de TFG siempre y cuando; a) Se obtenga la calificacion de satisfactorio en la presentacion previa, debidamente validado por el director de carrera, coordinador de TFG y otros que designe la direccion de carrera. b) Estén matriculados en el periodo académico de la presentación de la solicitud. c) Adeuden únicamente la asignatura Trafajo Final de GRado y hayan cumplido con los demás requisitos de egreso. d) Haya transcurrido cinco meses como mínimo desde la aprobación del tema. e) Presenten la libreta de TFG con la aprobación final de los Asesores. f) Obtengan la aprobación de la memoria del TFG. Para mas informacion podes leer el reglamento de TFG en el siguiente link http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
+
   utter_faq/reglamento:
   - text: El último reglamento académico lo podes ver en el siguiente link:http://www.ing.una.py/Resoluciones2021/ConsejoDirectivo/1487/1487_2021_003_reglamento_academico_herramientas_digitalesC1_2022.pdf
   
   utter_faq/horario_clases:
-  - text: El horario de clases lo podes mirar en este link http://www.ing.una.py/?page_id=748
+  - text: El horario de clases lo podes mirar descargar de este link link http://www.ing.una.py/?page_id=748 o mirar el link de sala de profesores https://docs.google.com/spreadsheets/d/1kO0J6h6HiD9Pt84mjKedgPE0t37aWLnxecfHLic0rQw/edit#gid=990148165 
   
   utter_faq/horario_examen:
   - text: El último el horario de examenes lo podes encontar acá http://www.ing.una.py/?page_id=752
+  
+  utter_faq/calendario:
+  - text: Lo podés consultar en el calendario académico https://drive.google.com/file/d/10NCHGAeUzUx28Q-JUOTRvCCNe4gxwBlg/view
   
   utter_faq/feriado:
   - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
@@ -64,52 +70,61 @@ responses:
   - text: El horario de atencion de la caja es de Lunes a Viernes de 07:30 a 19:00 y los Sabados de 08:00 a 12:00 hs
 
   utter_faq/formas_pago:
-  - text: Las formas de pago que ofrece la facultad son:-1. Efectivo 2.Bancard(desde la app) 3.Tarjeta de Crédito, débito y con QR 4. Transferencia y depósitos bancarios  5. Bocas de cobranza Aqui Pago. Infonet Cobranzas
+  - text: Podes pagar las cuotas de diferentes formas; -1. Efectivo en caja 2.Bancard(desde la app) 3.Tarjeta de Crédito, débito y con QR 4. Transferencia y depósitos bancarios  5. Bocas de cobranza Aqui Pago. Infonet Cobranzas
 
   utter_faq/malla_curricular:
-  - text: Podes encontrar la malla curricular de tu carrera en el siguiente link http://www.ing.una.py/?page_id=629
+  - text: Podes encontrar la malla curricular de tu carrera en el siguiente link https://drive.google.com/drive/u/1/folders/1uphtj7-73YaAFhZmWX3mIDZbDFQPYlgo
 
   utter_faq/grupos:
   - text: Para entrar a los grupos de whatsapp podes contactar con el delegado de tu semestre
 
   utter_faq/antecedente_academico:
-  - text: Para gestionar el certificado de estudios tenes que completar el siguiente formulario http://www.ing.una.py/pdf2020/formularios_Secretaria/SOLICITUD_CERTIFICADO_DE_ESTUDIOS_DE_GRADO_%20POSTGRADO.doc y luego presentarlo en mesa de entrada, tambien lo podes enviar al correo mesadeentrada@ing.una.py
+  - text: Para gestionar el certificado de estudios tenes que completar el siguiente formulario http://www.ing.una.py/pdf2020/formularios_Secretaria/SOLICITUD_CERTIFICADO_DE_ESTUDIOS_DE_GRADO_%20POSTGRADO.doc y luego presentarlo en mesa de entrada, tambien lo podes enviar al correo mesadeentrada@ing.una.py y lo retiras en mesa de entrada
 
   utter_faq/matriculacion:
   - text: Para matricularte solo necesitas ingresar al sistema insweb.ing.una.py. Al cerrar la preinscripción se verificará que el estudiante haya completado las encuestas de las asignaturas que cursó en el semestre anterior, luego se generará la deuda en caja y el sistema desplegará un mensaje indicando que “ya no podrá realizar modificaciones” a la selección. A partir de ese momento el estudiante podrá pagar la deuda correspondiente.
 
   utter_faq/matricula_cuota:
-  - text: La matricula ordinaria es 190.000 gs. La cuota mensual por asignatura es de 25.000gs. Para mas informacion podes ver el siguiente documento:https://drive.google.com/file/d/127HMvEDDr0NCVZ3wj2Oo2Tl9tiXZPGVy/view
+  - text: La matricula ordinaria es 190.000 gs, mientras que la cuota mensual por asignatura es 25.000gs. Para mas información sobre los demás aranceles podes ver el siguiente documento:https://drive.google.com/file/d/127HMvEDDr0NCVZ3wj2Oo2Tl9tiXZPGVy/view
 
   utter_faq/costo_examenes:
-  - text: Para rendir los examenes finales solamente tenes que abonar las cuotas, pagar los aranceles de cursos de idioma y las multas, 
+  - text: Los exámenes no tienen costo, solamente tenés que abonar las cuotas, pagar los aranceles de cursos de idioma y las multas si es el caso.
   
   utter_faq/abaco:
   - text: El abaco podes verlo aqui:https://ceiuna233565215.files.wordpress.com/2019/04/whatsapp-image-2020-01-15-at-12.32.43.jpeg?w=816 
   
-  utter_faq/eaula:
+  utter_faq/eAlu:
   - text: Podes verlo en la app de eAlu del CNC o en su pagina web
 
   utter_faq/extension:
   - text: Podes obtener informacion en el canal de telegram "Extension Universitaria - FIUNA"
 
   utter_faq/asistencia:
-  - text: Podes verificar con la siguiente imagen, igual ya no faltes https://drive.google.com/file/d/1aniL5MICJmCQ6Qnq6HzGjia2xOMd92A5/view?usp=share_link
+  - text: Podes verificar cuantas veces podes faltar con la siguiente imagen https://drive.google.com/file/d/1aniL5MICJmCQ6Qnq6HzGjia2xOMd92A5/view?usp=share_link
   
   utter_faq/aranceles:
   - text: Podes encontrar todos los aranceles en el siguiente documento https://drive.google.com/file/d/127HMvEDDr0NCVZ3wj2Oo2Tl9tiXZPGVy/view
   
-  utter_faq/estudio:
-  - text: Podes estudiar en la biblioteca de Lunes a Viernes desde las 7:00 hasta las 20:00 y los sabados desde las 7:00 hasta las 12:00. La biblioteca de Citec abre de lunes a viernes de 7:15 a 19:00hs. Además podes utilizar las aulas H1 y H2 que estan destinadas a estudio o cualquiera que se encuentre libre :)
+  utter_faq/horario_biblioteca:
+  - text: El horario de atención de la biblioteca es de Lunes a Viernes desde las 7:00 hasta las 20:00 y los sabados desde las 7:00 hasta las 12:00. La biblioteca de Citec abre de lunes a viernes de 7:15 a 19:00hs.
   
+  utter_faq/aulas_estudio:
+  - text: Podes estudiar en las aulas H1 y H2 que son las destinadas a estudio, o cualquiera que se encuentre libre :)
+  
+  utter_faq/horario_H:
+  - text: Las aulas H abren desde las 7:00 hasta las 21:00
+
   utter_faq/fotocopiadora:
-  - text: Tenes la fotocopiadora de la facultad ubicada en el Bloque D, tambien podes irte a los de otras facultades como Quimica o Arqui
+  - text: La fotocopiadora de la facultad está ubicada en el Bloque D, al lado del aula D2
  
   utter_faq/decano:
   - text: El decano actual es el Prof. Dr. Ing. Rubén Alcides López Santacruz
 
+  utter_faq/vice_decano:
+  - text: El vice decano actual es el Prof. Msc. Ing. Cirilo Hernáez
+
   utter_faq/laboratorio:
-  - text: Podes encontrar info sobre los laboratorios en el siguiente link http://www.ing.una.py/?page_id=622
+  - text: Podes encontrar info sobre los encargados de los laboratorios en el siguiente link http://www.ing.una.py/?page_id=622
   
   utter_faq/miembros_cei:
   - text: El presidente del CEI es Oscar Barboza y el vicepresidente es Isaac Schneider
@@ -127,10 +142,10 @@ responses:
   - text: El secretario academico es
 
   utter_faq/atencion_alumno:
-  - text: Tel.:021 72 900 10 Int. 1102 
+  - text: Podés contactarte con atención al alumno por estos medios; Tel:021 585 584/1 Int. 1102, Correo:atal@ing.una.py
 
   utter_faq/secretaria:
-  - text: POdes contactarte con secretaria por estos medios; Campus de la UNA, San Lorenzo Tel:021 72 900 10 Int. 1100. Correo:secretaria@ing.una.py. Sede Isla Bogado Luque Tel./Fax:+595 21 646 167
+  - text: Podés contactarte con secretaria por estos medios; Campus de la UNA, San Lorenzo Tel:021 585 584/1 Int. 1103. Correo:secretaria@ing.una.py. Sede Isla Bogado Luque Tel./Fax:+595 21 646 167
 
   utter_faq/prorroga_permanencia:
   - text: El tiempo de permanencia en la facultad es de 10 años, para solicitar prorroga se debe llenar este formulario http://ing.una.py/pdf2022/Secretaria/SOLICITUD_DE_PRORROGA_DE_PERMANENCIA.doc y presentarlo en mesa de entrada
@@ -145,11 +160,17 @@ responses:
   - text: Podes ingresar al SGA en el siguiente link http://aplicaciones.ing.una.py/sga/
 
   utter_faq/carreras:
-  - text: Las carreras que ofrece la facultad son Ingeniería Electrónica, Mecatrónica, Civil, Industrial, ELectromecánica y Geográfica y Ambiental
-  
+  - text: Las carreras que ofrece la facultad son 7; Ingeniería Civil, Electromecánica, Electrónica, Geográfica y Ambiental,Industrial,Mecánica y Mecatrónica.
+
   utter_faq/reposo_medico:
-  - text: Los alumnos pueden solicitar consideracion de inasistencia presentando una nota dirigida a  Direccion academica. Serán considerados justificativos los certificados médicos de embarazo y los de diagnóstico severo como por ejemplo:Covid-19m dengue, zica, chikungunya, gastroenteritis aguda, influenza, accidentes, enfermedades crónicas, cirugías, etc.
-  
+  - text: Serán considerados justificativos los certificados médicos de embarazo y los de diagnóstico severo como por ejemplo; Covid-19, dengue, zica, chikungunya, gastroenteritis aguda, influenza, accidentes, enfermedades crónicas, cirugías, etc., debiendo contar un certificado expedido por el médico tratante y visados por el Ministerio de Salud Pública y Bienestar Social y además contar el "Visto bueno" de la Unidad Médica de la FIUNA. Los certificados serán considerados solamente como justificativos solamente si son presentados en un plazo no mayor a 15 días desde la fecha de emisión de los mismos.
+
+  utter_faq_presentar_reposo_medico:
+  - text: El reposo médico lo tenés que presentar con una nota dirigida a Dirección académica, en esta deberá consignarse la carrera, asignatura, sección, tipo de clase y fechas.
+
+  utter_faq/inasistencia:
+  - text: Se puede solicitar inasistencia por nota dirigida a la Dirección Académica y en caso de que sea aprobado el justificativo los estudiantes llevarán "presente". En la solicitud de consideración deberá consignarse la carrera, asignatura, sección, tipo de clase y fechas.
+
   utter_faq/sin_multa:
   - text: Podes ver el vencimiento de la matricula y cuotas en el siguiente documento https://drive.google.com/file/d/11-ZlfAZYZPO8ll7lg6Y3fF60o7UES-Pz/view
 
@@ -164,6 +185,94 @@ responses:
   
   utter_faq/prestamo_libros:
   - text: Los prestamos de libro a domicilio son por 8 dias.
+
+  utter_faq/aula_clase:
+  - text: Podes ver en el siguiente link https://docs.google.com/spreadsheets/d/1kO0J6h6HiD9Pt84mjKedgPE0t37aWLnxecfHLic0rQw/edit#gid=990148165
+  
+  utter_faq/calendario:
+  - text: El calendario academico lo podes ver en el siguiente documento https://drive.google.com/file/d/10NCHGAeUzUx28Q-JUOTRvCCNe4gxwBlg/view
+
+  utter_faq/extension_universitaria:
+
+  - text: La extension unversitaria es un proceso pedagogico transformador y de compromiso social que contribuye al desarrollo inclusivo sostenible y sustentable de la sociedad, es un requisito para el egreso de las carreras impartidas en la FIUNA que el estudiante tenga cumplida una cantidad minima de 30 horas reloj en por lo menos tres lineas de accion o sectores diferentes. Para mas iformacion podes leer el reglamento interno de extensión http://www.ing.una.py/Resoluciones2022/ConsejoDirectivo/1494/1494_2022_021_Reglamento_Interno_de_Extension_Univ_FIUNA.pdf
+
+  utter_faq/pasantia:
+  - text: La pasantia es un requisito de egreso para las distintas carreras de la FIUNA, su objetivo es introducir al estudiante en el entrenamiento en el trabajo, permitiendo vincular los conocimientos teóricos con situaciones prácticas de la vida profesional. Tiene una duración mínima de 400 horas reloj pudiendo ser desarrollada por etapas (modular) o de una sola vez. Para mas informacion podes leer el reglamento de pasantia en el siguiente link https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
+  
+  utter_faq/pasantia_requisitos:
+  - text: Para empezar la pasantia se tiene que cumplir con los siguientes requisitos; 1- El estudiante esté matriculado en el periodo académico vigente. 2- El estudiante no tiene que adeudar mas de tres asignaturas de semestres inferiores al 8°. 3- Debe existir un acuerdo y/o Carta Compromiso entre el pasante y la empresa suscriptora. 4- El plan de trabajo debe estar aprobado por la cordinación de carrera. 5- Constancia de la organizacion donde trabaja el estudiante indicando detalladamente las tareas que realiza, para aquellos que desean tramitar la Pasantía CUrricular por experiencia y hata cumplido 6 meses de antiguedad. Para mas infromacion podes leer el reglamento de pasantia https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
+
+  utter_faq/pasantia_tramites:
+  - text: Primeramente el estudiante debe enviar el formulario de Solicitud de pasantia en pdf al correo de mesadeentrada@ing.una.py o presentarla fisicamente. Una vez aprobado por la Secretaria de la facultad se debe remitir el Plan de Trabajo y Carta de Compromiso al correo pasantia@ing.una.py en un plazo de hasta 15 dias posterior al inicio de la pasantía. Los modelos de los documentos mencionados podes encontrarlos en el siguiente link http://www.ing.una.py/?page_id=35022 Tambien podes informarte mas leyendo el reglamento de Pasantia https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
+  
+  utter_faq/pasantia_empresas:
+  - text: Actualmente estas son las empresas con acuerdo para realizacion de pasantia http://www.ing.una.py/?page_id=52405 pero podes contactar con el director de carrera, profesores o compañeros de semestres superiores para que te brinden ayuda.
+
+  utter_faq/nota_decano:
+  - text: Para mandar una nota al decano podes usar la Solicitud General disponible en el siguiente link http://www.ing.una.py/pdf2020/formularios_Secretaria/SOLICITUD_GENERAL%20_NOTA_DECANO.doc y enviarlo al correo de mesa de entrada mesadeentrada@ing.una.py o presentarlo en ventanila
+  
+  utter_faq/extension_encargado:
+  - text: El encargado de extension universitaria es MSc. Ing. Primo A. Cano Coscia; correo:pcano@ing.una.py, Telefono:021 585 581/4 Int. 1137 / 1121, Horario de atencion:De Lunes a Viernes de 08:00 a 17:00 en el 2” piso del Edificio Ing.Enzo Debernardi FIUNA
+  
+  utter_faq/acreditacion:
+  - text: Actualemente las 7 carreras de grado con la que cuenta la Facultad de Ingenieria se encuentran acreditadas en el Modelo Nacional de acreditaciond de la ANEAES y ARCU-SUR
+  
+  utter_faq/bolsa_trabajo:
+  - text: Podes ver las ofertas laborales en la bolsa de trabajo de la FIUNA http://www.ing.una.py/?page_id=42602
+
+  utter_faq/becas:
+  - text: La FIUNA ofrece becas internas en las siguientes modalidades; 1.- Ayuda Economica. 2.- Méritos académicos. 3.- Actividades deportivas o culturales. 4.- Promoción académica. Podes conocer mas sobre estas ayudas en la siguiente pagina http://www.ing.una.py/?page_id=16511
+  
+  utter_faq/becas_ayuda_economica:
+  - text: Esta ayuda es destinada para aquellos estudiantes con carencia de medios económicos necesarios para sufragar los gastos de matrícula, cuotas y/o aranceles, demostrados mediante el Informe Socio-Económico presentado por el Comité de Evaluación, y, además, cumplan con un buen nivel de desempeño académico, es decir, que en el semestre inmediato anterior, hayan alcanzado un promedio No inferior a 3 o pertenezcan al 25% de los mejores promedios en el periodo académico inmediato anterior. También deberán haber aprobado al menos el 50% de las materias (sin computar aplazos). En el caso de los ingresantes, podrán solicitar aquellos estudiantes que hayan obtenido un rendimiento mínimo del 80% en el examen de admisión.
+
+  utter_faq/becas_meritos_academicos:
+  - text: Esta ayuda es para aquellos estudiantes cuyo promedio general sea igual o mayor que 4,55 (cuatro enteros con cincuenta y cinco centésimas). En el caso de ingresantes, deberá haber alcanzado un rendimiento mínimo del 91%.
+  
+  utter_faq/becas_deportivas_culturales:
+  - text: Esta ayuda es para aquellos estudiantes que representen a la Facultad de Ingeniería en concursos de carácter deportivo, culturales y/o artísticos, ya sea de manera interna en eventos organizados por la Universidad Nacional de Asunción, eventos nacionales o internacionales y obtengan distinciones en los mismos. También deberán cumplir con un buen desempeño académico, es decir, que en el semestre inmediato anterior, hayan alcanzado un promedio No inferior a 3 o pertenezcan al 25% de los mejores promedios en el periodo académico inmediato anterior. Además deberán haber aprobado al menos el 50% de las materias (sin computar aplazos).En el caso de los ingresantes, podrán solicitar aquellos estudiantes que hayan obtenido un rendimiento mínimo del 80% en el examen de admisión. 
+  
+  utter_faq/becas_promocion_academica:
+  - text: Esta ayuda es para aquellos estudiantes que promuevan actividades en clubes reconocidos por la Facultad de Ingeniería o publiquen artículos de aporte científico y que otorguen prestigio a la FIUNA. También deberán cumplir con un buen desempeño académico, es decir, que en el semestre inmediato anterior, hayan alcanzado un promedio No inferior a 3 o pertenezcan al 25% de los mejores promedios en el periodo académico inmediato anterior. Además deberán haber aprobado al menos el 50% de las materias (sin computar aplazos).En el caso de los ingresantes, podrán solicitar aquellos estudiantes que hayan obtenido un rendimiento mínimo del 80% en el examen de admisión.
+
+  utter_faq/becas_peticion:
+  - text: La Facultad de Ingeniería de la Universidad Nacional de Asunción (FIUNA) informará a través de sus canales oficiales las fechas de habilitación del periodo de presentación de solicitudes para acceder al beneficio de exoneración de pagos de matrícula, cuotas y/o aranceles correspondientes a cada Ciclo Académico. Los estudiantes interesados, deberán necesariamente completar la encuesta:Becas Internas FIUNA, que se habilitará en la Plataforma de la Dirección Académica «E-Aula», https://eaula.ing.una.py, Miscelánea, adjuntar en formato PDF, verificando de que hayan sido cargados correctamente en su totalidad, los documentos exigidos para cada modalidad.
+  
+  utter_faq/inscripcion:
+  - text: Las matriculaciones para las asignaturas se habilitarán a partir de las 8:00 hs del lunes 23 de enero y hasta las 23:59 hs del sábado 04 de febrero del corriente, a través del sistema http://insweb.ing.una.py/login 
+
+  utter_faq/ubi_lab_fisica:
+  - text: El Laboratorio de fisica se encuentra en el complejo de laboratorios <<Bloque M, Campus San Lorenzo>> Podés mirar el mapa de la facultad en el siguiente link:https://drive.google.com/file/d/1QA6uiMimbmYaZ_TxN_7SmLpoCeNPHDg1/view?fbclid=PAAaY4dV1e8IXoRJ3XRils-7ZSI3orF3T5TfnPnty9BcrPVoKQQD0IzEplFVw
+  
+  utter_faq/ubi_DeBernardi:
+  - text: El edificio Enzo Debernardi se encuentra en el Campus de San Lorenzo, tiene su entrada sobre la Avda. Mcal Lopez.
+
+  utter_faq/horario_atal:
+  - text: El horario de atención al alumno es de Lunes a Viernes de 8:00 a 18:00. Para mas informacion podes consultar llamar al 021 585584/1102
+
+  utter_faq/contacto_repre_estudiantil:
+  - text: Te comparto algunos contactos. -Gerardo Piris(CSU-Titular):. 0981 429196 -Erika Mendoza(TEI-Titular):.0972 125966 -Sofia Barboza(AU-Titular):. 0984 487863
+
+  utter_faq/atal_ubicacion:
+  - text: Atención al Alumno queda enfrente de Aula Magna. Podés mirar el mapa de la facultad en el siguiente link:https://drive.google.com/file/d/1QA6uiMimbmYaZ_TxN_7SmLpoCeNPHDg1/view?fbclid=PAAaY4dV1e8IXoRJ3XRils-7ZSI3orF3T5TfnPnty9BcrPVoKQQD0IzEplFVw
+  
+  utter_faq_FIUNA_telefono:
+  - text: El número de telefono de la facultad es (021) 585 584
+
+  utter_faq/idiomas:
+  - text: Actualmente la FIUNA ofrece cursos de idioma Inglés y Alemán, próximamente será habilitado un curso de idioma francés.
+
+  utter_faq/aleman:
+  - text: Podés obtner información sobre los cursos de alemán en el siguiente link http://www.ing.una.py/?page_id=11972
+
+  utter_faq/ingles:
+  - text: Podés obtner información sobre los cursos de inglés en el siguiente link http://www.ing.una.py/?page_id=4825
+
+  utter_faq/ccna:
+  - text: Podés obtner información sobre los cursos de CISCO en el siguiente link http://www.ing.una.py/?page_id=24459
+
+  utter_faq/maestria:
+  - text: La FIUNA ofrece maestrías en Energía para el Desarrollo Sostenible, Energías Renovables y Eficiencia Energética, Maestría en Educación Superior, Maestría en Ciencias de Ingeniería Electrónica, Maestría en Ingeniería Naval, podes obtener mas información en la sección 'Postgrado' de la página web http://www.ing.una.py/?page_id=985
 
   utter_chitchat/ask_jokes:
   - text: ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
@@ -191,6 +300,18 @@ responses:
   utter_chitchat/starwars:
   - text: NOOOOO, eso no es cierto. Es imposiiible
 
+  utter_chitchat/creadores:
+  - text: Mis creadores son Óscar Valdez y Carlos Ozuna.
+
+  utter_chitchat/nombre:
+  - text: Mi nombre es FiunaBot :)
+
+  utter_chitchat/preguntas_frecuentes:
+  - text: Algunas preguntas frecuentes son; 1. Horario de clases 2. Malla curricular 3. Medios de pago de la matricula
+
+  utter_chitchat/como_funciona:
+  - text: Escribime preguntas que tengas sobre la facultad
+
   utter_out_of_scope:
   - text: Lo siento, no puedo responder a eso.
   - text: Lo siento, eso se encuentra fuera de mi alcance.
@@ -213,7 +334,7 @@ responses:
   - text: chau
   
   utter_iamabot:
-  - text: Soy un bot, entrenado para FIUNA!
+  - text: Soy un bot, creado por los estudiantes de Eca Oscar Valdez y Carlos Ozuna.
 
   utter_ask_nota_des:
   - text: cuanto queres quitar?
