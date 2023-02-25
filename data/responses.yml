@@ -4,7 +4,7 @@ responses:
   - text: Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad
   
   utter_tfg/asesores:
-  - text: Podes ver la lista de asesores de Trabajo Final de Grado en siguiente página:http://www.ing.una.py/?page_id=37688
+  - text: Podes ver la lista de asesores de Trabajo Final de Grado en la siguiente página:http://www.ing.una.py/?page_id=37688
   
   utter_tfg/reglamento:
   - text: El reglamento de Trabajo Final de Grado lo podés encontrar en el siguiente link:http://www.ing.una.py/resoluciones2017/reglamento-tfg479-2012.PDF
@@ -33,9 +33,12 @@ responses:
   utter_faq/horario_examen:
   - text: El último el horario de examenes lo podes encontar acá http://www.ing.una.py/?page_id=752
   
-  utter_faq/calendario:
-  - text: Lo podés consultar en el calendario académico https://drive.google.com/file/d/10NCHGAeUzUx28Q-JUOTRvCCNe4gxwBlg/view
+  utter_faq/calendario_examenes:
+  - text: Los periodos de exámenes podés encontrarlos en el calendario académico https://drive.google.com/file/d/10NCHGAeUzUx28Q-JUOTRvCCNe4gxwBlg/view
   
+  utter_faq/calendario_clases:
+  - text: Lo podés encontrar en el calendario académico https://drive.google.com/file/d/10NCHGAeUzUx28Q-JUOTRvCCNe4gxwBlg/view
+
   utter_faq/feriado:
   - text: te paso el link https://dias-festivos.eu/dias-festivos/paraguay/
   
@@ -45,7 +48,7 @@ responses:
   utter_faq/formularios:
   - text: Todos los formularios podes encontrarlos en el siguiente link http://www.ing.una.py/?page_id=6831
 
-  utter_faq/horario_atencion:
+  utter_faq/horario_mesa_entrada:
   - text: El horario de mesa de entrada es de 8:00 a 14:00 de lunes a viernes y de 7:00 a 12:00 los sabados
 
   utter_faq/MesaDeEntrada_Contacto:
@@ -102,6 +105,9 @@ responses:
   utter_faq/asistencia:
   - text: Podes verificar cuantas veces podes faltar con la siguiente imagen https://drive.google.com/file/d/1aniL5MICJmCQ6Qnq6HzGjia2xOMd92A5/view?usp=share_link
   
+  utter_faq/asistencia_consulta:
+  - text: Para consultar tu asistencia podés ir al departamento de Control Académico, ubicado 
+
   utter_faq/aranceles:
   - text: Podes encontrar todos los aranceles en el siguiente documento https://drive.google.com/file/d/127HMvEDDr0NCVZ3wj2Oo2Tl9tiXZPGVy/view
   
@@ -120,6 +126,9 @@ responses:
   utter_faq/decano:
   - text: El decano actual es el Prof. Dr. Ing. Rubén Alcides López Santacruz
 
+  utter_faq/decano_contacto:
+  - text: El correo del decanato es el siguiente; secretariadecanato@ing.una.py
+
   utter_faq/vice_decano:
   - text: El vice decano actual es el Prof. Msc. Ing. Cirilo Hernáez
 
@@ -136,7 +145,7 @@ responses:
   - text: Para solicitar un carnet de biblioteca necesitas presentar matricula de inscripcion o mostrar tu estado de cuenta en eAlu, 2 fotos tipo carnet, llenar el formulario que te proveen en biblioteca.
   
   utter_faq/sala_profesores:
-  - text: La sala de profesores queda en el inicio del bloque D, antes de las salas de dibujo.
+  - text: La sala de profesores queda en el inicio del bloque D, antes de las salas de dibujo. Podés buscar en el mapa de la Facultad https://drive.google.com/file/d/1QA6uiMimbmYaZ_TxN_7SmLpoCeNPHDg1/view?fbclid=PAAaY4dV1e8IXoRJ3XRils-7ZSI3orF3T5TfnPnty9BcrPVoKQQD0IzEplFVw
 
   utter_faq/secretario_academico:
   - text: El secretario academico es
@@ -181,32 +190,32 @@ responses:
   - text: Para ver el horario de atencion y el contacto de enfermeria podes fijarte en la siguiente imagen https://drive.google.com/file/d/1-jCZUS6g6sQKmwdtzLn6seVC--1IqR-M/view?usp=share_link 
   
   utter_faq/revision:
-  - text: Para obtener informacion sobre la revision de examenes podes contactar con el delegado del curso o en los grupos de la materia.
+  - text: Para obtener informacion sobre la revisión de exámenes podés contactar con el delegado del curso o en los grupos de la materia.
   
   utter_faq/prestamo_libros:
-  - text: Los prestamos de libro a domicilio son por 8 dias.
+  - text: Los préstamos de libro a domicilio son por 8 días.
 
   utter_faq/aula_clase:
-  - text: Podes ver en el siguiente link https://docs.google.com/spreadsheets/d/1kO0J6h6HiD9Pt84mjKedgPE0t37aWLnxecfHLic0rQw/edit#gid=990148165
+  - text: Podés ver en el siguiente link https://docs.google.com/spreadsheets/d/1kO0J6h6HiD9Pt84mjKedgPE0t37aWLnxecfHLic0rQw/edit#gid=990148165
   
-  utter_faq/calendario:
-  - text: El calendario academico lo podes ver en el siguiente documento https://drive.google.com/file/d/10NCHGAeUzUx28Q-JUOTRvCCNe4gxwBlg/view
+  utter_faq/calendario_academico:
+  - text: El calendario académico lo podes ver en el siguiente documento https://drive.google.com/file/d/10NCHGAeUzUx28Q-JUOTRvCCNe4gxwBlg/view
 
   utter_faq/extension_universitaria:
 
   - text: La extension unversitaria es un proceso pedagogico transformador y de compromiso social que contribuye al desarrollo inclusivo sostenible y sustentable de la sociedad, es un requisito para el egreso de las carreras impartidas en la FIUNA que el estudiante tenga cumplida una cantidad minima de 30 horas reloj en por lo menos tres lineas de accion o sectores diferentes. Para mas iformacion podes leer el reglamento interno de extensión http://www.ing.una.py/Resoluciones2022/ConsejoDirectivo/1494/1494_2022_021_Reglamento_Interno_de_Extension_Univ_FIUNA.pdf
 
   utter_faq/pasantia:
-  - text: La pasantia es un requisito de egreso para las distintas carreras de la FIUNA, su objetivo es introducir al estudiante en el entrenamiento en el trabajo, permitiendo vincular los conocimientos teóricos con situaciones prácticas de la vida profesional. Tiene una duración mínima de 400 horas reloj pudiendo ser desarrollada por etapas (modular) o de una sola vez. Para mas informacion podes leer el reglamento de pasantia en el siguiente link https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
+  - text: La pasantía es un requisito de egreso para las distintas carreras de la FIUNA, su objetivo es introducir al estudiante en el entrenamiento en el trabajo, permitiendo vincular los conocimientos teóricos con situaciones prácticas de la vida profesional. Tiene una duración mínima de 400 horas reloj pudiendo ser desarrollada por etapas (modular) o de una sola vez. Para mas informacion podes leer el reglamento de pasantia en el siguiente link https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
   
   utter_faq/pasantia_requisitos:
-  - text: Para empezar la pasantia se tiene que cumplir con los siguientes requisitos; 1- El estudiante esté matriculado en el periodo académico vigente. 2- El estudiante no tiene que adeudar mas de tres asignaturas de semestres inferiores al 8°. 3- Debe existir un acuerdo y/o Carta Compromiso entre el pasante y la empresa suscriptora. 4- El plan de trabajo debe estar aprobado por la cordinación de carrera. 5- Constancia de la organizacion donde trabaja el estudiante indicando detalladamente las tareas que realiza, para aquellos que desean tramitar la Pasantía CUrricular por experiencia y hata cumplido 6 meses de antiguedad. Para mas infromacion podes leer el reglamento de pasantia https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
+  - text: Para empezar la pasantía se tiene que cumplir con los siguientes requisitos; 1- El estudiante esté matriculado en el periodo académico vigente. 2- El estudiante no tiene que adeudar mas de tres asignaturas de semestres inferiores al 8°. 3- Debe existir un acuerdo y/o Carta Compromiso entre el pasante y la empresa suscriptora. 4- El plan de trabajo debe estar aprobado por la cordinación de carrera. 5- Constancia de la organizacion donde trabaja el estudiante indicando detalladamente las tareas que realiza, para aquellos que desean tramitar la Pasantía Curricular por experiencia y hata cumplido 6 meses de antiguedad. Para mas infromacion podes leer el reglamento de pasantia https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
 
   utter_faq/pasantia_tramites:
-  - text: Primeramente el estudiante debe enviar el formulario de Solicitud de pasantia en pdf al correo de mesadeentrada@ing.una.py o presentarla fisicamente. Una vez aprobado por la Secretaria de la facultad se debe remitir el Plan de Trabajo y Carta de Compromiso al correo pasantia@ing.una.py en un plazo de hasta 15 dias posterior al inicio de la pasantía. Los modelos de los documentos mencionados podes encontrarlos en el siguiente link http://www.ing.una.py/?page_id=35022 Tambien podes informarte mas leyendo el reglamento de Pasantia https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
+  - text: Primeramente se debe enviar el formulario de Solicitud de pasantía en pdf al correo de mesadeentrada@ing.una.py o presentarla fisicamente. Una vez aprobado por la Secretaria de la facultad se debe remitir el Plan de Trabajo y Carta de Compromiso al correo pasantia@ing.una.py en un plazo de hasta 15 dias posterior al inicio de la pasantía. Los modelos de los documentos mencionados podes encontrarlos en el siguiente link http://www.ing.una.py/?page_id=35022 Tambien podes informarte más leyendo el reglamento de Pasantía https://drive.google.com/file/d/1fQ2MD7hVLoTJjNCwu4F6E-spXQUk5Y79/view
   
   utter_faq/pasantia_empresas:
-  - text: Actualmente estas son las empresas con acuerdo para realizacion de pasantia http://www.ing.una.py/?page_id=52405 pero podes contactar con el director de carrera, profesores o compañeros de semestres superiores para que te brinden ayuda.
+  - text: Actualmente estas son las empresas con acuerdo para realización de pasantía http://www.ing.una.py/?page_id=52405 pero podes contactar con el director de carrera, profesores o compañeros de semestres superiores para que te brinden ayuda.
 
   utter_faq/nota_decano:
   - text: Para mandar una nota al decano podes usar la Solicitud General disponible en el siguiente link http://www.ing.una.py/pdf2020/formularios_Secretaria/SOLICITUD_GENERAL%20_NOTA_DECANO.doc y enviarlo al correo de mesa de entrada mesadeentrada@ing.una.py o presentarlo en ventanila
@@ -239,7 +248,7 @@ responses:
   - text: La Facultad de Ingeniería de la Universidad Nacional de Asunción (FIUNA) informará a través de sus canales oficiales las fechas de habilitación del periodo de presentación de solicitudes para acceder al beneficio de exoneración de pagos de matrícula, cuotas y/o aranceles correspondientes a cada Ciclo Académico. Los estudiantes interesados, deberán necesariamente completar la encuesta:Becas Internas FIUNA, que se habilitará en la Plataforma de la Dirección Académica «E-Aula», https://eaula.ing.una.py, Miscelánea, adjuntar en formato PDF, verificando de que hayan sido cargados correctamente en su totalidad, los documentos exigidos para cada modalidad.
   
   utter_faq/inscripcion:
-  - text: Las matriculaciones para las asignaturas se habilitarán a partir de las 8:00 hs del lunes 23 de enero y hasta las 23:59 hs del sábado 04 de febrero del corriente, a través del sistema http://insweb.ing.una.py/login 
+  - text: Las matriculaciones para las asignaturas se habilitarán a partir de las 8:00 hs del lunes 23 de enero y va hasta las 23:59 hs del sábado 04 de febrero del corriente, a través del sistema http://insweb.ing.una.py/login 
 
   utter_faq/ubi_lab_fisica:
   - text: El Laboratorio de fisica se encuentra en el complejo de laboratorios <<Bloque M, Campus San Lorenzo>> Podés mirar el mapa de la facultad en el siguiente link:https://drive.google.com/file/d/1QA6uiMimbmYaZ_TxN_7SmLpoCeNPHDg1/view?fbclid=PAAaY4dV1e8IXoRJ3XRils-7ZSI3orF3T5TfnPnty9BcrPVoKQQD0IzEplFVw
@@ -273,6 +282,15 @@ responses:
 
   utter_faq/maestria:
   - text: La FIUNA ofrece maestrías en Energía para el Desarrollo Sostenible, Energías Renovables y Eficiencia Energética, Maestría en Educación Superior, Maestría en Ciencias de Ingeniería Electrónica, Maestría en Ingeniería Naval, podes obtener mas información en la sección 'Postgrado' de la página web http://www.ing.una.py/?page_id=985
+
+  utter_faq/ubi_citec:
+  - text: CITEC se encuentra en Isla Bogado-Luque. Te comparto la ubicación https://goo.gl/maps/96XtKzL4YtbtE6Sd8
+
+  utter_faq/ubi_secretaria:
+  - text: La secretaría de la FIUNA queda en el bloque J, a la vuelta de Atencion al alumno. 
+
+  utter_faq/horario_fiuna:
+  - text: La FIUNA abre de Lunes a Viernes de 07:00 a 22:15 y los sábados de 07:00 a 18:00
 
   utter_chitchat/ask_jokes:
   - text: ¿Alguien ha visto la de serie de Fibonacci? ¿Me pueden decir de qué va sin muchos spoilers? Cada episodio es tan bueno como los dos anteriores combinados
