@@ -98,6 +98,17 @@ class ActionSaludo(Action):
         if nombre:
             msg = f"Hola {nombre}! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad"
         else:
-            msg = msg = f"Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad"
+            msg = f"Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad"
+        dispatcher.utter_message(text=msg)    
+        return []
+
+class ActionDirector(Action):
+    def name(self) -> Text:
+        return "action_director_carrera"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        carrera = (tracker.get_slot('carrera'))
+        directores = {'Civil':' el Prof. Ing. Roberto Olmedo Bareiro, Mail: rolmedo@ing.una.py ','Industrial':'la Ing. Gisela Olmedo, Mail: golmedo@ing.una.py','Electromecanica':'el Prof. Ing. Edgar Darío Castro Núñez, Mail: ecastro@ing.una.py','Electronica':'el Prof. Ing. Oscar Dario Resquin, Mail: oresquin@ing.una.py', 'Geografica':'el Prof. Ing. Oscar Alfonso Correa, Mail: oalfonso@ing.una.py', 'Mecanica':'el Prof. Ing. Orlando David Benítez Gómez, Mail: odbenitez@fiuna.edu.py', 'Mecatronica':'el Prof. Ing. Gustavo Román Verón Alderete, Mail: gveron@ing.una.py'}
+        msg = f"El director de {carrera} es {directores[carrera]}"
         dispatcher.utter_message(text=msg)    
         return []

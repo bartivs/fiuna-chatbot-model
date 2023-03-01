@@ -52,3 +52,8 @@ rules:
   - slot_was_set: 
     - requested_slot: null
   - action: action_informar_puntaje_final
+
+- rule: quien es el director de carrera
+  steps:
+  - intent: director_carrera
+  - action: action_director_carrera

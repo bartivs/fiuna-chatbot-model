@@ -20,12 +20,14 @@ intents:
 - saludo
 - tfg:
     is_retrieval_intent: true
+- director_carrera
 entities:
 - formularios
 - nombre
 - firma
 - nota_des
 - materia
+- carrera
 slots:
   nota_des:
     type: text
@@ -36,6 +38,9 @@ slots:
   nombre:
     type: text
     influence_conversation: false
+  carrera:
+    type: text
+    influence_conversation: false  
 actions:
 - action_informar_puntaje_final
 - action_saludo
@@ -43,6 +48,7 @@ actions:
 - utter_faq
 - utter_tfg
 - validate_notas_form
+- action_director_carrera
 forms:
   notas_form:
     required_slots:
