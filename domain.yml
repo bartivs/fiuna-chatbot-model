@@ -21,6 +21,7 @@ intents:
 - tfg:
     is_retrieval_intent: true
 - director_carrera
+- info_carrera
 entities:
 - formularios
 - nombre
@@ -49,6 +50,7 @@ actions:
 - utter_tfg
 - validate_notas_form
 - action_director_carrera
+- action_info_carrera
 forms:
   notas_form:
     required_slots:

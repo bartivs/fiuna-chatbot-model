@@ -57,3 +57,8 @@ rules:
   steps:
   - intent: director_carrera
   - action: action_director_carrera
+
+- rule: info sobre las carreras
+  steps:
+  - intent: info_carrera
+  - action: action_info_carrera 

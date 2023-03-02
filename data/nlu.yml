@@ -213,6 +213,23 @@ nlu:
     - Que haces
     - Como funcionas?
     - Que sabes hacer?
+- intent: chitchat/firma_macho
+  examples: |
+    - Cuanto es firma de macho?
+    - Cuanto es firma macho?
+    - Firma de macho que significa?
+    - Firma macho
+    - Qué es "firma de macho"?
+    - que es firma de macho
+- intent: chitchat/cof
+  examples: |
+    - Cuando comienzan los torneos?
+    - Cuándo empieza el COF?
+    - fecha de inicio del torneo
+    - que dia empieza el cof
+    - cuando vuelve el cof?
+    - fecha de inicio del campeonato
+    - inicio del campeonato
 - intent: nota_segun_firma
   examples: |
     - Cuanto tengo que hacer para quitar [5](nota_des) si mi firma es [35](firma)
@@ -241,7 +258,7 @@ nlu:
     - Si tengo una forma de [54](firma), cuánto debo hacer en el exámen final para sacar [5](nota_des)?
     - Cuánto debo hacer para quitar [5](nota_des) teniendo una firma de [41](firma)?
     - Cuánto debo hacer para sacar [5](nota_des)?
-    - Cuanto debo hacer para sacar [5](nota_des) si mi firma es [35](firna)?
+    - Cuanto debo hacer para sacar [5](nota_des) si mi firma es [35](firma)?
     - Tengo firma de [45](firma), cuántos puntos tengo que hacer para pasar?
     - Firma [45](firma), quiero quitar [5](nota_des)
     - Cuánto tengo que hacer para quitar [5](nota_des) con firma de [49](firma)
@@ -336,6 +353,7 @@ nlu:
     - Donde veo los horarios de las mater
     - Horarios de clase?
     - Cuál es el horario de dinámica?
+    - Horario propuesto
 - intent: faq/horario_examen
   examples: |
     - Cual es el horario de [examen](examen)?
@@ -427,7 +445,9 @@ nlu:
     - cuando se vuelve a clases
     - que dia se vuelve a la facu
     - cuando vuelve nuestro sufrimiento
-    - cuando se vuelve a la facultad    
+    - cuando se vuelve a la facultad  
+    - hasta cuando tenemos clases? 
+    - hasta cuando son las clases  
 - intent: faq/correlativas
   examples: |
     - me pasas las materias?
@@ -495,9 +515,6 @@ nlu:
     - cuando termina el periodo de inscripción?
     - cierre del periodo de inscripcion
     - hasta cuando puedo cerrar mi inscripcion
-- intent: faq/inicio_clases
-  examples: |
-
 - intent: faq/plan_estudios
   examples: |
     - Plan de desarrollo materia [dibujo tecnico](materia)
@@ -513,6 +530,7 @@ nlu:
     - Donde puedo ver el plan de estudios de electronica?
     - plan de estudios de civil
     - Contenido de las materias?
+    - Plan de clases
 - intent: faq/jefe_Catedra
   examples: |
     - ¿Que profesor esta como jefe de catedra de la materia [Probabilidad y Estadística](materia)?
@@ -692,6 +710,11 @@ nlu:
     - que me ataja [lineal 2](materia)
     - Que materia ataja fisica 1?
     - Correlativas mecánica de materiales 1
+    - Cuántos años dura la carrera de ingeniería?
+    - ¿Cuántos años dura la carrera de ingeniería civil?
+    - Cuánto dura la carrera de ING civil
+    - Cuanto dura la carrera Ingeniería civil?
+    - Qué materias son de primer semestre?
 - intent: faq/grupos
   examples: |
     - Grupo de [fisica](materia)?
@@ -699,6 +722,9 @@ nlu:
     - quiero entrar en el grupo de [calculo](materia)
     - grupo de whatsapp de [DLD](materia)
     - grupo de whatsapp
+    - Drive de cursos básicos?
+    - Drive de Emca ?
+    - Quiero el drive de construcciones
 - intent: faq/antecedente_academico
   examples: |
     - Como gestiono antecedente academico?
@@ -839,6 +865,7 @@ nlu:
     - Cuánto debo pagar por la cuota?
     - ¿Dónde puedo ver mi nota del examen?
     - Nota del examen
+    - En que materias estoy inscrito?
 - intent: faq/extension
   examples: |
     - A que actividades de extension me puedo anotar?
@@ -914,6 +941,7 @@ nlu:
     - Cuánto es la matrícula tardía?
     - Aranceles ?
     - cuanto es la matricula con multa
+    - Cuanto cuesta estudiar en fiuna?
 - intent: faq/horario_biblioteca
   examples: |
     - horario de atencion de la biblioteca
@@ -979,8 +1007,45 @@ nlu:
     - Donde queda la fotocopiadora ?
     - Donde esta la fotocopiadora?
     - En que parte de la facultad esta la fotocopiadora?
-    - Fotocopiadora
     - Dónde está la fotocopiadora?
+- intent: faq/horario_fotocopiadora
+  examples: |
+    - Hasta qué hora abre la fotocopiadora?
+    - Horario de atención de la fotocopiadora
+    - horario de atencion de la fotocopiadora
+    - hasta que hora se abre la fotocopiadora
+    - desde que hora abre la fotocopiadora
+    - que hora abre la fotocopiadora
+    - hasta que hora puedo quedarme en la fotocopiadora
+    - La fotocopiadora estará abierta hoy?
+    - Cual es el horario de la fotocopiadora?
+    - Hasta que hora se abre la bfotocopiadora?
+    - Horario de atención de la fotocopiadora
+    - A qué hora cierra la fotocopiadora?
+    - Horario de la fotocopiadora
+    - Horario de fotocopiadora?
+    - hasta que hora se abre la fotocopiadora
+    - fotocopiadora?
+    - Que horario abre la fotocopiadora?
+    - fotocopiadora
+    - A qué hora cierra la fotocopiadora
+    - A qué hora se cierra la fotocopiadora de la facultad?
+    - A qué hora abre la fotocopiadora?
+    - A partir de qué hora abre la fotocopiadora?
+    - Hasta qué hora abre la fotocopiadora?
+    - La fotocopiadora abre los sábados?
+    - Cual es el horario de la fotocopiadora los sábados?
+    - Cuál es el horario de la fotocopiadora?
+    - Horario que abre la fotocopiadora
+    - fotocopiadora horariooo
+    - Que horario se habilita la fotocopiadora?
+    - Hasta que hora abre la fotocopiadora?
+    - A qué hora se cierra la fotocopiadora?
+    - Hasta que hora abre la fotocopiadora
+    - La fotocopiadora hasta que hora se abre?
+    - el horario de la fotocopiadora
+    - Horario de atención de la fotocopiadora
+    - a que hora abre la fotocopiadora?
 - intent: faq/decano
   examples: |
     - Quien es el decano?
@@ -1313,6 +1378,8 @@ nlu:
     - Fecha límite de pago de matriculación
     - ¿Cual es la fecha limite para pagar las cuotas?
     - Hasta cuando se paga la cuota?
+    - Fecha de matriculación tardía
+    - Matriculación tardía
 - intent: faq/cambio_carrera
   examples: |
     - como hago para cambiar de carrera
@@ -1321,6 +1388,8 @@ nlu:
     - cual es el procedimiento para cambiarme de carrera
     - quiero mudarme a otra carrera
     - que tengo que hacer para cambiarme de carrera
+    - Como hacer cambio de carrera?
+    - Como puedo cambiarme de carrera?
 - intent: faq/enfermeria
   examples: |
     - Horario de atencion de enfermeria
@@ -1408,6 +1477,7 @@ nlu:
     - Link de clases
     - Distribucion de clases
     - Qué clases hay a esta hora?
+    - Que aulas están libres ?
 - intent: faq/calendario_academico
   examples: |
     - Calendario de clases?
@@ -1761,6 +1831,8 @@ nlu:
     - ccna turno noche
     - Busco información sobre la academia CISCO
     - academia cisco
+    - Costo del curso de CCNA
+    - Curso CCNA
 - intent: faq/maestria
   examples: |
     - Maestrias de la fiuna
@@ -1812,6 +1884,7 @@ nlu:
     - Que hora abre el porton
     - Horario de fiuna
     - Va a estar abierta la facultad mañana?
+    - Que días se abre la facultad?
 - intent: faq/mapa
   examples: |
     - Tienes un mapa para ubicar las clases
@@ -1833,6 +1906,38 @@ nlu:
     - Lab estrella donde queda?
     - Dónde queda el laboratorio Estrella?
     - Laboratorio Estrella
+    - ¿Donde queda el bloque Q?
+    - Bloque de computadoras
+    - Buen día, cuántas aulas hay en el bloque R de Fiuna San Lorenzo?
+    - Cuantos bloques tiene la facultad?
+    - Donde  es bozzano?
+    - Dónde está ubicada la clase R1?
+    - Donde queda aula F3
+    - Donde queda el aula P1
+    - Dónde queda el aula P1?
+    - Dónde queda el bloque Q
+    - Dónde queda el bloque Q?
+    - Donde queda el lab de geotecnia?
+    - Donde queda el lab de materiales?
+    - Donde queda el lab vial?
+    - Dónde queda el laboratorio de geomática?
+    - Dónde queda la cantina?
+    - Laboratorio de Electrotecnia
+    - Dónde queda el auditorio?
+    - Baño
+    - Baño?
+    - Donde esta el baño?
+    - Donde hay baños?
+    - Dónde quedan los baños?
+    - En que parte de la facultad hay baños?
+    - Donde esta la biblioteca?
+    - Donde queda biblioteca 2
+    - Dónde queda la biblioteca
+    - Donde esta la caja
+    - Dónde queda la caja?
+    - Donde esta Dtics
+    - Dónde queda Dtics?
+    - Donde es la mesa de entrada
 - intent: faq/director_academico
   examples: |
     - Quien es el director académico?
@@ -1853,10 +1958,8 @@ nlu:
   examples: |
     - El CEI esta abierto?
     - A que hora abre el CEI?
-    - Cei
     - Hasta que hora abre el cei
     - El cei hasta que hora abre
-    - CEI
     - Esta abierto el Cei ?
     - En que horario abre el cei ?
     - En que horario abre el cei?
@@ -1873,6 +1976,176 @@ nlu:
     - Cual es la contraseña del wifi
     - Cual es la contraseña de wifi
     - Cual es la contraseña del WiFi?
+- intent: faq/calcomanias
+  examples: |
+    - calcomanias
+    - calcomanias para los autos
+    - ¿Donde se gestionan las calcomanias?
+    - Cómo consigo la calcomanía para el estacionamiento?
+    - Solicitud calcomania para acceso vehicular
+    - como consigo la calcomania de acceso
+    - calcomania para el estacionamiento
+    - como hago para tener la calcomania de acceso
+    - donde pido las calcomnias
+    - como gestiono el libre acceso vehicular
+- intent: faq/cei
+  examples: |
+    - Centro de estudiantes de ingeniería
+    - CEI
+    - Cei
+    - cei
+    - centro de estudiantes
+    - que es el cei
+    - que hace el cei
+    - que hace el centro de estudiantes
+- intent: faq/desmatriculacion
+  examples: |
+    - Desmatriculacion
+    - como hago para desmatricularme
+    - proceso de desmatriculacion
+    - como me desmatriculo
+    - donde presento mi desmatriculacion
+    - desmatriculacion?
+    - quiero desmatricularme
+    - que tengo que hacer para desmatricularme
+    - pasos para desmatriculacion
+    - Como hago para desmatricularme en alguna materia?
+- intent: faq/director_ayolas
+  examples: |
+    - Quien es el director de ayolas
+    - director filial ayolas
+    - director de ayolas
+    - nombre del director de la filial de ayolas
+    - nombre del director de ayolas
+    - quien es el director de la filial de ayolas
+    - director de ayolas?
+    - Quien es el director de la sede ayolas?
+    - director de la sede ayolas
+    - director sede ayolas
+- intent: faq/ayolas
+  examples: |
+    - filial ayolas
+    - sede ayolas
+    - fiuna ayolas
+    - facultad de ingeniería ayolas
+    - ingenieria sede ayolas
+- intent: faq/director_cursos_basicos
+  examples: |
+    - Quien es el director de cursos basicos
+    - director de cursos básicos
+    - nombre del director de cursos basicos
+    - quien es actualmente el director de cursos basicos
+    - director de cb
+    - nombre del director de CB
+- intent: faq/dtic_contacto
+  examples: |
+    - Cual es el número de dtics?
+    - numero de dtic?
+    - telefono de DTICs
+    - número de DTICs
+    - cuál es el numero de teléfono de DTIC
+    - quiero el numero de dtic
+    - cual es el interno de dtic
+    - correo de dtic
+    - correo de DTICs
+    - cuál es el correo de dtics
+    - quiero comunicarme con DTIC
+    - contacto de dtic?
+    - algún contacto de DTIC
+    - como puedo contactar con alguien de DTIC
+    - necesito ayuda de dtic
+    - quiero hablar con dtic
+    - Departamento tecnico de informatica y computación
+    - Dtics
+- intent: faq/horario_dtic
+  examples: |
+    - Hasta que hora atienden en dtics?
+    - Horario de atención de dtics
+    - Horario de dtics
+    - Hasta que hora abre dtic
+    - que hora abre dtic
+    - horario dtic
+    - a partir de que hora atienden en dtic
+    - a que hora atienden en dtics
+- intent: faq/evaluaciones
+  examples: |
+    - Como funcionan las evaluaciones en la fiuna ?
+    - evaluaciones en fiuna
+    - como se evalua en la fiuna
+    - sistema de evaluacion de la fiuna
+    - sistema de evaluacion
+    - cuantos puntos suman los parciales
+    - cuanto valen los examenes
+    - Cuanto suman los parciales?
+    - Cuántos puntos vale el examen final?
+- intent: faq/talleres
+  examples: |
+    - Cuándo es el primer taller de mm1
+    - Cuando inician los talleres?
+    - Fecha talleres
+    - Que fecha es el taller de C2
+    - Que fecha es el taller de C2?
+    - Cuando es el taller de fisica?
+    - taller de fisica 3
+    - Horario de talleres
+    - Talleres
+- intent: faq/firma_minima
+  examples: |
+    - Con cuánto se consigue firma?
+    - Con cuantos puntos tengo firma?
+    - cual es el puntaje de firma mínima?
+    - Cual es el puntaje para tener firma?
+    - Cual es la el puntaje  mínimo para rendir un final?
+    - Cual es la firma mínima para rendir examen final?
+    - Cuanto es el mínimo para derecho a examen final ?
+    - Cuánto es la firma mínima ?
+    - Cuantos puntos necesito para alcanzar firma?
+    - Cuantos puntos necesito para tener derecho a examen final?
+    - Desde que puntaje tengo firma?
+    - Firma para acceder al examen final
+    - Cual es el puntaje mínimo de taller?
+    - Cuanto es el mínimo de taller ?
+    - Mínimo de taller ?
+    - Puntos taller necesarios para habilitar examen final
+- intent: faq/firma_duracion
+  examples: |
+    - Cómo funciona la firma?
+    - Cuantas convocatorias dura una firma en materias de cursos básicos?
+    - Cuanto dura mi firma?
+    - Cuanto dura una firma?
+    - Cuanto tiempo dura la firma?
+    - Cuanto tiempo dura una firma?
+    - Cuanto tiempo me dura la firma en una materia?
+    - Cuantos ciclos dura una firma?
+    - Cuantos intentos dura mi firma?
+    - Por cuanto tiempo puedo mantener mi firma en una materia?
+- intent: faq/firma_renuncia
+  examples: |
+    - Como puedo renunciar a mí firma?
+    - Puedo renunciar a mi firma?
+    - Renuncia a firma
+    - quiero renunciar a mi firma
+    - se puede renunciar a la firma?
+    - renunciar a la firma?
+- intent: faq/cantina
+  examples: |
+    - Cuánto cuesta el café de la librería del cei?
+    - Hay torta marmolada en la librería del cei?
+    - Cantina
+    - Cuál sería el menú de la cantina el día de mañana?
+    - Cuanto cuesta el almuerzo
+    - Cuánto cuesta una empanada de jamón y queso en la cantina?
+    - Cuánto cuesta una empanada?
+    - El economico
+    - Hay algo para merendar en la cantina de fiuna?
+    - Hay café?
+    - Hay empanada de jamón y queso en la cantina ?
+    - hay empanada de jamon y queso en la cantina?
+    - Hay empanada de jamón y queso?
+    - La cantina
+    - Menu cantina
+    - Precios cantina
+    - Que puedo comprar en la cantina?
 - intent: tfg/reglamento
   examples: |
     - me podes pasar el reglamento de tfg
@@ -1922,7 +2195,7 @@ nlu:
   examples: |
     - Puedo pedir prorroga para el [tesis](tfg)?
     - Se puede extender el periodo del [tesis](tfg)?
-    - Se puede alargar la duracion de la [tesis](tfg)?image.png
+    - Se puede alargar la duracion de la [tesis](tfg)?
     - cuanto es a prorroga del [tesis](tfg)?
     - Prorroga de tesis
 - intent: tfg/asesores
@@ -2018,6 +2291,9 @@ nlu:
     - Cuando termino la Facu?
     - Cómo se calcula una losa
     - Cómo puedo pasar calculo 1?
+    - Cual es la historia de la facultad
+    - Número del área de Admisión?
+    - Tengo hambre
 - intent: director_carrera
   examples: |
     - Quien es el director de [electronica](carrera)
@@ -2026,8 +2302,22 @@ nlu:
     - director de carrera [geografica](carrera)
     - [mecanica](carrera) director
     - Jefe de carrera ingeniería [mecánica](carrera)?
-    - Director de carrera de [Industrial](industrial) quién es?
+    - Director de carrera de [Industrial](carrera) quién es?
     - Director carrera [geografica](carrera)
+- intent: info_carrera
+  examples: |
+    - Ingeniería [civil](carrera)
+    - Ingenieria [electromecánica](carrera)
+    - Ing. [electronica](carrera)
+    - info sobre [mecatrónica](carrera)
+    - Dime sobre Ingenieria [geográfica](carrera)
+    - contame sobre [industrial](carrera)
+    - que sabes de [mecánica](carrera)
+    - [Industrial](carrera)
+    - [mecatrónica](carrera)
+    - [electrónica](carrera)
+    - mas informacion de la carrera
+    - Qué es la ingenieria [civil](carrera)?
 - synonym: examen
   examples: |
     - examenes

@@ -108,7 +108,24 @@ class ActionDirector(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         carrera = (tracker.get_slot('carrera'))
-        directores = {'Civil':' el Prof. Ing. Roberto Olmedo Bareiro, Mail: rolmedo@ing.una.py ','Industrial':'la Ing. Gisela Olmedo, Mail: golmedo@ing.una.py','Electromecanica':'el Prof. Ing. Edgar Darío Castro Núñez, Mail: ecastro@ing.una.py','Electronica':'el Prof. Ing. Oscar Dario Resquin, Mail: oresquin@ing.una.py', 'Geografica':'el Prof. Ing. Oscar Alfonso Correa, Mail: oalfonso@ing.una.py', 'Mecanica':'el Prof. Ing. Orlando David Benítez Gómez, Mail: odbenitez@fiuna.edu.py', 'Mecatronica':'el Prof. Ing. Gustavo Román Verón Alderete, Mail: gveron@ing.una.py'}
-        msg = f"El director de {carrera} es {directores[carrera]}"
+        if carrera:
+            directores = {'Civil':' el Prof. Ing. Roberto Olmedo Bareiro, Mail: rolmedo@ing.una.py ','Industrial':'la Ing. Gisela Olmedo, Mail: golmedo@ing.una.py','Electromecanica':'el Prof. Ing. Edgar Darío Castro Núñez, Mail: ecastro@ing.una.py','Electronica':'el Prof. Ing. Oscar Dario Resquin, Mail: oresquin@ing.una.py', 'Geografica':'el Prof. Ing. Oscar Alfonso Correa, Mail: oalfonso@ing.una.py', 'Mecanica':'el Prof. Ing. Orlando David Benítez Gómez, Mail: odbenitez@fiuna.edu.py', 'Mecatronica':'el Prof. Ing. Gustavo Román Verón Alderete, Mail: gveron@ing.una.py'}
+            msg = f"El director de {carrera} es {directores[carrera]}"
+        else:
+            msg = f"Podés tener mas información sobre los directores de carrera en el siguiente enlace http://www.ing.una.py/?page_id=629"
         dispatcher.utter_message(text=msg)    
+        return []
+
+class ActionInfoCarreras(Action):
+    def name(self) -> Text:
+        return "action_info_carrera"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        carrera = (tracker.get_slot('carrera'))
+        if carrera:
+            info = {'Civil':'http://www.ing.una.py/?page_id=1046','Industrial':'http://www.ing.una.py/?page_id=1083','Electromecanica':'http://www.ing.una.py/?page_id=1434','Electronica':'http://www.ing.una.py/?page_id=1473', 'Geografica':'http://www.ing.una.py/?page_id=1493', 'Mecanica':'http://www.ing.una.py/?page_id=1512', 'Mecatronica':'http://www.ing.una.py/?page_id=1533'}
+            msg = f"Para obtener más información sobre {carrera} podés ir al siguiente link: {info[carrera]}"
+        else:
+            msg = f"Para obtener más información sobre las carreras de la FIUNA podés ingresar al siguiente link: http://www.ing.una.py/?page_id=629"      
+        dispatcher.utter_message(text=msg)
         return []
