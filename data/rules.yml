@@ -1,7 +1,6 @@
 version: "2.0"
 
 rules:
-
 - rule: Despedir a usuario que se despide 
   steps:
   - intent: despedida 
@@ -62,3 +61,18 @@ rules:
   steps:
   - intent: info_carrera
   - action: action_info_carrera 
+
+- rule: responder horarios
+  steps:
+  - intent: horario
+  - action: action_horario
+
+- rule: responder malla
+  steps:
+  - intent: malla_curricular
+  - action: action_malla_curricular
+
+- rule: Bienvenida
+  conversation_start: true
+  steps:
+    - action: action_saludo

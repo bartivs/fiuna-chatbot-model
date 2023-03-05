@@ -9,8 +9,12 @@ intents:
     is_retrieval_intent: true
 - deny
 - despedida
+- director_carrera
 - faq:
     is_retrieval_intent: true
+- horario
+- info_carrera
+- malla_curricular
 - mood_bueno
 - mood_triste
 - nota_deseada
@@ -18,10 +22,10 @@ intents:
 - out_of_scope
 - puntos_firma
 - saludo
+- continuar_preguntando_horario
+- continuar_preguntando_carrera
 - tfg:
     is_retrieval_intent: true
-- director_carrera
-- info_carrera
 entities:
 - formularios
 - nombre
@@ -29,6 +33,7 @@ entities:
 - nota_des
 - materia
 - carrera
+- lugar
 slots:
   nota_des:
     type: text
@@ -41,16 +46,21 @@ slots:
     influence_conversation: false
   carrera:
     type: text
-    influence_conversation: false  
+    influence_conversation: false
+  lugar:
+    type: text
+    influence_conversation: false
 actions:
+- action_director_carrera
+- action_horario
+- action_info_carrera
 - action_informar_puntaje_final
+- action_malla_curricular
 - action_saludo
 - utter_chitchat
 - utter_faq
 - utter_tfg
 - validate_notas_form
-- action_director_carrera
-- action_info_carrera
 forms:
   notas_form:
     required_slots:

@@ -1,8 +1,5 @@
 version: "2.0"
 responses:
-  utter_saludo:
-  - text: Hola! Soy FiunaBOT, un asistente creado para ayudarte con las preguntas frecuentes de la facultad
-  
   utter_tfg/asesores:
   - text: Podes ver la lista de asesores de Trabajo Final de Grado en la siguiente página:http://www.ing.una.py/?page_id=37688
   
@@ -48,9 +45,6 @@ responses:
   utter_faq/formularios:
   - text: Todos los formularios podes encontrarlos en el siguiente link http://www.ing.una.py/?page_id=6831
 
-  utter_faq/horario_mesa_entrada:
-  - text: El horario de mesa de entrada es de 8:00 a 14:00 de lunes a viernes y de 7:00 a 12:00 los sabados
-
   utter_faq/MesaDeEntrada_Contacto:
   - text: El correo de mesa de entrada es mesadeentrada@ing.una.py y su numero de telefono es 585581/4 int. 1195
 
@@ -61,19 +55,13 @@ responses:
   - text: Todos los contenidos del plan de estudio de tu carrera podes descargarlo encontrarlos en el siguiente link http://www.ing.una.py/?page_id=629
 
   utter_faq/jefe_Catedra:
-  - text: La lista de docentes Jefes de Cátedra podes verla aqui http://www.ing.una.py/?page_id=2156
+  - text: La lista de docentes Jefes de Cátedra podes verla en el siguiente enlace http://www.ing.una.py/?page_id=2156
 
   utter_faq/Arancel_Cero:
   - text: Para gestionar el arancel cero el estudiante debe ser egresado de un Colegio Público o Subvencionado y haber ingresado a la FIUNA en el año 2016 en adelante o en caso de ser de un Colegio Privado es necesario una constancia de vulnerabilidad. Se debe entregar el formulario de gratuidad disponible en el e-Aula, con una copia de cédula de identidad en Mesa de entrada.  Para mas informacion podes acceder al siguiente link http://www.ing.una.py/?p=55299
 
-  utter_faq/horario_caja:
-  - text: El horario de atencion de la caja es de Lunes a Viernes de 07:30 a 19:00 y los Sabados de 08:00 a 12:00 hs
-
   utter_faq/formas_pago:
   - text: Podes pagar las cuotas de diferentes formas; -1. Efectivo en caja 2.Bancard(desde la app) 3.Tarjeta de Crédito, débito y con QR 4. Transferencia y depósitos bancarios  5. Bocas de cobranza Aqui Pago. Infonet Cobranzas
-
-  utter_faq/malla_curricular:
-  - text: Podés encontrar la malla curricular de tu carrera en el siguiente link https://drive.google.com/drive/u/1/folders/1uphtj7-73YaAFhZmWX3mIDZbDFQPYlgo
 
   utter_faq/materias_malla:
   - text: Lo podés ver en la malla curricular de tu carrera; https://drive.google.com/drive/u/1/folders/1uphtj7-73YaAFhZmWX3mIDZbDFQPYlgo
@@ -97,7 +85,7 @@ responses:
   - text: El ábaco podés verlo aquí:https://ceiuna233565215.files.wordpress.com/2019/04/whatsapp-image-2020-01-15-at-12.32.43.jpeg?w=816 
   
   utter_faq/eAlu:
-  - text: Podes verlo en la app de eAlu del CNC o en su pagina web
+  - text: Podés verlo en la app de eAlu del CNC o en su página web https://www.cnc.una.py/ealu/#/pages/login?returnUrl=%2Fdashboard
 
   utter_faq/extension:
   - text: Podés participar del Coro de la FIUNA, del ballet Folklórico Jeroky, o de alguno de los clubes de la Facultad, también podés estudiar en la academia de idiomas, o en la academia local CISCO. Para obtener más información de las actividades a realizarse podés ingresar al canal de telegram "Extension Universitaria - FIUNA"
@@ -106,26 +94,17 @@ responses:
   - text: La asistencia mínima es del 70%. Podés verificar cuántas veces podés faltar con la siguiente imagen https://drive.google.com/file/d/1aniL5MICJmCQ6Qnq6HzGjia2xOMd92A5/view?usp=share_link
   
   utter_faq/asistencia_consulta:
-  - text: Para consultar tu asistencia podés ir al departamento de Control Académico, ubicado 
+  - text: Para consultar tu asistencia podés ir al departamento de Control Académico.
 
   utter_faq/aranceles:
   - text: Podés ver los aranceles en el siguiente documento https://drive.google.com/file/d/127HMvEDDr0NCVZ3wj2Oo2Tl9tiXZPGVy/view
   
-  utter_faq/horario_biblioteca:
-  - text: El horario de atención de la biblioteca es de Lunes a Viernes desde las 7:00 hasta las 20:00 y los sabados desde las 7:00 hasta las 12:00. La biblioteca de Citec abre de lunes a viernes de 7:15 a 19:00hs.
-  
   utter_faq/aulas_estudio:
   - text: Podes estudiar en las aulas H1 y H2 que son las destinadas a estudio, o cualquiera que se encuentre libre :)
   
-  utter_faq/horario_H:
-  - text: Las aulas H abren desde las 7:00 hasta las 21:00
-
   utter_faq/fotocopiadora:
   - text: La fotocopiadora de la facultad está ubicada en el Bloque D, al lado del aula D2
  
-  utter_faq/horario_fotocopiadora:
-  - text: El horario de atención de la biblioteca es de Lunes a Viernes de 8:00 a 12:00 y los Sábados de 8:00 a 12:00
-  
   utter_faq/decano:
   - text: El decano actual es el Prof. Dr. Ing. Rubén Alcides López Santacruz
 
@@ -165,9 +144,6 @@ responses:
   utter_faq/secretaria:
   - text: Podés contactarte con secretaría por estos medios; Campus de la UNA, San Lorenzo Tel:021 585 584/1 Int. 1103. Correo:secretaria@ing.una.py. Sede Isla Bogado Luque Tel./Fax:+595 21 646 167
 
-  utter_faq/horario_secretaria:
-  - text: El horario de la secretaría de Lunes a Viernes de 8:00 hs a 18:00 y Sábados de 8:00 a 12:00
-  
   utter_faq/prorroga_permanencia:
   - text: El tiempo de permanencia en la facultad es de 10 años, para solicitar prórroga se debe llenar este formulario http://ing.una.py/pdf2022/Secretaria/SOLICITUD_DE_PRORROGA_DE_PERMANENCIA.doc y presentarlo en mesa de entrada
   
@@ -208,7 +184,7 @@ responses:
   - text: Los préstamos de libro a domicilio son por 8 días.
 
   utter_faq/aula_clase:
-  - text: Podés ver en el siguiente link https://docs.google.com/spreadsheets/d/1kO0J6h6HiD9Pt84mjKedgPE0t37aWLnxecfHLic0rQw/edit#gid=990148165
+  - text: Podés ver en el siguiente enlace https://docs.google.com/spreadsheets/d/1kO0J6h6HiD9Pt84mjKedgPE0t37aWLnxecfHLic0rQw/edit#gid=990148165
   
   utter_faq/calendario_academico:
   - text: El calendario académico lo podes ver en el siguiente documento https://drive.google.com/file/d/10NCHGAeUzUx28Q-JUOTRvCCNe4gxwBlg/view
@@ -267,9 +243,6 @@ responses:
   utter_faq/ubi_DeBernardi:
   - text: El edificio Enzo Debernardi se encuentra en el Campus de San Lorenzo, tiene su entrada sobre la Avda. Mcal Lopez.
 
-  utter_faq/horario_atal:
-  - text: El horario de atención al alumno es de Lunes a Viernes de 8:00 a 18:00. Para mas informacion podes consultar llamar al 021 585584/1102
-
   utter_faq/contacto_repre_estudiantil:
   - text: No puedo compartirte números de teléfono, pero los podés encontrar en la cuenta de instagram de representación estudiantil.
 
@@ -303,9 +276,6 @@ responses:
   utter_faq/ubi_secretaria:
   - text: La secretaría de la FIUNA queda en el bloque J, a la vuelta de Atencion al alumno. 
 
-  utter_faq/horario_fiuna:
-  - text: La FIUNA abre de Lunes a Viernes de 07:00 a 22:15 y los sábados de 07:00 a 18:00
-
   utter_faq/mapa:
   - text: Aquí te paso el mapa de la facultad:https://drive.google.com/file/d/1QA6uiMimbmYaZ_TxN_7SmLpoCeNPHDg1/view?fbclid=PAAaY4dV1e8IXoRJ3XRils-7ZSI3orF3T5TfnPnty9BcrPVoKQQD0IzEplFVw
 
@@ -318,11 +288,8 @@ responses:
   utter_faq/resoluciones:
   - text: Las resoluciones podés encontrar en la página de la facultad http://www.ing.una.py/?page_id=31 
   
-  utter_faq/horario_cei:
-  - text: El horario del CEI es de Lunes a Viernes de 7:30 a 20:00
-  
   utter_faq/contraseñas:
-  - text: La contraseña del wifi es NOlose
+  - text: La contraseña del wifi de FIUNA es 'fiuna#19'
 
   utter_faq/calcomanias:
   - text: Para obtener los distintivos de libre acceso vehicular el estudiantes deberá presentar el formulario de solicitud de calcomanía en el Departamento de Proyectos(Final del bloque de caja), debidamente completado, firmado y acompañado de; Copia CIC del Propietario vehículo y del Solicitante autorizado, Copia de Cédula del Automotor, Copia de Habilitación del Municipio, Comprobante de Inscripción (INSWEB). El formulario lo podés descargar del siguiente link http://www.ing.una.py/wp-content/uploads/2022/07/Formulario-Solic-Calcomania-2022-estud.pdf
@@ -344,9 +311,6 @@ responses:
 
   utter_faq/dtic_contacto:
   - text: El número de teléfono de DTIC es 021 585 584/1 interno 1701 para recepción, 1704 para Sistemas Informáticos y 1705 para Soporte Técnico, Mail:dtics@ing.una.py
-
-  utter_faq/horario_dtic:
-  - text: El horario de atención de DTICs es de Lunes a Viernes de 8:00 a 18:00
 
   utter_faq/evaluaciones:
   - text: Las evaluaciones se dividen en dos partes; la primera es la evaluación de proceso sobre 70 puntos que comprenden dos pruebas parciales (24 y 36 puntos), exámenes talleres, trabajos prácticos, trabajos de laboratorio, otras que establezca la cátedra(10 puntos). La segunda etapa es el examen final sobre todo el contenido analítico del programa de la asignatura, se evalúa sobre 30 puntos y para tener derecho a éste se debe haber acumulado un mínimo de 35 puntos en la primera etapa, donde 2 deben ser de talleres y/o 6 de laboratorio. 
@@ -385,7 +349,6 @@ responses:
   - text: Para esto estoy, decime
   
   utter_chitchat/agradecimiento:
-  - text: De nada!
   - text: No es nada, para eso estoy ;)
   - text: Cuando quieras
 
@@ -411,7 +374,11 @@ responses:
   - text: La idea es poder ayudar a los estudiantes con las preguntas frecuentes que tengan sobre la facultad.
 
   utter_chitchat/cof:
-  - text: Yo también quiero saber eso :(
+  - text: El torneo de verano inicia el 22/03/2023.
+
+  utter_chitchat/pronostico:
+  - text: Podés ver el pronóstico del tiempo en el siguiente enlace https://www.meteorologia.gov.py/
+
   utter_out_of_scope:
   - text: Lo siento, no puedo responder a eso.
   - text: Lo siento, eso se encuentra fuera de mi alcance.
@@ -430,7 +397,7 @@ responses:
   - text: Que bueno!
   
   utter_despedida:
-  - text: Adios
+  - text: Adios/
   - text: chau
   
   utter_iamabot:
@@ -443,4 +410,5 @@ responses:
   utter_ask_firma:
   - text: cuanto es tu firma?
   
-
+  utter_saludo_corto:
+  - text: Hola! en que puedo ayudarte?

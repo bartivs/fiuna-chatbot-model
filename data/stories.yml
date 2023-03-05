@@ -2,17 +2,13 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: Saluda Primero
   steps:
   - intent: saludo
   - action: action_saludo
-  - intent: mood_bueno
-  - action: utter_happy
 
 - story: sad path 1
   steps:
-  - intent: saludo 
-  - action: action_saludo
   - intent: mood_triste
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -53,3 +49,38 @@ stories:
   - active_loop: null
   - action: action_informar_puntaje_final
 
+- story: Preguntas de horario
+  steps:
+  - intent: saludo
+  - action: action_saludo
+  - intent: horario
+  - action: action_horario
+  - intent: continuar_preguntando_horario
+  - action: action_horario
+
+- story: Preguntas de malla
+  steps:
+  - intent: saludo
+  - action: action_saludo
+  - intent: malla_curricular
+  - action: action_malla_curricular
+  - intent: continuar_preguntando_carrera
+  - action: action_malla_curricular
+
+- story: Preguntas director de carrera
+  steps:
+  - intent: saludo
+  - action: action_saludo
+  - intent: director_carrera
+  - action: action_director_carrera
+  - intent: continuar_preguntando_carrera
+  - action: action_director_carrera
+
+- story: Preguntas director sobre la carrera
+  steps:
+  - intent: saludo
+  - action: action_saludo
+  - intent: info_carrera
+  - action: action_info_carrera
+  - intent: continuar_preguntando_carrera
+  - action: action_info_carrera

@@ -30,6 +30,7 @@ nlu:
     - hasta nunca
     - hasta luego
     - hablamos
+    - chao
 - intent: afirmacion
   examples: |
     - si
@@ -88,7 +89,7 @@ nlu:
     - Estoy triste
     - Me animas?
     - :(
-    - No me siento bien 
+    - No me siento bien
     - Voy a llorar
 - intent: bot_challenge
   examples: |
@@ -104,7 +105,7 @@ nlu:
   examples: |
     - Quién te creó?
     - quien te hizo
-    - quienes te hicieron    
+    - quienes te hicieron
     - Quien TE Creo?
     - Quien te creo?
     - Quien creo este bot?
@@ -156,6 +157,8 @@ nlu:
     - thanks
     - thx
     - Gracias
+    - de lujo
+    - ok
 - intent: chitchat/dificultad
   examples: |
     - Que materia es facil?
@@ -197,6 +200,9 @@ nlu:
     - Que preguntas por ejemplo?
     - Que preguntas?
     - Cómo cuáles?
+    - No lo se tu dime
+    - no lo sé,tú dime
+    - como me podes ayudar
 - intent: chitchat/como_funciona
   examples: |
     - Como te hago preguntas ?
@@ -230,13 +236,29 @@ nlu:
     - cuando vuelve el cof?
     - fecha de inicio del campeonato
     - inicio del campeonato
+- intent: chitchat/pronostico
+  examples: |
+    - Lloverá en la facultad?
+    - que tal el tiempo para hoy
+    - clima
+    - condiciones climáticas
+    - esta feo el tiempo
+    - va a llover?
+    - quiero saber si va a llover
+    - que tal el clima
+    - tiene pinta de que va a a llover
+    - esta nublado
+    - parece que quiere llover
+    - haete la okysea
+    - como esta el tiempo en san lorenzo
+    - va a llover en la facultad?
 - intent: nota_segun_firma
   examples: |
     - Cuanto tengo que hacer para quitar [5](nota_des) si mi firma es [35](firma)
-    - mi firma es de [55](firma), cuanto debo hacer para pasar con [2](nota_des)?
-    - si tengo de firma [44](firma), con cuanto paso?
-    - quiero quitar [4](nota_des) y mi firma es de [51], cuanto tengo que hacer?
-    - quiero saber cuanto tengo que hacer para quitar [5](nota_des) si mi firma es de [40](firma)
+    - mi firma es de [36](firma), cuanto debo hacer para pasar con [2](nota_des)?
+    - si tengo de firma [37](firma), con cuanto paso?
+    - quiero quitar [4](nota_des) y mi firma es de [38], cuanto tengo que hacer?
+    - quiero saber cuanto tengo que hacer para quitar [3](nota_des) si mi firma es de [39](firma)
     - Cuanto tengo que hacer para pasar
     - que puntaje tengo que hacer en el final para pasar?
     - Cuanto tengo que hacer en 1er final para pasar?
@@ -250,31 +272,44 @@ nlu:
     - quiero saber cuanto debo hacer para pasar
     - quiero saber cuanto debo hacer en mi examen
     - quiero saber cuanto tengo que hacer en mi examen para pasar
-    - Si mi firma es [56](firma), cuanto tengo que hacer en el final para pasar?
-    - Con que puntaje de final paso teniendo firma de [45](firma)
-    - Si mi firma es [44](firma) cuanto tengo que hacer para pasar?
-    - Tengo firma de [35](firma) cuánto debo hacer en el final?
-    - Cuanto debo de hacer para pasar con [dos](nota_des) si tengo [35](firma) de firma?
-    - Si tengo una forma de [54](firma), cuánto debo hacer en el exámen final para sacar [5](nota_des)?
-    - Cuánto debo hacer para quitar [5](nota_des) teniendo una firma de [41](firma)?
+    - Si mi firma es [40](firma), cuanto tengo que hacer en el final para pasar?
+    - Con que puntaje de final paso teniendo firma de [41](firma)
+    - Si mi firma es [42](firma) cuanto tengo que hacer para pasar?
+    - Tengo firma de [43](firma) cuánto debo hacer en el final?
+    - Cuanto debo de hacer para pasar con [dos](nota_des) si tengo [44](firma) de firma?
+    - Si tengo una forma de [45](firma), cuánto debo hacer en el exámen final para sacar [5](nota_des)?
+    - Cuánto debo hacer para quitar [5](nota_des) teniendo una firma de [46](firma)?
     - Cuánto debo hacer para sacar [5](nota_des)?
     - Cuanto debo hacer para sacar [5](nota_des) si mi firma es [35](firma)?
-    - Tengo firma de [45](firma), cuántos puntos tengo que hacer para pasar?
-    - Firma [45](firma), quiero quitar [5](nota_des)
+    - Tengo firma de [47](firma), cuántos puntos tengo que hacer para pasar?
+    - Firma [48](firma), quiero quitar [5](nota_des)
     - Cuánto tengo que hacer para quitar [5](nota_des) con firma de [49](firma)
 - intent: puntos_firma
   examples: |
-    - Mi firma es [35](firma)
-    - apenas [37](firma)
-    - no se, creo que [38](firma)
-    - [39](firma) por ahi
-    - mi firma es [43](firma)
-    - mi firma es [42](firma)
-    - creo que es [55](firma) 
-    - Me parece que [60](firma)
-    - Mi firma es de [63](firma)
-    - Mi firma es [45](firma)
-    - Mi firma es [47](firma)
+    - Mi firma es [50](firma)
+    - apenas [51](firma)
+    - no se, creo que [52](firma)
+    - [53](firma) por ahi
+    - mi firma es [54](firma)
+    - creo que es [55](firma)
+    - Me parece que [56](firma)
+    - Mi firma es de [57](firma)
+    - [58](firma)
+    - Mi firma es [59](firma)
+    - de [60](firma)
+    - firma de [61](firma)
+    - firma de [macho](firma)
+    - [machazo](firma)
+    - [machaso](firma)
+    - [62](firma)
+    - [63](firma)
+    - [64](firma)
+    - [65](firma) apenami
+    - apenami [66](firma)
+    - firma de [67](firma)
+    - [68](firma)
+    - [69](firma)
+    - [70](firma) 
 - intent: nota_deseada
   examples: |
     - quiero quitar un [3](nota_des)
@@ -369,7 +404,6 @@ nlu:
     - ¿Hay horario de exámenes parciales?
     - Cuando es el tercer final de f2?
     - Horario de exámenes?
-    - Horario de exámenes
     - Cuando es el 3er final de f2
     - Cual es el horario de exámenes
     - Puedes pasar el horario de exámenes?
@@ -394,7 +428,7 @@ nlu:
     - que fecha empiezan los finales
     - que fecha empiezan los examenes
     - inicio 2do final
-    - fecha de 2° final 
+    - fecha de 2° final
     - cuando termina 3° final
     - cuando se rinde 3er final
     - Que fecha son los exámenes este semestre?
@@ -419,10 +453,9 @@ nlu:
     - cuando [rendimos](examen)
     - Fecha examen
     - Fecha examen ?
-    - Cuándo empiezan los parciales?
     - Cuando empiezan los parciales
 - intent: faq/calendario_clases
-  examples: |    
+  examples: |
     - Cuando empiezan las clases?
     - Cuánto empieza las clases?
     - Cuándo empiezan las clases
@@ -445,9 +478,9 @@ nlu:
     - cuando se vuelve a clases
     - que dia se vuelve a la facu
     - cuando vuelve nuestro sufrimiento
-    - cuando se vuelve a la facultad  
-    - hasta cuando tenemos clases? 
-    - hasta cuando son las clases  
+    - cuando se vuelve a la facultad
+    - hasta cuando tenemos clases?
+    - hasta cuando son las clases
 - intent: faq/correlativas
   examples: |
     - me pasas las materias?
@@ -473,24 +506,6 @@ nlu:
     - Me pasan el formulario de [nota al Decano](formularios)?
     - me pasas el formulario de [nota al decano](formularios)
     - Donde encuentro formularios?
-- intent: faq/horario_mesa_entrada
-  examples: |
-    - Cual es el horario de atencion de mesa de entrada
-    - Hasta que hora se abre mesa de entrada
-    - hoy abre mesa de entrada?
-    - hasta que hora atienden en mesa de entrada
-    - sabados a partir de que hora atienden en mesa de entrada?
-    - horario de mesa de entrada
-    - Horario atención Fiuna
-    - horario de atención mesa de entrada
-    - A qué hora cierra mesa de entrada
-    - a qué hora abre mesa de entrada
-    - Horario de mesa de entrada
-    - Hasta que hora está abierto mesa de entrada
-    - hasta que hora abre mesa de entrada
-    - Cual es el horario de mesa de entrada
-    - Cuál es el horario de atención en mesa de entrada?
-    - Horario mesa de entrada
 - intent: faq/MesaDeEntrada_Contacto
   examples: |
     - Como puedo contactar con mesa de entrada
@@ -567,55 +582,6 @@ nlu:
     - como sé que se necesita para el arancel 0
     - Donde solicito arancel cero?
     - donde solicito arancel 0
-- intent: faq/horario_caja
-  examples: |
-    - Cual es el horario de atención de la caja
-    - Hasta que hora atieden en caja
-    - hoy abre la caja?
-    - hasta que hora atienden en la caja
-    - sabados a partir de que hora abren en caja?
-    - horario de la caja
-    - pasame el horario de caja
-    - quiero saber hasta que hora abren la caja
-    - ¿Hasta que hora abre caja?
-    - Horario de caja
-    - Hasta que horas estará el cajero de la facultad hoy?
-    - Cuál es el horario de la caja?
-    - Horario caja de la facultad
-    - Horario de la caja
-    - Cual es el horario de atención de la caja?
-    - A qué hora se abre la caja de fiuna?
-    - Horario de caja?
-    - Horario de caja ?
-    - Caja
-    - Cuál es el horario de Caja?
-    - Hasta que hora abre la caja?
-    - Hasta que hora está abierta la caja de la facultad?
-    - A qué hora abre la caja?
-    - El horario de caja para pagar cuotas cuál es?
-    - Hasta que hora abre caja?
-    - Horario de la caja?
-    - Cuál es el horario de caja?
-    - Hasta qué hora abre la caja ?
-    - Hasta qué hora es la atención de la caja ?
-    - Hasta que hora se abre la caja
-    - Horarios de la Caja?
-    - Hasta que hora se abre la caja?
-    - Cual es el horario de atención en caja?
-    - Horario de atención de caja?
-    - Hasta que hora se atiende en la caja?
-    - Sabes hasta que hora esta abierto Caja?
-    - Sabes hasta que hora esta abierta la Caja para pagar matricula y cuotas de la facultad?
-    - Horario de atención de caja
-    - Quiero el horario de atención de caja
-    - Horarip de caja
-    - Cual es el horario de la caja?
-    - Hasta que hora atienden en caja?
-    - En qué horarios se abre la caja de fiuna?
-    - Caja ?
-    - horario caja
-    - A que hora cierra la caja
-    - horaripo de caja
 - intent: faq/formas_pago
   examples: |
     - Como puedo pagar mi cuota?
@@ -646,43 +612,6 @@ nlu:
     - Donde pago mis cuotas ?
     - Donde pago la cuota del semestre?
     - ¿puedo pagar la matricula por transferencia bancaria?
-- intent: faq/malla_curricular
-  examples: |
-    - Necesito la malla curricular de electronica
-    - cual es la malla de mecatronica
-    - malla de electromecanica
-    - quiero ver la malla de indus
-    - malla
-    - malla de la carrera de electronica
-    - Malla curricular geográfica.
-    - Malla curricular mecánica
-    - Hay una nueva malla?
-    - me pueden pasar la malla de electrónica?
-    - me podes pasar la malla de eca
-    - Donde veo la malla curricular?
-    - Cual es la malla curricular de electrónica?
-    - Quiero la malla de eca
-    - Mallas
-    - Malla de industrial
-    - Malla de electrónica
-    - malla de eca
-    - malla de mecánica
-    - malla de geografica
-    - malla de gyf
-    - Mall de Ingeria civil
-    - Donde podría encontrar la malla curricular de Emca, Mecánica, etc?
-    - Malla de civil
-    - Malla de Ing. Civil?
-    - Malla de emca
-    - Me pueden mandar la malla de ingeniería civil
-    - Cuál es la malla de industrial ?
-    - Malla de civil?
-    - Malla curricular de ingeniería civil
-    - Cual es la malla de Ingeniería Industrial?
-    - Malla electromecánica
-    - Cual es la malla de mecatrónica?
-    - Dime la malla de mecatrónica
-    - Malla electromecanica
 - intent: faq/materias_malla
   examples: |
     - Que materias hay en el 3 semestre
@@ -745,14 +674,13 @@ nlu:
     - como hago para matricularme
     - como es el tema de la matriculacion
     - que necesito para matricularme
-    - me podes explicar el proceso para matricularme 
+    - me podes explicar el proceso para matricularme
     - quiero saber como matricularme
     - matriculacion
     - como matricularme
     - que papeles tengo que tener para matricularme
     - proceso de matriculacion
     - matricula
-    - matriculacion
     - Matriculación materias eaula
     - Que necesito para inscribirme?
     - como hago para inscribirme
@@ -789,7 +717,6 @@ nlu:
     - Se paga algo?
     - Cuál es el costo de la matricula y primera cuota
     - Cuánto es la cuota mensual?
-    - Cuánto es la cuota?
     - Cuánto cuesta la cuota?
     - Cuanto es el costo de la matricula y  cuota ?
     - cual El costo de las cuotas?
@@ -942,43 +869,6 @@ nlu:
     - Aranceles ?
     - cuanto es la matricula con multa
     - Cuanto cuesta estudiar en fiuna?
-- intent: faq/horario_biblioteca
-  examples: |
-    - horario de atencion de la biblioteca
-    - hasta que hora se abre la biblio
-    - desde que hora abre la biblioteca
-    - que hora abre la biblioteca
-    - hasta que hora puedo quedarme en la biblioteca
-    - La biblioteca estará abierta hoy?
-    - Cual es el horario de la biblioteca?
-    - Horario de biblioteca en citec
-    - Hasta que hora se abre la biblioteca?
-    - Horario de atención de la biblioteca
-    - A qué hora cierra la biblioteca?
-    - Horario de la biblioteca
-    - Horario de biblioteca?
-    - hasta que hora se abre la biblioteca
-    - Biblioteca?
-    - Que horario abre la biblioteca?
-    - biblioteca
-    - A qué hora cierra la biblioteca
-    - A qué hora se cierra la biblioteca de la facultad?
-    - A qué hora abre la biblioteca?
-    - A partir de qué hora abre la biblioteca?
-    - Hasta qué hora abre la biblioteca?
-    - La biblioteca abre los sábados?
-    - Cual es el horario de la Biblioteca los sábados?
-    - Cuál es el horario de la biblioteca?
-    - Horario que abre la biblioteca
-    - Biblioteca horariooo
-    - Que horario se habilita la biblioteca?
-    - Hasta que hora abre la biblioteca?
-    - A qué hora se cierra la biblioteca?
-    - Hasta que hora abre la biblioteca
-    - La biblioteca hasta que hora se abre?
-    - el horario de la biblioteca
-    - Horario de atención de la biblioteca
-    - a que hora abre la biblioteca?
 - intent: faq/aulas_estudio
   examples: |
     - Que aula puedo utilizar para estudiar?
@@ -986,18 +876,6 @@ nlu:
     - aulas para estudiar?
     - cuales son las aulas habilitadas para estudiar
     - Que aula puedo utilizar para estudiar
-- intent: faq/horario_H
-  examples: |
-    - Hasta que hora se abren las aulas H?
-    - Que hora abren las aulas H
-    - horario aulas h
-    - desde que hora se abre h
-    - que hora cierran H
-    - aulas H
-    - horario de clases H
-    - Las clases de H hasta qué hora abren?
-    - hasta que hora abren las clases H
-    - a que hora abren las aulas h
 - intent: faq/fotocopiadora
   examples: |
     - Donde puedo hacer fotocopias?
@@ -1008,44 +886,6 @@ nlu:
     - Donde esta la fotocopiadora?
     - En que parte de la facultad esta la fotocopiadora?
     - Dónde está la fotocopiadora?
-- intent: faq/horario_fotocopiadora
-  examples: |
-    - Hasta qué hora abre la fotocopiadora?
-    - Horario de atención de la fotocopiadora
-    - horario de atencion de la fotocopiadora
-    - hasta que hora se abre la fotocopiadora
-    - desde que hora abre la fotocopiadora
-    - que hora abre la fotocopiadora
-    - hasta que hora puedo quedarme en la fotocopiadora
-    - La fotocopiadora estará abierta hoy?
-    - Cual es el horario de la fotocopiadora?
-    - Hasta que hora se abre la bfotocopiadora?
-    - Horario de atención de la fotocopiadora
-    - A qué hora cierra la fotocopiadora?
-    - Horario de la fotocopiadora
-    - Horario de fotocopiadora?
-    - hasta que hora se abre la fotocopiadora
-    - fotocopiadora?
-    - Que horario abre la fotocopiadora?
-    - fotocopiadora
-    - A qué hora cierra la fotocopiadora
-    - A qué hora se cierra la fotocopiadora de la facultad?
-    - A qué hora abre la fotocopiadora?
-    - A partir de qué hora abre la fotocopiadora?
-    - Hasta qué hora abre la fotocopiadora?
-    - La fotocopiadora abre los sábados?
-    - Cual es el horario de la fotocopiadora los sábados?
-    - Cuál es el horario de la fotocopiadora?
-    - Horario que abre la fotocopiadora
-    - fotocopiadora horariooo
-    - Que horario se habilita la fotocopiadora?
-    - Hasta que hora abre la fotocopiadora?
-    - A qué hora se cierra la fotocopiadora?
-    - Hasta que hora abre la fotocopiadora
-    - La fotocopiadora hasta que hora se abre?
-    - el horario de la fotocopiadora
-    - Horario de atención de la fotocopiadora
-    - a que hora abre la fotocopiadora?
 - intent: faq/decano
   examples: |
     - Quien es el decano?
@@ -1089,7 +929,6 @@ nlu:
     - vice decano actual
     - cual es el nombre del vice decano
     - Quien es el vicedecano?
-    - vice decano actual
     - Quién es el vice decano ?
 - intent: faq/rector
   examples: |
@@ -1133,15 +972,15 @@ nlu:
     - Quien es el presidente del CEI?
 - intent: faq/contactos_cei
   examples: |
-   - Contacto de alguien del Centro de estudiantes ?
-   - numero del presidente del cei?
-   - numero de alguien del cei?
-   - contacto del cei
+    - Contacto de alguien del Centro de estudiantes ?
+    - numero del presidente del cei?
+    - numero de alguien del cei?
+    - contacto del cei
 - intent: faq/cosas_perdidas
   examples: |
     - Donde se dejan las cosas perdidas?
     - se me perdio mi billetera
-    - me olvide de mi calculadora 
+    - me olvide de mi calculadora
     - se me perdio mi cartuchera
     - deje mi abrigo en la clase
     - deje mi campera por la silla
@@ -1150,7 +989,7 @@ nlu:
 - intent: faq/carnet_biblioteca
   examples: |
     - Como retiro un carnet de la biblioteca?
-    - Requisitos para solicitar Carnet de Biblioteca 
+    - Requisitos para solicitar Carnet de Biblioteca
     - quiero un carnet de biblioteca
     - carnet de biblioteca
     - cuales son los requisitos para el carnet de biblioteca
@@ -1224,34 +1063,8 @@ nlu:
     - cual es el telefono de secretaria
     - cual es el correo de la secretaria de la facultad
     - quiero contactarme con secretaria
-    - Secretaria
     - numero de secretaria
-    - Secretaría
     - Número de secretaría
-- intent: faq/horario_secretaria
-  examples: |
-    - Horario de secerataria
-    - A qué hora abre secretaría
-    - Hasta que hora se abre secretaría?
-    - Hasta qué hora atienden en secretaría?
-    - hasta qué hora abre secretaría?
-    - hasta que hora abre secretaría?
-    - Hasta que hora se abre secretaría
-    - A qué hora se abre secretaría?
-    - que hora abre secretaría?
-    - a qué hora abre secretaría?
-    - A qué hora cierra secretaría
-    - a qué hora cierra secretaría
-    - Hasta que hora está abierto secretaría
-    - Hasta que hora está abiero secretaría
-    - Hasta que hora abre secretaría
-    - Hasta que hora abre secretaría 
-    - Cual es el horario de secretaría?
-    - Horario de secretaría
-    - Horario secretaría
-    - Horario de secretaría?    
-    - Hasta que hora atienden en secretaria?
-    - Secretaria esta abierta?
 - intent: faq/prorroga_permanencia
   examples: |
     - Prórroga de permanencia
@@ -1264,7 +1077,6 @@ nlu:
     - Plazo de permanencia en la facultad?
     - cuanto tiempo tengo para terminar mis materias
     - permanencia en la facultad
-    - tiempo de permanencia en la facultad
     - cuando tengo que pedir prorroga
     - Hasta cuánto tiempo se puede quedar en la facu?
     - Cómo funciona la prórroga?
@@ -1319,7 +1131,6 @@ nlu:
     - Carreras
     - Qué carreras hay en fiuna?
     - Cuántas carreras tiene la FIUNA?
-    - Carreras
     - Fiuna Carreras
     - Cuáles son las carreras
     - Cuáles son las carreras disponibles en fiuna?
@@ -1334,6 +1145,7 @@ nlu:
     - covid-19
     - Certificado médico
     - justificativo médico
+    - que me sirve como justificativo
 - intent: faq/presentar_reposo_medico
   examples: |
     - Donde presento mi certificado de reposo medico ?
@@ -1359,7 +1171,7 @@ nlu:
     - vencimiento de la cuota
     - hasta cuando puedo pagar mi cuota sin multa
     - matricula sin multa
-    - cuota sin multa 
+    - cuota sin multa
     - fecha limite de cuota
     - hasta cuando la cuota es sin multa
     - cuando vence la matricula
@@ -1414,7 +1226,7 @@ nlu:
 - intent: faq/revision
   examples: |
     - fecha de revision
-    - que dia es la revision 
+    - que dia es la revision
     - cuando es la revision
     - revision de fisica
     - cuando es la revision de estatica
@@ -1460,9 +1272,7 @@ nlu:
     - Distribución de aulas por materias
     - Donde veo en que aula tengo clases?
     - El horario de clases por día?
-    - Distribución de aulas
     - Que hora es la clase con el Ing Florentin?
-    - Distribución de aulas
     - Link de la distribución de aulas
     - Link de las aulas disponible
     - En que aula hay clases de Mecánica de Materiales 1 ?
@@ -1477,7 +1287,9 @@ nlu:
     - Link de clases
     - Distribucion de clases
     - Qué clases hay a esta hora?
-    - Que aulas están libres ?
+    - a que hora es la clase de proyecto y diseño
+    - que hora empieza la clase de DLD
+    - Que hora empieza TC3
 - intent: faq/calendario_academico
   examples: |
     - Calendario de clases?
@@ -1513,8 +1325,7 @@ nlu:
   examples: |
     - Como funciona el tema de la pasantía.
     - Pasantia
-    - como hago la pasantia
-    - me explicas la pasantia 
+    - me explicas la pasantia
     - como es la pasantia
     - Cuanto dura la pasantia
     - como es el tema de la pasantia
@@ -1522,10 +1333,6 @@ nlu:
     - Pasantía
     - Donde encuentro todo lo referente a la pasantia?
     - Me gustaría informacion sobre la pasantia
-    - Cómo es el proceso de pasantía?
-    - Cual es el procedimiento de pasantia?
-    - Cuales son los pasos a seguir para la pasantía ?
-    - Cuál es el procedimiento para hacer pasantía?
     - Datos de pasantía
     - Que es la pasantía?
 - intent: faq/pasantia_requisitos
@@ -1550,6 +1357,11 @@ nlu:
     - documentos necesarios para pasantia
     - Como se realiza el proceso de pasantía
     - A que mail mando mis doc de pasantia?
+    - como hago la pasantia
+    - Cómo es el proceso de pasantía?
+    - Cual es el procedimiento de pasantia?
+    - Cuales son los pasos a seguir para la pasantía ?
+    - Cuál es el procedimiento para hacer pasantía?
 - intent: faq/pasantia_empresas
   examples: |
     - Empresas donde puedo hacer pasantía
@@ -1558,7 +1370,8 @@ nlu:
     - empresas para pasantia
     - convenios para pasantia?
     - en que empresa puedo hacer pasantia?
-    - Donde puedo hacer pasantía
+    - Dónde puedo hacer pasantía
+    - Donde puedo hacer la pasantía
 - intent: faq/nota_decano
   examples: |
     - Como puedo mandar alguna nota al decano.
@@ -1604,11 +1417,10 @@ nlu:
     - trabajo para electronicos
     - trabajo para celectromecanico
     - bolsa de trabajo
-    - busqueda de trabajo
     - trabajo para industrial
 - intent: faq/becas
   examples: |
-    - beca  
+    - beca
     - Becas
     - Becas facultad
     - becas de la facultad
@@ -1722,39 +1534,6 @@ nlu:
     - hacia donde es el enzo de bernardi
     - donde esta el enzo de bernardi
     - Dónde queda el edificio Enzo Debernardi?
-- intent: faq/horario_atal
-  examples: |
-    - Hasta que hora se abre atención al alumno?
-    - horario de atención al alumno
-    - horario de atal
-    - Hasta qué hora atienden en atal?
-    - hasta qué hora abre atal?
-    - hasta que hora abre atencion al alumno?
-    - Hasta que hora se abre atención al alumno
-    - A qué hora se abre atención al alumno?
-    - que hora abre atal?
-    - a qué hora abre atal?
-    - A qué hora cierra atención al alumno
-    - a qué hora cierra atal
-    - Hasta que hora está abierto atención al alumno
-    - Hasta que hora está abiero atal
-    - Hasta que hora abre atal
-    - Hasta que hora abre atención al alumno 
-    - Cual es el horario de atención al alumno?
-    - Horario de atal
-    - Horario atención al alumno
-    - Horario de atención al alumno?
-    - Horario de atención?
-    - Horario de Atal
-    - Horario de atencion atal
-    - Horario de ATALA
-    - HORARIO DE ATAL
-    - Cual es el horario de atención atención al alumno?
-    - Cual es el horario de atal
-    - cual es el horario de atal?
-    - Horario de Atención al Alumno?
-    - Atención al alumno atiende los sábados?
-    - horario de atencion al alumno
 - intent: faq/contacto_repre_estudiantil
   examples: |
     - Me pueden pasar el número de algún representante estudiantil?
@@ -1854,7 +1633,7 @@ nlu:
     - Citec
     - Donde esta CITEC?
 - intent: faq/pagina_web
-  examples:  |
+  examples: |
     - Cual es la página web de la fiuna?
     - pagina de la facultad
     - web de la facu
@@ -1873,18 +1652,6 @@ nlu:
     - ubicacion de la secretaria
     - ubi de secretaria
     - Donde esta la secretaria
-- intent: faq/horario_fiuna
-  examples:  |
-    - Horario de la fiuna
-    - Hasta que hora se abre la facultad
-    - horario de la facultad
-    - a que hora abre la facultad
-    - a partir de que hora se abre la facultad?
-    - a que hora se cierra la facultad?
-    - Que hora abre el porton
-    - Horario de fiuna
-    - Va a estar abierta la facultad mañana?
-    - Que días se abre la facultad?
 - intent: faq/mapa
   examples: |
     - Tienes un mapa para ubicar las clases
@@ -1895,6 +1662,7 @@ nlu:
     - Mapa de la facultad
 - intent: faq/ubi_clases_laboratorios
   examples: |
+    - donde quedan las aulas f 
     - Dónde queda el laboratorio de materiales
     - Ubicación del laboratorio
     - donde queda el bloque S?
@@ -1954,16 +1722,6 @@ nlu:
     - Quiero ver una resolución del consejo Directivo
     - donde puedo ver las resoluciones
     - necesito la resolución
-- intent: faq/horario_cei
-  examples: |
-    - El CEI esta abierto?
-    - A que hora abre el CEI?
-    - Hasta que hora abre el cei
-    - El cei hasta que hora abre
-    - Esta abierto el Cei ?
-    - En que horario abre el cei ?
-    - En que horario abre el cei?
-    - Esta abierto el cei?
 - intent: faq/contraseñas
   examples: |
     - Cuál es la contraseñaa del wifi de fiuna?
@@ -2057,16 +1815,6 @@ nlu:
     - quiero hablar con dtic
     - Departamento tecnico de informatica y computación
     - Dtics
-- intent: faq/horario_dtic
-  examples: |
-    - Hasta que hora atienden en dtics?
-    - Horario de atención de dtics
-    - Horario de dtics
-    - Hasta que hora abre dtic
-    - que hora abre dtic
-    - horario dtic
-    - a partir de que hora atienden en dtic
-    - a que hora atienden en dtics
 - intent: faq/evaluaciones
   examples: |
     - Como funcionan las evaluaciones en la fiuna ?
@@ -2107,6 +1855,8 @@ nlu:
     - Cuanto es el mínimo de taller ?
     - Mínimo de taller ?
     - Puntos taller necesarios para habilitar examen final
+    - cuanto es la firma minima
+    - firma minima
 - intent: faq/firma_duracion
   examples: |
     - Cómo funciona la firma?
@@ -2293,7 +2043,6 @@ nlu:
     - Cómo puedo pasar calculo 1?
     - Cual es la historia de la facultad
     - Número del área de Admisión?
-    - Tengo hambre
 - intent: director_carrera
   examples: |
     - Quien es el director de [electronica](carrera)
@@ -2304,6 +2053,12 @@ nlu:
     - Jefe de carrera ingeniería [mecánica](carrera)?
     - Director de carrera de [Industrial](carrera) quién es?
     - Director carrera [geografica](carrera)
+    - quien es el director de [mecatrónica](carrera)
+    - quienes son los directores de carrera 
+    - directores de carrera
+    - nombre de los directores de carrera
+    - director de carrera
+    - nombre del director de carrera
 - intent: info_carrera
   examples: |
     - Ingeniería [civil](carrera)
@@ -2318,6 +2073,196 @@ nlu:
     - [electrónica](carrera)
     - mas informacion de la carrera
     - Qué es la ingenieria [civil](carrera)?
+    - quiero informacion de todas las carreras
+    - info sobre las carreras
+    - informacion de las carreras
+- intent: horario
+  examples: |
+    - A partir de qué hora abre la [biblioteca](lugar)?
+    - a que hora abre la [biblioteca](lugar)?
+    - A qué hora abre la [biblioteca](lugar)?
+    - A qué hora cierra la [biblioteca](lugar)
+    - A qué hora cierra la [biblioteca](lugar)?
+    - A qué hora se cierra la [biblioteca](lugar) de la facultad?
+    - A qué hora se cierra la [biblioteca](lugar)?
+    - [biblioteca](lugar) horariooo
+    - [biblioteca](lugar)?
+    - Cual es el horario de la [biblioteca](lugar) los sábados?
+    - Cual es el horario de la [biblioteca](lugar)?
+    - Cuál es el horario de la [biblioteca](lugar)?
+    - el horario de la [biblioteca](lugar)
+    - Hasta que hora abre la [biblioteca](lugar)
+    - Hasta que hora abre la [biblioteca](lugar) ?
+    - Hasta que hora abre la [biblioteca](lugar)?
+    - Hasta qué hora abre la [biblioteca](lugar)?
+    - hasta que hora se abre la [biblioteca](lugar)
+    - Hasta que hora se abre la [biblioteca](lugar)?
+    - Horario [biblioteca](lugar)
+    - Horario de atención de la [biblioteca](lugar)
+    - Horario de [biblioteca](lugar)
+    - Horario de [biblioteca](lugar) en citec
+    - Horario de [biblioteca](lugar)?
+    - Horario de la [biblioteca](lugar)
+    - Horario que abre la [biblioteca](lugar)
+    - La [biblioteca](lugar) abre los sábados?
+    - La [biblioteca](lugar) hasta que hora se abre?
+    - Que hora abre la [biblioteca](lugar)
+    - Que horario abre la [biblioteca](lugar)?
+    - Que horario se habilita la [biblioteca](lugar)?
+    - A qué hora se abre [atal](lugar)?
+    - [atal](lugar) atiende los sábados?
+    - Cual es el horario de [atal](lugar)
+    - cual es el horario de [atal](lugar)?
+    - Cual es el horario de [atal](lugar)?
+    - Cual es el horario de atención [atal](lugar)?
+    - Hasta que hora abre [atal](lugar)
+    - Hasta que hora se abre [atal](lugar)
+    - Hasta que hora se abre [atal](lugar)?
+    - Horario [atal](lugar)
+    - Horario de [atal](lugar)
+    - Horario de [ATALA](lugar)
+    - horario de [atencion al alumno](lugar)
+    - Horario de [atal](lugar)?
+    - Horario de atencion [atal](lugar)
+    - Horario de atención?
+    - Horario atención [Fiuna](lugar)
+    - ¿Hasta que hora abre [caja](lugar)?
+    - A qué hora abre la [caja](lugar)?
+    - A que hora cierra la [caja](lugar)
+    - A qué hora se abre la [caja](lugar) de fiuna?
+    - [caja](lugar) ?
+    - Cual es el horario de atención de la [caja](lugar)?
+    - Cual es el horario de atención en [caja](lugar)?
+    - Cuál es el horario de [caja](lugar)?
+    - Cual es el horario de la [caja](lugar)?
+    - El horario de [caja](lugar) para pagar cuotas cuál es?
+    - En qué horarios se abre la [caja](lugar) de fiuna?
+    - Hasta que hora abre [caja](lugar)?
+    - Hasta qué hora abre la [caja](lugar) ?
+    - Hasta que hora abre la [caja](lugar)?
+    - Hasta que hora atienden en [caja](lugar)?
+    - Hasta qué hora es la atención de la [caja](lugar) ?
+    - Hasta que hora está abierta la [caja](lugar) de la facultad?
+    - Hasta que hora se abre la [caja](lugar)
+    - Hasta que hora se abre la [caja](lugar)?
+    - Hasta que hora se atiende en la [caja](lugar)?
+    - Hasta que horas estará el cajero de la facultad hoy?
+    - horario [caja](lugar)
+    - Horario [caja](lugar) de la facultad
+    - Horario de atención de [caja](lugar)
+    - Horario de atención de [caja](lugar)?
+    - Horario de [caja](lugar)
+    - Horario de [caja](lugar) ?
+    - Horario de [caja](lugar)?
+    - Horario de la [caja](lugar)
+    - Horario de la [caja](lugar) ?
+    - Horario de la [caja](lugar)?
+    - Horarios de la [caja](lugar)?
+    - Horarip de [caja](lugar)
+    - horaripo de [caja](lugar)
+    - Quiero el horario de atención de [caja](lugar)
+    - Sabes hasta que hora esta abierta la [caja](lugar) para pagar matricula y cuotas de la facultad?
+    - Sabes hasta que hora esta abierto [caja](lugar)?
+    - A que hora abre el [cei](lugar)?
+    - El [cei](lugar) esta abierto?
+    - El [cei](lugar) hasta que hora abre
+    - En que horario abre el [cei](lugar) ?
+    - En que horario abre el [cei](lugar)?
+    - Esta abierto el [cei](lugar) ?
+    - Esta abierto el [cei](lugar)?
+    - Hasta que hora abre el [cei](lugar)
+    - Horario de atención de [dtics](lugar)
+    - Horario de [dtics](lugar)
+    - Horario de [fiuna](lugar)
+    - Horario de la [fiuna](lugar)
+    - Que días se abre la [fiuna](lugar)?
+    - Que hora abre el [fiuna](lugar)
+    - Va a estar abierta la [fiuna](lugar) mañana?
+    - Hasta qué hora abre la [fotocopiadora](lugar)?
+    - Horario de atención de la [fotocopiadora](lugar)
+    - Hasta que hora se abren las [aulas H](lugar)?
+    - Las [clases de H](lugar) hasta qué hora abren?
+    - Cuál es el horario de atención en [mesa de entrada](lugar)?
+    - Horario de [mesa de entrada](lugar)
+    - Horario [mesa de entrada](lugar)
+    - Hasta que hora atienden en [secretaria](lugar)?
+    - [Secretaria](lugar) esta abierta?
+    - Hasta que hora atienden en [dtics](lugar)?
+    - Hasta que hora abre la [cantina](lugar) ?
+    - Que hora cierra la [cantina](lugar)
+    - Horario de la [cantina](lugar)
+    - Cuál es el horario de la [cantina](lugar)?
+    - Que hora abre la [cantina](lugar)?
+    - cual es el horario de la [cantina](lugar)?
+    - Hasta que hora se abre la [cantina](lugar)
+    - A qué hora abre la [cantina](lugar)?
+    - Hasta qué hora abre la [cantina](lugar)?
+- intent: malla_curricular
+  examples: |
+    - Necesito la malla curricular de [electronica](carrera)
+    - cual es la malla de [mecatronica](carrera)
+    - malla de [electromecanica](carrera)
+    - quiero ver la malla de [indus](carrera)
+    - malla
+    - malla de la carrera de [electronica](carrera)
+    - Malla curricular [geográfica](carrera).
+    - Malla curricular [mecánica](carrera)
+    - Hay una nueva malla?
+    - me pueden pasar la malla de [electrónica](carrera?
+    - me podes pasar la malla de [eca](carrera)
+    - Donde veo la malla curricular?
+    - Cual es la malla curricular de [electrónica](carrera)?
+    - Quiero la malla de [eca](carrera)
+    - Mallas
+    - Malla de [industrial](carrera)
+    - Malla de [electrónica](carrera)
+    - malla de [eca](carrera)
+    - malla de [mecánica](carrera)
+    - malla de [geografica](carrera)
+    - malla de [gyf](carrera)
+    - Mall de Ingeria [civil](carrera)
+    - Donde podría encontrar la malla curricular de Emca, Mecánica, etc?
+    - quiero la malla de las carreras
+    - Malla de [civil](carrera)
+    - Malla de Ing. [Civil](carrera?
+    - Malla de [emca](carrera)
+    - Me pueden mandar la malla de ingeniería [civil](carrera)
+    - Cuál es la malla de [industrial](carrera) ?
+    - Malla de [civil](carrera)?
+    - Malla curricular de ingeniería [civil](carrera)
+    - Cual es la malla de Ingeniería [Industrial](carrera?
+    - Malla [electromecánica](carrera)
+    - Cual es la malla de [mecatrónica](carrera)?
+    - Dime la malla de [mecatrónica](carrera)
+    - Malla [electromecanica](carrera)
+    - quiero ver todas las mallas
+- intent: continuar_preguntando_horario
+  examples: |
+    - y la [secretaria](lugar)?
+    - y el de [atal](lugar)?
+    - y [mesa de entrada]
+    - ya, y el del [cei](lugar)?
+    - gracias, y el de [dtic](lugar)?
+    - y [fotocopiadora](lugar)
+    - el [cei] hasta que hora?
+    - y el de [fotocopiadora](lugar)
+    - y el de [secretaria](lugar)
+    - y el de la [biblioteca](lugar)
+    - y la [biblioteca](lugar)
+- intent: continuar_preguntando_carrera
+  examples: |
+    - y el de [electronica](carrera)
+    - tenes el de [mecanica](carrera)
+    - tenes tambien el de [mecatronica](carrera)
+    - el de [electromecanica](carrera) quien es?
+    - y el de [civil](carrera)?
+    - quiero el de [geografica](carrera) también
+    - y sobre [industrial](carrera) que sabes?
+    - y el de [meca](carrera)?
+    - y el de [mecatrónica](carrera)
+    - y los de otras carreras 
+    - quiero ver solamente el de [electronica](carrera)
+    - solo el de [civil](carrera) quiero ver
 - synonym: examen
   examples: |
     - examenes
@@ -2333,12 +2278,14 @@ nlu:
     - tfg
     - trabajo final de grado
     - tesis
-- synonym: Electronica
+- synonym: Electrónica
   examples: |
     - eca
     - electronica
     - Electrónica
     - electrónica
+    - ele
+    - ELE
 - synonym: Civil
   examples: |
     - civil
@@ -2350,37 +2297,138 @@ nlu:
     - ind
     - industrial
     - induchill
-- synonym: Electromecanica
+- synonym: Electromecánica
   examples: |
     - emca
     - EMCA
     - electromecánica
     - Electromecánica
     - electro
-- synonym: Geografica
-  examples:  |
+    - electromecanica
+- synonym: Geográfica y Ambiental
+  examples: |
     - geografica y ambiental
     - geográficay ambiental
     - Geográfica y Ambiental
     - Geográfica y ambiental
-    - gyf
-    - GyF
+    - gya
+    - GyA
     - GYF
-    - G Y F
-    - g y f
-- synonym: Mecanica
+    - G Y A
+    - g y a
+    - Geográfica
+    - geografica
+    - geográfica
+    - Geografica
+- synonym: Mecánica
   examples: |
     - mecanica
     - Mecánica
     - Mecanica
-- synonym: Mecatronica
+    - MEC
+    - mec
+- synonym: Mecatrónica
   examples: |
     - Meca
     - meca
     - mecatrónica
     - Mecatrónica
     - mecatronica
+    - MCT
+    - mct
 - synonym: reglamento
   examples: |
     - reglamento
     - reglamento academico
+- synonym: biblioteca
+  examples: |
+    - Biblioteca
+    - biblio
+    - Biblio
+    - biblioteca 2
+    - biblioteca 1
+    - Biblioteca 1
+    - Biblioteca 2
+- synonym: atención al alumno
+  examples: |
+    - atención al alumno
+    - Atención al alumno
+    - Atención Al Alumno
+    - Atención al Alumno
+    - atencion al alumno
+    - Atencion al alumno
+    - Atencion Al Alumno
+    - Atencion al Alumno
+    - Atal
+    - ATAL
+    - ATALA
+    - atala
+    - atal
+- synonym: FIUNA
+  examples: |
+    - Fiuna
+    - fiuna
+    - facu
+    - Facu
+    - facultad
+    - Facultad
+- synonym: caja
+  examples: |
+    - cajero
+    - CAJA
+    - Caja
+- synonym: CEI
+  examples: |
+    - CEI
+    - Cei
+    - cei
+    - Centro de Estudiantes
+    - centro de estudiantes
+    - centro de estudiantes de ingeniería
+    - Centro de Estudiantes de Ingeniería
+- synonym: DTIC
+  examples: |
+    - dtic
+    - Dtic
+    - dtics
+    - Dtics
+    - DTICS
+    - Dtic's
+    - dtic's
+- synonym: aulas H
+  examples: |
+    - aula h
+    - aulas h
+    - Aulas h
+    - H
+    - clase H
+    - sala H
+    - sala h
+    - Sala H
+    - clases de H
+    - salas h
+    - aulas h
+    - h
+- synonym: mesa de entrada
+  examples: |
+    - Mesa de entrada
+    - Mesa de Entrada
+    - Mesa De Entrada
+    - mde
+- synonym: fotocopiadora
+  examples:  |
+    - FOTOCOPIADORA
+    - fotocopiador
+- synonym: dos
+  examples: |
+    - macho
+    - machazo
+    - machito
+    - machaso
+- synonym: secretaría
+  examples: |
+    - secretaria
+    - Secretaria
+    - Secretaría
+    - SEcretaria
+    - SEcretaría
