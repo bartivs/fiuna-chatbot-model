@@ -1,7 +1,6 @@
 version: "2.0"
 
 rules:
-
 - rule: Despedir a usuario que se despide 
   steps:
   - intent: despedida 
@@ -52,3 +51,28 @@ rules:
   - slot_was_set: 
     - requested_slot: null
   - action: action_informar_puntaje_final
+
+- rule: quien es el director de carrera
+  steps:
+  - intent: director_carrera
+  - action: action_director_carrera
+
+- rule: info sobre las carreras
+  steps:
+  - intent: info_carrera
+  - action: action_info_carrera 
+
+- rule: responder horarios
+  steps:
+  - intent: horario
+  - action: action_horario
+
+- rule: responder malla
+  steps:
+  - intent: malla_curricular
+  - action: action_malla_curricular
+
+- rule: Bienvenida
+  conversation_start: true
+  steps:
+    - action: action_saludo
