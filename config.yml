@@ -13,11 +13,8 @@ pipeline:
    - name: WhitespaceTokenizer
    - name: RegexFeaturizer
    - name: LexicalSyntacticFeaturizer
-     alias: "lexical-syntactic"  
    - name: CountVectorsFeaturizer
-     alias: "cvf-word"
    - name: CountVectorsFeaturizer
-     alias: "cvf-char"
      analyzer: char_wb
      min_ngram: 1
      max_ngram: 4
@@ -27,15 +24,12 @@ pipeline:
      constrain_similarities: true 
    - name: EntitySynonymMapper
    - name: ResponseSelector
-     featurizers: ["cvf-word","cvf-char"]
      epochs: 100
      retrieval_intent: faq
    - name: ResponseSelector
-     featurizers: ["cvf-word","cvf-char"]
      epochs: 100
      retrieval_intent: chitchat
    - name: ResponseSelector
-     featurizers: ["cvf-word","cvf-char"]
      epochs: 100
      retrieval_intent: tfg
    - name: FallbackClassifier

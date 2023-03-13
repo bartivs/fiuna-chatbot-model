@@ -7,6 +7,8 @@ intents:
 - bot_challenge
 - chitchat:
     is_retrieval_intent: true
+- continuar_preguntando_carrera
+- continuar_preguntando_horario
 - deny
 - despedida
 - director_carrera
@@ -22,18 +24,18 @@ intents:
 - out_of_scope
 - puntos_firma
 - saludo
-- continuar_preguntando_horario
-- continuar_preguntando_carrera
+- fecha
 - tfg:
     is_retrieval_intent: true
 entities:
-- formularios
-- nombre
 - firma
 - nota_des
 - materia
+- formularios
+- nombre
 - carrera
 - lugar
+- fecha
 slots:
   nota_des:
     type: text
@@ -50,6 +52,9 @@ slots:
   lugar:
     type: text
     influence_conversation: false
+  fecha:
+    type: text
+    influence_conversation: false
 actions:
 - action_director_carrera
 - action_horario
@@ -61,6 +66,8 @@ actions:
 - utter_faq
 - utter_tfg
 - validate_notas_form
+- action_reset_all_slots
+- action_fecha
 forms:
   notas_form:
     required_slots:

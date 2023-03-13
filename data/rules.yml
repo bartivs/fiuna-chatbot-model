@@ -76,3 +76,8 @@ rules:
   conversation_start: true
   steps:
     - action: action_saludo
+
+- rule: fecha
+  steps:
+  - intent: fecha
+  - action: action_fecha
