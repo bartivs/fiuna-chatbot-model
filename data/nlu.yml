@@ -22,6 +22,7 @@ nlu:
     - Hola fiuna bot
     - Ola
     - Me saludas?
+    - /start
 - intent: despedida
   examples: |
     - chau
@@ -34,13 +35,11 @@ nlu:
 - intent: afirmacion
   examples: |
     - si
-    - ok
     - dale
     - por supuesto
     - esta bien
     - correcto
     - oima
-    - de lujo
 - intent: deny
   examples: |
     - no
@@ -184,7 +183,6 @@ nlu:
 - intent: chitchat/preguntas_frecuentes
   examples: |
     - que le puedo preguntar a fiunabot
-    - Que sabes hacer ?
     - Cuales son las preguntas frecuentes?
     - Que te puedo preguntar
     - preguntas frecuentes
@@ -202,7 +200,6 @@ nlu:
     - Cómo cuáles?
     - No lo se tu dime
     - no lo sé,tú dime
-    - como me podes ayudar
 - intent: chitchat/como_funciona
   examples: |
     - Como te hago preguntas ?
@@ -211,6 +208,7 @@ nlu:
     - como te pregunto?
 - intent: chitchat/objetivo
   examples: |
+    - Que sabes hacer ?
     - Que haces?
     - que sabes hacer
     - para qué servis
@@ -219,6 +217,7 @@ nlu:
     - Que haces
     - Como funcionas?
     - Que sabes hacer?
+    - como me podes ayudar
 - intent: chitchat/firma_macho
   examples: |
     - Cuanto es firma de macho?
@@ -255,6 +254,7 @@ nlu:
 - intent: nota_segun_firma
   examples: |
     - Cuanto tengo que hacer para quitar [5](nota_des) si mi firma es [35](firma)
+    - Cuanto tengo que hacer para quitar [3](nota_des) si mi firma es [36](firma)
     - mi firma es de [36](firma), cuanto debo hacer para pasar con [2](nota_des)?
     - si tengo de firma [37](firma), con cuanto paso?
     - quiero quitar [4](nota_des) y mi firma es de [38], cuanto tengo que hacer?
@@ -263,6 +263,7 @@ nlu:
     - que puntaje tengo que hacer en el final para pasar?
     - Cuanto tengo que hacer en 1er final para pasar?
     - que tengo que hacer para pasar?
+    - cuanto tengo que hacer para pasar si mi firma es [35](firma)?
     - Cuanto tengo que hacer en 3er final para pasar?
     - cuanto tengo que hacer en el final para pasar?
     - quiero saber cuanto tengo que hacer para pasar
@@ -284,8 +285,73 @@ nlu:
     - Tengo firma de [47](firma), cuántos puntos tengo que hacer para pasar?
     - Firma [48](firma), quiero quitar [5](nota_des)
     - Cuánto tengo que hacer para quitar [5](nota_des) con firma de [49](firma)
+    - tengo firma de [36](firma) cuanto tengo que hacer para pasar?
+    - cuanto tengo que hacer para sacar [4](nota_des) si mi firma es [35](firma)
+    - mi firma es de [35](firma), cuanto tengo que hacer para pasar con [2](nota_des)?
+    - tengo firma de [37](firma) y quiero quitar [5](nota_des)
+    - cuanto tengo que hacer para quitar [5](nota_des) si mi firma es [35](firma)
+    - quiero pasar con firma de [35](firma)
+    - Mi firma es [35](firma), quiero quitar [5](nota_des)
+    - quiero quitar [2](nota_des) mi firma es [35](firma)
+    - quiero quitar [5](nota_des), mi firma es [38](firma)
+    - cuanto tengo que hacer si quiero pasar con [4](nota_des)
+    - cuanto tengo que hacer para pasar si mi firma es de [35](nota_des) y quiero quitar [5](nota_des)
+- lookup: firma
+  examples: |
+    - 35
+    - 36
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42 
+    - 43
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+    - 50
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 57
+    - 58
+    - 59
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
+    - 66
+    - 67
+    - 68
+    - 69
+    - 70
+    - macho
+    - machazo
+    - machaso
+- lookup: nota_des
+  examples: |
+    - 2
+    - 3
+    - 4
+    - 5
+    - Dos
+    - Tres
+    - Cuatro
+    - Cinco
 - intent: puntos_firma
   examples: |
+    - [36](firma)
+    - mi firma es [36](firma)
+    - [35](firma)
     - Mi firma es [50](firma)
     - apenas [51](firma)
     - no se, creo que [52](firma)
@@ -298,9 +364,6 @@ nlu:
     - Mi firma es [59](firma)
     - de [60](firma)
     - firma de [61](firma)
-    - firma de [macho](firma)
-    - [machazo](firma)
-    - [machaso](firma)
     - [62](firma)
     - [63](firma)
     - [64](firma)
@@ -309,7 +372,14 @@ nlu:
     - firma de [67](firma)
     - [68](firma)
     - [69](firma)
-    - [70](firma) 
+    - [70](firma)
+    - [36](firma)
+    - Firma [35](firma)
+    - [35](firma) de firma
+    - Tengo [36](firma) de firma
+    - Mi firma es [37](firma)
+    - Mi firma es de [40](firma)
+    - Mi firma es de [37](firma)
 - intent: nota_deseada
   examples: |
     - quiero quitar un [3](nota_des)
@@ -324,7 +394,23 @@ nlu:
     - quiero pasar con [2](nota_des)
     - [2](nota_des) nomas
     - [4](nota_des)
+    - [3](nota_des)
+    - [cuatro](nota_des)
     - Un [cinco](nota_des) o que
+    - [2](nota_des)
+    - quiero [cinco](nota_des)
+    - con [tres](nota_des)
+    - con un [cuatro](nota_des)
+    - con [2](nota_des)
+    - Quiero pasar con [5](nota_des)
+    - Con [5](nota_des)
+    - Quiero quitar [3](nota_des)
+    - [5](nota_des)
+    - con [4](nota_des)
+    - quiero pasar con [4](nota_des)
+    - con [5](nota_des)
+    - quiero quitar [5](nota_des)
+    - [cinco](nota_des)
 - intent: faq/feriado
   examples: |
     - Quiero saber el proximo feriado
@@ -391,11 +477,11 @@ nlu:
     - Horario propuesto
 - intent: faq/horario_examen
   examples: |
-    - Cual es el horario de [examen](examen)?
-    - Cual es el horario de los (examen)?
-    - me pasas el horario de los (examen)?
+    - Cual es el horario de examen?
+    - Cual es el horario de los examenes?
+    - me pasas el horario de los examenes?
     - Horario exámenes finales
-    - Horario de [examenes parciales](examen)
+    - Horario de examenes parciales
     - Horario de examen?
     - cuando se rinde [fisica](materia)?
     - fecha de examen de  [calculo](materia)
@@ -413,6 +499,10 @@ nlu:
     - Donde encuentro el horario de exámenes?
     - Horario de examenes
     - Horario de exámenes 2023
+    - Cuando se rinde [teoría de circuitos](materia)
+    - quiero el horario de examenes de este año
+    - necesito el horario de examenes del 2023
+    - quiero el horario de examenes del 2023
 - intent: faq/calendario_examenes
   examples: |
     - Que día empiezan los parciales
@@ -450,7 +540,7 @@ nlu:
     - Cuando comienzan los exámenes?
     - Exámenes 2023
     - Cuando son las parciales
-    - cuando [rendimos](examen)
+    - cuando rendimos
     - Fecha examen
     - Fecha examen ?
     - Cuando empiezan los parciales
@@ -637,13 +727,16 @@ nlu:
     - geografica lleva [estatica](materia)?
     - Que materia ataja [fisica 1](materia)?
     - que me ataja [lineal 2](materia)
-    - Que materia ataja fisica 1?
-    - Correlativas mecánica de materiales 1
+    - Correlativas [mecánica de materiales 1](materia)
     - Cuántos años dura la carrera de ingeniería?
     - ¿Cuántos años dura la carrera de ingeniería civil?
     - Cuánto dura la carrera de ING civil
     - Cuanto dura la carrera Ingeniería civil?
     - Qué materias son de primer semestre?
+    - que materias se tiene en el segundo semestre?
+    - Que materias hay el proximo semestre
+    - Cuantos semestres dura la carrera de Ingeniería electrónica
+    - cuanto dura la carrera de electronica
 - intent: faq/grupos
   examples: |
     - Grupo de [fisica](materia)?
@@ -687,6 +780,14 @@ nlu:
     - como me inscribo
     - documentos para inscripción
     - Requisitos para la inscripción
+    - Cómo me inscribo?
+    - Inscripción
+    - procedimiento para inscribirme
+    - matriculacion fiuna
+    - donde me inscribo?
+    - donde me matriculo
+    - Como puedo matricularme?
+    - que tengo que hacer para inscribirme
 - intent: faq/matricula_cuota
   examples: |
     - Cuanto cuesta la matricula?
@@ -808,10 +909,21 @@ nlu:
     - que puedo hacer para ganar horas de extension
     - Como consigo puntos de extensión universitaria
     - Que extensiones universitarias hay disponibles
-    - Puntos de extensión
     - Qué actividades podría realizar para conseguir puntos de extensión?
     - Conocés alguna actividad?
     - Qué actividades hay en la facultad?
+    - necesito puntos de extension
+    - necesito extension
+    - me falta extension
+    - me falta puntos de extensión
+    - Como hacer para conseguir puntos de extensión
+    - como hago para conseguir puntos de extension
+    - me faltan puntos de extensión
+    - me falta extension 
+    - quiero puntos para completar la extension universitaria
+    - necesito completar la extension
+    - necesito puntos de extension
+    - quiero puntos de extension
 - intent: faq/asistencia
   examples: |
     - cuantas veces puedo faltar
@@ -886,6 +998,10 @@ nlu:
     - Donde esta la fotocopiadora?
     - En que parte de la facultad esta la fotocopiadora?
     - Dónde está la fotocopiadora?
+    - Numero de la fotocopiadora
+    - telefono fotocopias
+    - whatsapp de la fotocopiadora
+    - whatsapp del fotocopiador
 - intent: faq/decano
   examples: |
     - Quien es el decano?
@@ -901,7 +1017,6 @@ nlu:
     - Quién es el decano actual?
     - Quién es el decano?
     - Quien es el decando de la facultad?
-    - Quien es el rector de la Fiuna ?
     - Quien es el decano
     - Quien es el decano de la facultad
     - Actual decano de fiuna
@@ -967,7 +1082,6 @@ nlu:
     - presidente del cei
     - presidente del centro de estudiantes
     - Quien es el presidente del centro?
-    - Contacto de alguien del Centro de estudiantes ?
     - Quien es el presidente del centro de estudiantes?
     - Quien es el presidente del CEI?
 - intent: faq/contactos_cei
@@ -976,6 +1090,7 @@ nlu:
     - numero del presidente del cei?
     - numero de alguien del cei?
     - contacto del cei
+    - numero de telefono de alguien del cei
 - intent: faq/cosas_perdidas
   examples: |
     - Donde se dejan las cosas perdidas?
@@ -1082,11 +1197,6 @@ nlu:
     - Cómo funciona la prórroga?
     - Cuanto tiempo es lo máximo que puedo estar en la facultad ?
     - Cuánto es el periodo de permanencia?
-- intent: faq/electronica
-  examples: |
-    - Cuantos semestres dura la carrera de Ingeniería electrónica
-    - Ingeniería electrónica
-    - cuanto dura la carrera de electronica
 - intent: faq/insweb
   examples: |
     - Insweb
@@ -1134,6 +1244,12 @@ nlu:
     - Fiuna Carreras
     - Cuáles son las carreras
     - Cuáles son las carreras disponibles en fiuna?
+    - carreras de ingeniería
+    - cuales son las carreras de ingenieria
+    - carreras disponibles en ingenieria
+    - que carreras de ingeniería hay
+    - cuantas carreras tiene ingenieria
+    - cuales son las carreras que hay en ingeniería
 - intent: faq/reposo_medico
   examples: |
     - justificativo medico
@@ -1308,6 +1424,8 @@ nlu:
     - Calendario académico
     - Calendario fiuna
     - Calendario académico fiuna
+    - quiero ver el calendario de este año
+    - calendario academico 2023
 - intent: faq/extension_universitaria
   examples: |
     - Como funciona los puntos de extensión?
@@ -1321,6 +1439,8 @@ nlu:
     - Extensión universitaria
     - Cuántos puntos se debe acumular para la extensión?
     - Cuantos puntos de extensión son necesarios ?
+    - Puntos de extensión
+    - puntos de extensión?
 - intent: faq/pasantia
   examples: |
     - Como funciona el tema de la pasantía.
@@ -1344,7 +1464,6 @@ nlu:
     - como se si ya puedo hacer la pasantia
     - donde puedo consultar si ya puedo hacer la pasantia
     - requsitos de pasantia
-    - quiero hacer la pasantía
 - intent: faq/pasantia_tramites
   examples: |
     - cómo es el proceso para hacer una pasantía?
@@ -1362,6 +1481,8 @@ nlu:
     - Cual es el procedimiento de pasantia?
     - Cuales son los pasos a seguir para la pasantía ?
     - Cuál es el procedimiento para hacer pasantía?
+    - quiero hacer la pasantía
+    - como empiezo la pasantia
 - intent: faq/pasantia_empresas
   examples: |
     - Empresas donde puedo hacer pasantía
@@ -1425,7 +1546,6 @@ nlu:
     - Becas facultad
     - becas de la facultad
     - hay becas en la facultad?
-    - ayuda economica
     - exoneracion de aranceles
     - exoneracion de matricula
     - exoneracion de cuotas
@@ -1496,25 +1616,15 @@ nlu:
     - cuando puedo pedir becas
     - cuando puedo solicitar becas
     - Como solicitar becas internas?
-- intent: faq/inscripcion
+- intent: faq/inscripcion_fecha
   examples: |
-    - Cómo me inscribo?
-    - Inscripción
-    - donde me inscribo?
     - cuando empieza la inscripcion
     - fecha de inscripcion
     - inicio de inscripciones
-    - como hago para inscribirme
     - inicio de inscripcion
-    - procedimiento para inscribirme
-    - matriculacion fiuna
     - inicio de matriculacion
-    - matriculacion
-    - donde me matriculo
-    - proceso de matriculacion
     - Periodo de matriculación
     - Hasta cuando puedo inscribirme
-    - Como puedo matricularme?
 - intent: faq/ubi_lab_fisica
   examples: |
     - Donde queda el laboratorio de fisica?
@@ -1571,6 +1681,11 @@ nlu:
     - Cuál es el número de la facultad
     - Contacto de fiuna
     - numero telefonico de la facultad
+    - contacto de citec
+    - telefono de citec
+    - quiero el numero de citec
+    - quiero el numero de la facultad
+    - necesito el numero de la facu
 - intent: faq/idiomas
   examples: |
     - Cursos de idiomas de la facultad
@@ -1662,7 +1777,7 @@ nlu:
     - Mapa de la facultad
 - intent: faq/ubi_clases_laboratorios
   examples: |
-    - donde quedan las aulas f 
+    - donde quedan las aulas f
     - Dónde queda el laboratorio de materiales
     - Ubicación del laboratorio
     - donde queda el bloque S?
@@ -1984,7 +2099,6 @@ nlu:
     - donde puedo encontrar hielo
     - Quién es el presidente de paraguay
     - Como está el clima
-    - Va a llover
     - Que hora es en China
     - Qué carrera es la mejor?
     - Cual es la mejor carrera
@@ -2054,11 +2168,12 @@ nlu:
     - Director de carrera de [Industrial](carrera) quién es?
     - Director carrera [geografica](carrera)
     - quien es el director de [mecatrónica](carrera)
-    - quienes son los directores de carrera 
+    - quienes son los directores de carrera
     - directores de carrera
     - nombre de los directores de carrera
     - director de carrera
     - nombre del director de carrera
+    - quiero ver todos los directores
 - intent: info_carrera
   examples: |
     - Ingeniería [civil](carrera)
@@ -2076,6 +2191,7 @@ nlu:
     - quiero informacion de todas las carreras
     - info sobre las carreras
     - informacion de las carreras
+    - Ingeniería [electrónica](carrera)
 - intent: horario
   examples: |
     - A partir de qué hora abre la [biblioteca](lugar)?
@@ -2197,6 +2313,8 @@ nlu:
     - Hasta que hora se abre la [cantina](lugar)
     - A qué hora abre la [cantina](lugar)?
     - Hasta qué hora abre la [cantina](lugar)?
+    - La [biblioteca](lugar) está cerrada?
+    - Cuál es el horario de [mesa de entrada](lugar)
 - intent: malla_curricular
   examples: |
     - Necesito la malla curricular de [electronica](carrera)
@@ -2260,19 +2378,22 @@ nlu:
     - y sobre [industrial](carrera) que sabes?
     - y el de [meca](carrera)?
     - y el de [mecatrónica](carrera)
-    - y los de otras carreras 
+    - y los de otras carreras
     - quiero ver solamente el de [electronica](carrera)
     - solo el de [civil](carrera) quiero ver
-- synonym: examen
+    - y el de [mecatronica](carrera)?
+- intent: fecha
   examples: |
-    - examenes
-    - parciales
-    - recuperatorio
-    - recu
-    - final
-    - parcial
-    - rendir
-    - rendimos
+    - que fecha es hoy?
+    - Que fecha es [mañana](dia)?
+    - Que día de la semana será [mañana](fecha)?
+    - Que día es hoy?
+    - Que día es
+    - Que día es?
+    - Que año es ahora?
+    - Que fecha es hoy
+    - Que fecha es hoy?
+    - Que dia es hoy ?
 - synonym: tfg
   examples: |
     - tfg
@@ -2407,7 +2528,6 @@ nlu:
     - Sala H
     - clases de H
     - salas h
-    - aulas h
     - h
 - synonym: mesa de entrada
   examples: |
@@ -2416,15 +2536,9 @@ nlu:
     - Mesa De Entrada
     - mde
 - synonym: fotocopiadora
-  examples:  |
+  examples: |
     - FOTOCOPIADORA
     - fotocopiador
-- synonym: dos
-  examples: |
-    - macho
-    - machazo
-    - machito
-    - machaso
 - synonym: secretaría
   examples: |
     - secretaria
@@ -2432,3 +2546,9 @@ nlu:
     - Secretaría
     - SEcretaria
     - SEcretaría
+- synonym: macho
+  examples: |
+    - Macho
+    - Machazo
+    - Machaso
+    - machito

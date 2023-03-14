@@ -76,7 +76,7 @@ stories:
   - intent: continuar_preguntando_carrera
   - action: action_director_carrera
 
-- story: Preguntas director sobre la carrera
+- story: Preguntas sobre la carrera
   steps:
   - intent: saludo
   - action: action_saludo
