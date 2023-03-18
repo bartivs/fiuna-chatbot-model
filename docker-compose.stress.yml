@@ -15,19 +15,7 @@ services:
   rasa:
     container_name: rasa_runner
     restart: always
-    build:
-      context: ./
-      dockerfile: compose/rasa_runner/DockerFile
-      args:
-        POSTGRES_USER: $POSTGRES_USER
-        POSTGRES_PASSWORD: $POSTGRES_PASSWORD
-        POSTGRES_URL: $POSTGRES_URL
-        POSTGRES_DB: $POSTGRES_DB
-        POSTGRES_PORT: $POSTGRES_PORT
-        TELEGRAM_TOKEN: $TELEGRAM_TOKEN
-        TELEGRAM_NAME: $TELEGRAM_NAME
-        BASE_URL: $BASE_URL
-        RASA_VERSION: $RASA_VERSION
+    image: rasa/rasa
     command: ["run", "--enable-api", "--auth-token", "${API_TOKEN}"] 
     deploy:
       resources:
@@ -47,7 +35,7 @@ services:
       - ./config.yml:/app/config.yml:ro
 
   db:
-    image: postgres:15-alpine
+    image: postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
