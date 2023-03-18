@@ -24,7 +24,8 @@ intents:
 - out_of_scope
 - puntos_firma
 - saludo
-- fecha
+- puntos_realizados
+- bienvenida
 - tfg:
     is_retrieval_intent: true
 entities:
@@ -35,7 +36,7 @@ entities:
 - nombre
 - carrera
 - lugar
-- fecha
+- puntos
 slots:
   nota_des:
     type: text
@@ -43,12 +44,15 @@ slots:
   firma:
     type: text
     influence_conversation: true
+  puntos:
+    type: text
+    influence_conversation: false
   nombre:
     type: text
     influence_conversation: false
   carrera:
     type: text
-    influence_conversation: false
+    influence_conversation: true
   lugar:
     type: text
     influence_conversation: false
@@ -68,6 +72,8 @@ actions:
 - validate_notas_form
 - action_reset_all_slots
 - action_fecha
+- validate_carreras_form
+- action_puntos_realizados
 forms:
   notas_form:
     required_slots:
@@ -77,3 +83,8 @@ forms:
       firma:
       - type: from_entity
         entity: firma
+  malla_form:
+    required_slots:
+      carrera:
+      - type: from_entity
+        entity: carrera

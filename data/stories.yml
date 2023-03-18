@@ -25,7 +25,7 @@ stories:
   - intent: deny 
   - action: utter_despedida
 
-- story: interactive_story_1
+- story: informar puntaje
   steps:
   - intent: saludo
   - action: action_saludo
@@ -37,17 +37,35 @@ stories:
   - slot_was_set:
     - nota_des: '2'
   - slot_was_set:
-    - nota_des: '2'
-  - slot_was_set:
     - requested_slot: firma
-  - slot_was_set:
-    - firma: '35'
   - slot_was_set:
     - firma: '35'
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
   - action: action_informar_puntaje_final
+
+- story: preguntar nota por puntaje
+  steps:
+  - intent: saludo
+  - action: action_saludo
+  - intent: nota_segun_firma
+  - action: notas_form
+  - active_loop: notas_form
+  - slot_was_set:
+    - requested_slot: nota_des
+  - slot_was_set:
+    - nota_des: '2'
+  - slot_was_set:
+    - requested_slot: firma
+  - slot_was_set:
+    - firma: '35'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_informar_puntaje_final
+  - intent: puntos_realizados
+  - action: action_puntos_realizados
 
 - story: Preguntas de horario
   steps:
@@ -58,14 +76,33 @@ stories:
   - intent: continuar_preguntando_horario
   - action: action_horario
 
-- story: Preguntas de malla
+- story: informar malla
   steps:
   - intent: saludo
   - action: action_saludo
   - intent: malla_curricular
+  - action: malla_form
+  - active_loop: malla_form
+  - slot_was_set:
+    - requested_slot: carrera
+  - slot_was_set:
+    - carrera: 'Electrónica'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
   - action: action_malla_curricular
   - intent: continuar_preguntando_carrera
+  - action: malla_form
+  - active_loop: malla_form
+  - slot_was_set:
+    - requested_slot: carrera
+  - slot_was_set:
+    - carrera: 'Mecánica'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
   - action: action_malla_curricular
+
 
 - story: Preguntas director de carrera
   steps:
