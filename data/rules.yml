@@ -36,7 +36,7 @@ rules:
   - intent: nlu_fallback
   - action: utter_fallback
 
-- rule: Activate form
+- rule: Activate nota segun firma form
   steps:
   - intent: nota_segun_firma
   - action: notas_form
@@ -67,17 +67,28 @@ rules:
   - intent: horario
   - action: action_horario
 
-- rule: responder malla
-  steps:
-  - intent: malla_curricular
-  - action: action_malla_curricular
+#- rule: responder malla
+#  steps:
+#  - intent: malla_curricular
+#  - action: action_malla_curricular
 
 - rule: Bienvenida
   conversation_start: true
   steps:
     - action: action_saludo
 
-- rule: fecha
+- rule: Activate malla curricular form
   steps:
-  - intent: fecha
-  - action: action_fecha
+  - intent: malla_curricular
+  - action: malla_form
+  - active_loop: malla_form
+
+- rule: Submit form
+  condition:
+  - active_loop: malla_form
+  steps:
+  - action: malla_form
+  - active_loop: null
+  - slot_was_set: 
+    - requested_slot: null
+  - action: action_malla_curricular

@@ -1,5 +1,9 @@
 version: "2.0"
 nlu:
+- intent: bienvenida
+  examples: |
+    - /start
+    - /Start
 - intent: saludo
   examples: |
     - hola
@@ -22,7 +26,6 @@ nlu:
     - Hola fiuna bot
     - Ola
     - Me saludas?
-    - /start
 - intent: despedida
   examples: |
     - chau
@@ -347,6 +350,30 @@ nlu:
     - Tres
     - Cuatro
     - Cinco
+- lookup: puntos
+  examples: |
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
 - intent: puntos_firma
   examples: |
     - [36](firma)
@@ -411,6 +438,18 @@ nlu:
     - con [5](nota_des)
     - quiero quitar [5](nota_des)
     - [cinco](nota_des)
+- intent: puntos_realizados
+  examples: |
+    - Cuanto voy a quitar si hago [18](puntos) si mi firma es [35](firma)
+    - y si hago [15](puntos)?
+    - cuanto voy a quitar si hago [10](puntos) si mi firma es [36](firma)
+    - tengo firma de [42], hice [23](puntos) en mi final, cuanto voy a quitar?
+    - y si hago [20](puntos)
+    - hice [20](puntos) en el final y mi firma es de [42](firma). caunto voy a quitar?
+    - cuanto quito si hago [21](puntos) puntos en el final?
+    - hice [19](puntos) en mi examen, cuanto voy a quitar?
+    - y si hago [25](puntos)
+    - y con [26](puntos)?
 - intent: faq/feriado
   examples: |
     - Quiero saber el proximo feriado
@@ -571,15 +610,6 @@ nlu:
     - cuando se vuelve a la facultad
     - hasta cuando tenemos clases?
     - hasta cuando son las clases
-- intent: faq/correlativas
-  examples: |
-    - me pasas las materias?
-    - me pasas las correlativas de [mtc](carrera)?
-    - me pasas las correlativas de ing. [mtc](carrera)?
-    - me pasas las correlativas de ingenieria [mtc](carrera)?
-    - quiero saber que materias me faltan
-    - quiero ver las materias de [ind](carrera)
-    - quiero saber las materias de [ind](carrera)
 - intent: faq/formularios
   examples: |
     - Quiero la solicitud de [nota al decano](formularios)
@@ -737,6 +767,12 @@ nlu:
     - Que materias hay el proximo semestre
     - Cuantos semestres dura la carrera de Ingeniería electrónica
     - cuanto dura la carrera de electronica
+    - me pasas las correlativas de [mtc](carrera)?
+    - me pasas las correlativas de ing. [mtc](carrera)?
+    - me pasas las correlativas de ingenieria [mtc](carrera)?
+    - quiero saber que materias me faltan
+    - quiero ver las materias de [ind](carrera)
+    - quiero saber las materias de [ind](carrera)
 - intent: faq/grupos
   examples: |
     - Grupo de [fisica](materia)?
@@ -2174,6 +2210,11 @@ nlu:
     - director de carrera
     - nombre del director de carrera
     - quiero ver todos los directores
+    - coordinador de grado
+    - coordinador de carrera de [eca](carrera)
+    - coordinador de [electrónica](carrera)
+    - coordinador de carrera de [electrónica](carrera)
+    - nombre del coordinador de [mecatronica])carrera
 - intent: info_carrera
   examples: |
     - Ingeniería [civil](carrera)
@@ -2382,18 +2423,6 @@ nlu:
     - quiero ver solamente el de [electronica](carrera)
     - solo el de [civil](carrera) quiero ver
     - y el de [mecatronica](carrera)?
-- intent: fecha
-  examples: |
-    - que fecha es hoy?
-    - Que fecha es [mañana](dia)?
-    - Que día de la semana será [mañana](fecha)?
-    - Que día es hoy?
-    - Que día es
-    - Que día es?
-    - Que año es ahora?
-    - Que fecha es hoy
-    - Que fecha es hoy?
-    - Que dia es hoy ?
 - synonym: tfg
   examples: |
     - tfg
@@ -2552,3 +2581,6 @@ nlu:
     - Machazo
     - Machaso
     - machito
+- synonym : director
+  examples: |
+    - coordinador

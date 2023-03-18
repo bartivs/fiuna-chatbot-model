@@ -91,7 +91,19 @@ class ActionFirma(Action):
         msg = f"Si haces {puntaje_final} en el final, quitas {nota_deseada}"
         dispatcher.utter_message(text=msg)
         return []
+class ActionPuntos(Action):
+    def name(self) -> Text:
+        return "action_puntos_realizados"
 
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        firma_actual = int(tracker.get_slot('firma'))
+        puntos_realizados = int(tracker.get_slot('puntos'))
+        aux = [fila[firma_actual - 35] for fila in ABACO]
+        aux.reverse()
+        msg = f"Si hacés {puntos_realizados} en el final, con firma de {firma_actual} quitás {aux[puntos_realizados-9]}"
+        dispatcher.utter_message(text=msg)
+        return []
+    
 class ActionSaludo(Action):
     def name(self) -> Text:
         return "action_saludo"
@@ -115,7 +127,9 @@ class ActionDirector(Action):
             msg = f"Podés tener mas información sobre los directores de carrera en el siguiente enlace http://www.ing.una.py/?page_id=629"     
         else:
             directores = {'Civil':' el Prof. Ing. Roberto Olmedo Bareiro, Mail: rolmedo@ing.una.py ','Industrial':'la Ing. Gisela Olmedo, Mail: golmedo@ing.una.py','Electromecánica':'el Prof. Ing. Edgar Darío Castro Núñez, Mail: ecastro@ing.una.py','Electrónica':'el Prof. Ing. Oscar Dario Resquin, Mail: oresquin@ing.una.py', 'Geográfica y Ambiental':'el Prof. Ing. Oscar Alfonso Correa, Mail: oalfonso@ing.una.py', 'Mecánica':'el Prof. Ing. Orlando David Benítez Gómez, Mail: odbenitez@fiuna.edu.py', 'Mecatrónica':'el Prof. Ing. Gustavo Román Verón Alderete, Mail: gveron@ing.una.py'}
-            msg = f"El director de {carrera} es {directores[carrera]}"
+            msg = f"El coordinador de {carrera} es {directores[carrera]}"
+        if carrera=='Industrial':
+            msg=f"La coordinadora de grado de Industrial es {directores[carrera]}"
         dispatcher.utter_message(text=msg)
         return []
 
@@ -142,7 +156,7 @@ class ActionInformarHorario(Action):
         if place not in ALLOWED_Lugares:
             msg = f"Aún no cuento con esa información, espero poder ayudarte pronto" 
         else:
-            info = {'biblioteca':'El horario de atención de la biblioteca es:\n\t- Lunes a Viernes desde las 7:00 hasta las 20:00\n\t- Sábados desde las 7:00 hasta las 12:00.\nLa biblioteca de Citec abre de:\n\t- Lunes a Viernes de 7:15 a 19:00hs.',
+            info = {'biblioteca':'El horario de atención de la biblioteca es:\n\t- Lunes a Viernes desde las 7:00 hasta las 20:00\n\t- Sábados desde las 7:00 hasta las 12:00.\nLa biblioteca de Citec abre de:\n\t- Lunes a Viernes de 8:00 a 19:00hs.',
                     'atención al alumno':'El horario de atención al alumno es:\n\t- Lunes a Viernes de 8:00 a 18:00.\nPara mas información podes consultar llamar al 021 585584/1102',
                     'FIUNA':'La FIUNA abre de Lunes a Viernes de 07:00 a 22:15 y los sábados de 07:00 a 18:00 hs.',
                     'caja':'El horario de atención de la caja es\n\t- Lunes a Viernes de 07:30 a 19:00\n\t- Sábados de 08:00 a 12:00 hs.',
@@ -179,23 +193,3 @@ class ActionResetAllSlots(Action):
     def run(self, dispatcher, tracker, domain):
         return [AllSlotsReset()]
 
-
-class ActiondarFecha(Action):
-    def name(self) -> Text:
-        return "action_fecha"
-    
-    def run(self,dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dia = (tracker.get_slot('fecha'))
-        fecha_actual=datetime.date.today()  
-        dia_semana=fecha_actual.weekday()
-        fecha_manana = fecha_actual + datetime.timedelta(days=1)
-        dia_semana_manana = fecha_manana.weekday()
-        nombres_dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-        nombre_dia_semana = nombres_dias[dia_semana]
-        nombre_dia_semana_manana = nombres_dias[dia_semana_manana]
-        if dia=='mañana': 
-            msg = f"Mañana es, {nombre_dia_semana_manana}, y la fecha es:{fecha_manana.strftime()}"
-        else:
-            msg = f"Hoy es, {nombre_dia_semana}, y la fecha es:{fecha_actual.strftime()}"
-        dispatcher.utter_message(text=msg)
-        return []
