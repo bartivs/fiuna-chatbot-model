@@ -432,3 +432,5 @@ responses:
       payload: '/malla_curricular{{"carrera":"Mecatrónica"}}'
       button_type: vertical
  
+  utter_ingreso:
+  - text: "El ingreso a la facultad queda fuera de mi alcance. Podés pedir ayuda en el área de admisión.\nTeléfono:021 729 0010 interno 1722 y 1723\nCorreo: admision@ing.una.py"

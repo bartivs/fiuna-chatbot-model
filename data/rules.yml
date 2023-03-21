@@ -91,3 +91,8 @@ rules:
   - slot_was_set: 
     - requested_slot: null
   - action: action_malla_curricular
+
+- rule: responder a preguntas sobre el ingreso
+  steps:
+  - intent: ingreso
+  - action: utter_ingreso

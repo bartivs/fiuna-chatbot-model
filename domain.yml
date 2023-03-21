@@ -26,6 +26,7 @@ intents:
 - saludo
 - puntos_realizados
 - start
+- ingreso
 - tfg:
     is_retrieval_intent: true
 entities:
