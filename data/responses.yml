@@ -1,5 +1,8 @@
 version: "2.0"
 responses:
+  utter_start:
+  - text: "Hola! Soy FiunaBOT, un asistente creado para responder a las preguntas frecuentes de los alumnos sobre la facultad.\nAlgunas de estas preguntas son:\n- Horario de la caja.\n- Horario de la biblioteca\n- Aulas donde se desarrollarán las clases\n- Malla curricular de la carrera." 
+
   utter_tfg/asesores:
   - text: Podés ver la lista de asesores de Trabajo Final de Grado en la siguiente página:http://www.ing.una.py/?page_id=37688
   
@@ -391,7 +394,7 @@ responses:
   - text: Que bueno!
   
   utter_despedida:
-  - text: Adios/
+  - text: Adios
   - text: chau
   
   utter_iamabot:
@@ -409,18 +412,23 @@ responses:
     buttons:
     - title: "Civil"
       payload: '/malla_curricular{{"carrera":"Civil"}}'
+      button_type: vertical
     - title: "Electromecánica"
       payload: '/malla_curricular{{"carrera":"Electromecánica"}}'
+      button_type: vertical
     - title: "Electrónica"
       payload: '/malla_curricular{{"carrera":"Electrónica"}}'
+      button_type: vertical
     - title: "Gegráfica y Ambiental"
       payload: '/malla_curricular{{"carrera":"Gegráfica y Ambiental"}}'
+      button_type: vertical
     - title: "Industrial"
       payload: '/malla_curricular{{"carrera":"Industrial"}}'
+      button_type: vertical
     - title: "Mecánica"
       payload: '/malla_curricular{{"carrera":"Mecánica"}}'
+      button_type: vertical
     - title: "Mecatrónica"
       payload: '/malla_curricular{{"carrera":"Mecatrónica"}}'
-
-  utter_bienvenida:
-  - text: "Hola! Soy FiunaBOT, un asistente creado para responder a las preguntas frecuentes de los alumnos sobre la facultad.\nAlgunas de estas preguntas son:\n- Horario de la caja.\n- Horario de la biblioteca\n- Aulas donde se desarrollarán las clases\n- Malla curricular de la carrera."
+      button_type: vertical
+ 

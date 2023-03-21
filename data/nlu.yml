@@ -1,8 +1,9 @@
 version: "2.0"
 nlu:
-- intent: bienvenida
+- intent: start
   examples: |
     - /start
+    - //start
     - /Start
 - intent: saludo
   examples: |
@@ -254,6 +255,7 @@ nlu:
     - haete la okysea
     - como esta el tiempo en san lorenzo
     - va a llover en la facultad?
+    - como esta el clima
 - intent: nota_segun_firma
   examples: |
     - Cuanto tengo que hacer para quitar [5](nota_des) si mi firma es [35](firma)
@@ -2128,19 +2130,29 @@ nlu:
     - como hago para presentar mi tesis
     - presentacion de tesis?
     - pasos para presentar la tesis
+- intent: ingreso
+  examples: |
+    - Becas para el cursillo?
+    - Como puedo ingresar a la facultad de ingenieria?
+    - Cuando empiezan las inscripciones para el ingreso a la facultad?
+    - Examen de ingreso
+    - Ingreso fiuna
+    - Becas para el cursillo
+    - Cursillo
+    - cuanto cuesta el cursillo
+    - Cuánto cuesta el cursillo?
+    - Número del área de Admisión?
 - intent: out_of_scope
   examples: |
     - Tengo hambre
     - Cuánto es 2+2
     - donde puedo encontrar hielo
     - Quién es el presidente de paraguay
-    - Como está el clima
     - Que hora es en China
     - Qué carrera es la mejor?
     - Cual es la mejor carrera
     - Donde hay cariñosas?
     - ¿Cuantos alumnos tiene la carrera de ingenieria electronica?
-    - Becas para el cursillo?
     - 3 de 4 queso, una croqueta de carne y una pulp de medio
     - Por que no me quiere?
     - Dame 2 lomitos arabes mixto
@@ -2151,22 +2163,14 @@ nlu:
     - Y video?
     - Cuantos alumnos hay por carrera?
     - Cual es tu jojo favorito
-    - Como puedo ingresar a la facultad de ingenieria?
-    - Cuando empiezan las inscripciones para el ingreso a la facultad?
     - Hay luz en la facultad
-    - Examen de ingreso
-    - Ingreso fiuna
     - Eca > meca ?
     - Ingreso
-    - Becas para el cursillo
-    - Cursillo
     - Hector Rojas
     - Quien es Hector Rojas
     - Quien fue Gustavo Riart
     - Puedo comprar libros de geometría de pujol
     - Miss fiuna
-    - cuanto cuesta el cursillo
-    - Cuánto cuesta el cursillo?
     - Rubencito se la come?
     - Se puede portar armas en la facultad? Porque estoy bien armado
     - Voy a pasar?
@@ -2192,7 +2196,6 @@ nlu:
     - Cómo se calcula una losa
     - Cómo puedo pasar calculo 1?
     - Cual es la historia de la facultad
-    - Número del área de Admisión?
 - intent: director_carrera
   examples: |
     - Quien es el director de [electronica](carrera)

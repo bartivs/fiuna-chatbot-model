@@ -25,7 +25,7 @@ intents:
 - puntos_firma
 - saludo
 - puntos_realizados
-- bienvenida
+- start
 - tfg:
     is_retrieval_intent: true
 entities:
@@ -66,9 +66,6 @@ actions:
 - action_informar_puntaje_final
 - action_malla_curricular
 - action_saludo
-- utter_chitchat
-- utter_faq
-- utter_tfg
 - validate_notas_form
 - action_reset_all_slots
 - action_fecha

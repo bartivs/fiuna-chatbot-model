@@ -71,11 +71,10 @@ rules:
 #  steps:
 #  - intent: malla_curricular
 #  - action: action_malla_curricular
-
-- rule: Bienvenida
-  conversation_start: true
+- rule: inicio de una sesion
   steps:
-    - action: action_saludo
+  - intent: start
+  - action: utter_start
 
 - rule: Activate malla curricular form
   steps:
